@@ -1,0 +1,1029 @@
+﻿@using H724.Models
+@model IEnumerable<H724.Models.HotelSummary>
+
+@{
+    ViewBag.Title = "Hotels724.com - Global Discount Hotel Reservations";
+    Layout = "~/Views/Shared/_Layout_Ean.cshtml";
+}
+
+<div id="SubNavLanguageCurrency">
+
+    <div id="CustOps">
+        <div class="left">
+            US and Canada:                 1-800-780-5733
+                Europe:                 00-800-11-20-11-40
+                Promo Code 459173
+        </div>
+
+        <div class="right">
+            Customer service: <a href="https://www.travelnow.com/templates/459173/selfService?lang=en&amp;currency=TRY&amp;secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&amp;requestVersion=V2">Manage your booking</a>
+        </div>
+    </div>
+    <ul id="localization-container">
+        <li class="localization-container-locale">
+
+            <a name="anchor-language-selection"></a>
+            <select id="lang" name="lang">
+                <option value="da">Dansk</option>
+                <option value="de">Deutsch</option>
+                <option value="et">Eesti</option>
+                <option value="en" selected>English</option>
+                <option value="es">Español</option>
+                <option value="es_MX">Español (Mexican)</option>
+                <option value="fr">Français</option>
+                <option value="fr_CA">Français (Canada)</option>
+                <option value="in">Indonesia</option>
+                <option value="it">Italiano</option>
+                <option value="lv">Latviešu</option>
+                <option value="lt">Lietuvių</option>
+                <option value="hu">Magyar</option>
+                <option value="ms">Melayu</option>
+                <option value="nl">Nederlands</option>
+                <option value="nb">Norsk</option>
+                <option value="pl">Polski</option>
+                <option value="pt_BR">Português (Brasil)</option>
+                <option value="sk">Slovenčina</option>
+                <option value="fi">Suomi</option>
+                <option value="sv">Svenska</option>
+                <option value="tr">Türkçe</option>
+                <option value="vi">Việt</option>
+                <option value="is">Íslenska</option>
+                <option value="cs">Česky</option>
+                <option value="el">Ελληνικά</option>
+                <option value="ru">Русский</option>
+                <option value="uk">Українська</option>
+                <option value="ar">العربية</option>
+                <option value="th">ภาษาไทย</option>
+                <option value="ja">日本語</option>
+                <option value="zh_CN">简体中文</option>
+                <option value="zh_TW">繁體中文</option>
+                <option value="ko">한국어</option>
+            </select>
+            <a id="change-locale-btn" title="Choose your language">Change        </a>
+            <input type="hidden" id="lang-from" value="en" />
+        </li>
+        <li class="localization-container-currency">
+            <a name="anchor-currency-selection"></a>
+            <select id="currency" name="currency">
+                <option value="USD">USD $</option>
+                <option value="EUR">EUR €</option>
+                <option value="GBP">GBP £</option>
+                <option value="AED">AED AED</option>
+                <option value="ARS">ARS ARS</option>
+                <option value="AUD">AUD A$</option>
+                <option value="BRL">BRL R$</option>
+                <option value="CAD">CAD C$</option>
+                <option value="CHF">CHF CHF</option>
+                <option value="CLP">CLP CLP</option>
+                <option value="CNY">CNY ¥</option>
+                <option value="DKK">DKK kr</option>
+                <option value="HKD">HKD HK$</option>
+                <option value="IDR">IDR Rp</option>
+                <option value="ILS">ILS ₪</option>
+                <option value="INR">INR ₨</option>
+                <option value="JPY">JPY ¥</option>
+                <option value="KRW">KRW ₩</option>
+                <option value="MXN">MXN M$</option>
+                <option value="MYR">MYR RM</option>
+                <option value="NOK">NOK kr</option>
+                <option value="NZD">NZD NZD</option>
+                <option value="PHP">PHP PHP</option>
+                <option value="RUB">RUB RUB</option>
+                <option value="SEK">SEK kr</option>
+                <option value="SGD">SGD S$</option>
+                <option value="THB">THB ฿</option>
+                <option value="TRY"
+                    selected>TRY TRY</option>
+                <option value="TWD">TWD TWD</option>
+                <option value="VND">VND VND</option>
+                <option value="ZAR">ZAR ZAR</option>
+            </select>
+            <a id="change-currency-btn" title="Choose your currency">Change    </a>
+            <input type="hidden" name="currency-from" id="currency-from" value="TRY" />
+        </li>
+    </ul>
+    <!-- /#localization-container -->
+</div>
+
+<div class="equalColumn">
+    <div class="columnEqualLeftSpace">
+        <h1>Search for Hotels</h1>
+        
+        <div id="SearchBoxContainer" class="boxModule">
+            <div id="SearchBox" class="contentBoxModule">
+
+                <form id="SearchBoxForm" method="get" action="http://m.hotels724.com/templates/459173/hotels/list?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2">
+                    <input type="hidden" name="pagename" id="pagename" value="ToSearchResults" />
+                    <input type="hidden" name="lang" value="en">
+                    <input type="hidden" name="currency" value="TRY">
+                    <input type="hidden" name="secureUrlFromDataBridge" value="https%3A%2F%2Fwww.travelnow.com">
+                    <input type="hidden" name="requestVersion" value="V2">
+                    
+                    <fieldset class="simpleDestinations">
+
+                        <label for="SearchBox_DestinationName" class="labelTextTitle fullWidth">
+                            Where would you like to go?           
+                        </label>
+                        <input type="text" id="SearchBox_DestinationName" name="destination" class="fullWidth" value="">
+                        <input type="hidden" name="targetId" id="SearchBox_TargetId">
+                    </fieldset>
+
+                    <fieldset id="check-in-out">
+                        <div class="first">
+                            <label for="checkin">
+                                <span>Check-in</span>
+                                <input type="text" id="checkin" name="checkin" value="5/9/14" />
+
+                                <input type="hidden" value='5/9/2014' id="standardCheckin" name="standardCheckin" />
+                            </label>
+                        </div>
+
+                        <div>
+                            <label for="checkout">
+                                <span>Check-out</span>
+                                <input type="text" id="checkout" name="checkout" value="5/11/14" />
+
+                                <input type="hidden" value='5/11/2014' id="standardCheckout" name="standardCheckout" />
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <input type="hidden" name="roomsCount" value="1" id="roomsCount">
+                    <ol id="rooms-and-guests">
+                    <!-- <li><fieldset>
+    <legend>
+Room {roomNumber}    </legend>
+    
+    <label for="rooms[{sysRoomNumber}].adultsCount" class="adults">
+        <span class="label">Adults<br><span>(18+)</span></span>
+        <select name="rooms[{sysRoomNumber}].adultsCount" id="rooms{sysRoomNumber}.adultsCount">
+                <option value="1">1</option>
+                <option value="2" selected>2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+        </select>
+    </label>
+    
+    <label for="rooms[{sysRoomNumber}].childrenCount" class="children">
+        <span class="label">Children<br><span>(0-17)</span></span>
+        <select name="rooms[{sysRoomNumber}].childrenCount" id="rooms{sysRoomNumber}.childrenCount">
+                <option value="0" selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+        </select>
+    </label>
+    
+    <fieldset class="children-ages">
+        <legend>Age</legend>
+        <ul class="child-ages">
+            <li>
+                <label for="rooms[{sysRoomNumber}].children[0].age">
+                    <select name="rooms[{sysRoomNumber}].children[0].age" id="rooms[{sysRoomNumber}].children[0].age" disabled>
+                        <option value="">—</option>
+                        <option value="0">&lt;1</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                    </select>
+                </label>
+            </li>
+            <li>
+                <label for="rooms[{sysRoomNumber}].children[1].age">
+                    <select name="rooms[{sysRoomNumber}].children[1].age" id="rooms[{sysRoomNumber}].children[1].age" disabled>
+                        <option value="">—</option>
+                        <option value="0">&lt;1</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                    </select>
+                </label>
+            </li>
+            <li>
+                <label for="rooms[{sysRoomNumber}].children[2].age">
+                    <select name="rooms[{sysRoomNumber}].children[2].age" id="rooms[{sysRoomNumber}].children[2].age" disabled>
+                        <option value="">—</option>
+                        <option value="0">&lt;1</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                    </select>
+                </label>
+            </li>
+        </ul>
+    </fieldset>
+</fieldset></li>
+ -->
+                        <li class='first'>
+                            <fieldset>
+                                <legend>Room 1    </legend>
+
+                                <label for="rooms[0].adultsCount" class="adults">
+                                    <span class="label">Adults<br>
+                                        <span>(18+)</span></span>
+                                    <select name="rooms[0].adultsCount" id="rooms0.adultsCount">
+                                        <option value="1">1</option>
+                                        <option value="2" selected>2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </label>
+
+                                <label for="rooms[0].childrenCount" class="children">
+                                    <span class="label">Children<br>
+                                        <span>(0-17)</span></span>
+                                    <select name="rooms[0].childrenCount" id="rooms0.childrenCount">
+                                        <option value="0" selected>0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </label>
+
+                                <fieldset class="children-ages">
+                                    <legend>Age</legend>
+                                    <ul class="child-ages">
+                                        <li>
+                                            <label for="rooms[0].children[0].age">
+                                                <select name="rooms[0].children[0].age" id="rooms[0].children[0].age" disabled>
+                                                    <option value="">—</option>
+                                                    <option value="0">&lt;1</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                </select>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label for="rooms[0].children[1].age">
+                                                <select name="rooms[0].children[1].age" id="rooms[0].children[1].age" disabled>
+                                                    <option value="">—</option>
+                                                    <option value="0">&lt;1</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                </select>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label for="rooms[0].children[2].age">
+                                                <select name="rooms[0].children[2].age" id="rooms[0].children[2].age" disabled>
+                                                    <option value="">—</option>
+                                                    <option value="0">&lt;1</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                </select>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                            </fieldset>
+                        </li>
+                        <li class="add-row">
+                            <button>Add room</button>
+                        </li>
+                    </ol>
+
+                    <button type="submit" class="button" id="SearchBox_Submit" name="Search" value="search">Search</button>
+
+                    <div class="finalError">
+                        Please correct the errors above before proceeding           
+                    </div>
+
+
+                    <div class="guarantee">
+                        Low Price Guarantee    (<a href="http://m.hotels724.com/templates/459173/view-low-price-guarantee?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2" target="_blank">Details</a>)
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        
+        <h2 class="mainTitle">Top Destinations</h2>
+
+        <ul id="TopDestinations">
+            <li>
+                <div class="modulePadding title">
+                    <a href="#" class="iconSet titleDestination"><span class="smallIcon rightArrowIcon">D</span><span class="smallIcon downArrowIcon">A</span> <span class="iconText">Dubai</span></a>
+
+                </div>
+
+                <ul class="deals">
+                    <li>
+                        @{
+                            var hotel = (HotelSummary)Model.ToList()[0];
+                            var moneyValue = Decimal.Parse(hotel.LowRate.Replace(".", ","));
+                            //var lowRateHtml = String.Format("Order Total: {0:C}", moneyValue);
+                            var lowRate = Math.Round(moneyValue);
+                            var deeplink = hotel.DeepLink.Replace("travel.ian.com", "m.hotels724.com").Replace("cid=55505", "cid=459173");
+                        }
+
+                        <a class="thumb" href="@Html.Raw(HttpUtility.HtmlDecode(deeplink))">
+                            <img width="70" height="70" alt="@hotel.Name" src="http://images.travelnow.com@(hotel.ThumbNailUrl)" /></a>
+
+                        <div class="informationColumn">
+                            <h3><a href="@hotel.DeepLink">@Html.Raw(HttpUtility.HtmlDecode(hotel.Name))</a></h3>
+
+                            <span class="star-rating star5">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;@hotel.HotelRating&lt;/strong&gt; of 5 stars </em>
+                            </span>
+
+                            <span class="tripadvisor-rating ta4">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;@hotel.TripAdvisorRating&lt;/strong&gt; of 5 stars </em>
+                            </span>
+                        </div>
+
+                        <div class="priceColumn">
+                            <span class="smallText">From</span> <a class="largePrice" href="@hotel.DeepLink">@hotel.RateCurrencyCode@lowRate</a>
+                        </div>
+                    </li>
+                    @*<li>
+                        <a class="thumb" href="http://m.hotels724.com/templates/459173/hotels/105804/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-236b6b32-d201-4188-9661-5a3da6cf6d9c|cities&amp;pagename=ToPropDetails&amp;dealClicked=true">
+                            <img width="70" height="70" alt="Sheraton Dubai Creek Hotel &amp; Towers" src="http://images.travelnow.com/hotels/1000000/10000/6400/6394/6394_187_t.jpg" /></a>
+
+                        <div class="informationColumn">
+                            <h3><a href="http://m.hotels724.com/templates/459173/hotels/105804/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-236b6b32-d201-4188-9661-5a3da6cf6d9c|cities&amp;pagename=ToPropDetails&amp;dealClicked=true">Sheraton Dubai Creek Hotel &amp; Towers</a></h3>
+
+                            <span class="star-rating star5">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;5&lt;/strong&gt; of 5 stars </em>
+                            </span>
+
+                            <span class="tripadvisor-rating ta4">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;4&lt;/strong&gt; of 5 stars </em>
+                            </span>
+                        </div>
+
+                        <div class="priceColumn">
+                            <span class="smallText">From</span> <a class="largePrice" href="http://m.hotels724.com/templates/459173/hotels/105804/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-236b6b32-d201-4188-9661-5a3da6cf6d9c|cities&amp;pagename=ToPropDetails&amp;dealClicked=true">TRY235</a>
+                        </div>
+                    </li>*@
+                    <li>
+                        <a class="thumb" href="http://m.hotels724.com/templates/459173/hotels/106230/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-236b6b32-d201-4188-9661-5a3da6cf6d9c|cities&amp;pagename=ToPropDetails&amp;dealClicked=true">
+                            <img width="70" height="70" alt="Radisson Blu Hotel, Dubai Deira Creek" src="http://images.travelnow.com/hotels/1000000/30000/21900/21870/21870_214_t.jpg" /></a>
+
+                        <div class="informationColumn">
+                            <h3><a href="http://m.hotels724.com/templates/459173/hotels/106230/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-236b6b32-d201-4188-9661-5a3da6cf6d9c|cities&amp;pagename=ToPropDetails&amp;dealClicked=true">Radisson Blu Hotel, Dubai Deira Creek</a></h3>
+
+                            <span class="star-rating star4">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;4&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+
+                        </div>
+
+                        <div class="priceColumn">
+                            <span class="smallText">From</span> <a class="largePrice" href="http://m.hotels724.com/templates/459173/hotels/106230/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-236b6b32-d201-4188-9661-5a3da6cf6d9c|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">TRY1,141</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="thumb" href="http://m.hotels724.com/templates/459173/hotels/106548/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-236b6b32-d201-4188-9661-5a3da6cf6d9c|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">
+                            <img width="70" height="70" alt="Ramada Dubai" src="http://images.travelnow.com/hotels/1000000/10000/6700/6631/6631_87_t.jpg" /></a>
+
+                        <div class="informationColumn">
+                            <h3><a href="http://m.hotels724.com/templates/459173/hotels/106548/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-236b6b32-d201-4188-9661-5a3da6cf6d9c|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">Ramada Dubai</a></h3>
+
+                            <span class="star-rating star4">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;4&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                            <span class="tripadvisor-rating ta4">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;4&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                        </div>
+
+                        <div class="priceColumn">
+                            <span class="smallText">From</span> <a class="largePrice" href="http://m.hotels724.com/templates/459173/hotels/106548/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-236b6b32-d201-4188-9661-5a3da6cf6d9c|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">TRY372</a>
+                        </div>
+                    </li>
+
+                    <li class="allHotels"><a href="http://m.hotels724.com/templates/459173/hotels/list?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-236b6b32-d201-4188-9661-5a3da6cf6d9c|cities&checkout=&checkin=&roomsCount=1&rooms[0].adultsCount=2&rooms[0].childrenCount=0&dateless=true&search=true&mcicid=459173.homepage.hotel.city-AREA-236b6b32-d201-4188-9661-5a3da6cf6d9c&amp;pagename=ToSearchResults">Show all hotels</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <div class="modulePadding title">
+                    <a href="#" class="iconSet titleDestination"><span class="smallIcon rightArrowIcon">D</span><span class="smallIcon downArrowIcon">A</span> <span class="iconText">Istanbul</span></a>
+
+                </div>
+
+                <ul class="deals">
+                    <li>
+                        <a class="thumb" href="http://m.hotels724.com/templates/459173/hotels/117444/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-918f4e54-a951-4458-9019-5ec91d8f2ac5|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">
+                            <img width="70" height="70" alt="Dedeman Istanbul" src="http://images.travelnow.com/hotels/1000000/10000/4200/4190/4190_18_t.jpg" /></a>
+
+                        <div class="informationColumn">
+                            <h3><a href="http://m.hotels724.com/templates/459173/hotels/117444/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-918f4e54-a951-4458-9019-5ec91d8f2ac5|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">Dedeman Istanbul</a></h3>
+
+                            <span class="star-rating star5">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;5&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                            <span class="tripadvisor-rating ta3-5">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;3.5&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                        </div>
+
+                        <div class="priceColumn">
+                            <span class="smallText">From</span> <a class="largePrice" href="http://m.hotels724.com/templates/459173/hotels/117444/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-918f4e54-a951-4458-9019-5ec91d8f2ac5|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">TRY447</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="thumb" href="http://m.hotels724.com/templates/459173/hotels/120087/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-918f4e54-a951-4458-9019-5ec91d8f2ac5|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">
+                            <img width="70" height="70" alt="Pera Rose Hotel - Special Class" src="http://images.travelnow.com/hotels/2000000/1530000/1523300/1523271/1523271_24_t.jpg" /></a>
+
+                        <div class="informationColumn">
+                            <h3><a href="http://m.hotels724.com/templates/459173/hotels/120087/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-918f4e54-a951-4458-9019-5ec91d8f2ac5|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">Pera Rose Hotel - Special Class</a></h3>
+
+                            <span class="star-rating star4">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;4&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                            <span class="tripadvisor-rating ta4">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;4&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                        </div>
+
+                        <div class="priceColumn">
+                            <span class="smallText">From</span> <a class="largePrice" href="http://m.hotels724.com/templates/459173/hotels/120087/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-918f4e54-a951-4458-9019-5ec91d8f2ac5|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">TRY216</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="thumb" href="http://m.hotels724.com/templates/459173/hotels/123035/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-918f4e54-a951-4458-9019-5ec91d8f2ac5|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">
+                            <img width="70" height="70" alt="Four Seasons Hotel Istanbul at Sultanahmet" src="http://images.travelnow.com/hotels/1000000/450000/443500/443490/443490_17_t.jpg" /></a>
+
+                        <div class="informationColumn">
+                            <h3><a href="http://m.hotels724.com/templates/459173/hotels/123035/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-918f4e54-a951-4458-9019-5ec91d8f2ac5|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">Four Seasons Hotel Istanbul at Sultanahmet</a></h3>
+
+                            <span class="star-rating star5">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;5&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                            <span class="tripadvisor-rating ta5">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;5&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                        </div>
+
+                        <div class="priceColumn">
+                            <span class="smallText">From</span> <a class="largePrice" href="http://m.hotels724.com/templates/459173/hotels/123035/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-918f4e54-a951-4458-9019-5ec91d8f2ac5|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">TRY1,509</a>
+                        </div>
+                    </li>
+
+                    <li class="allHotels"><a href="http://m.hotels724.com/templates/459173/hotels/list?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-918f4e54-a951-4458-9019-5ec91d8f2ac5|cities&checkout=&checkin=&roomsCount=1&rooms[0].adultsCount=2&rooms[0].childrenCount=0&dateless=true&search=true&mcicid=459173.homepage.hotel.city-AREA-918f4e54-a951-4458-9019-5ec91d8f2ac5&amp;pagename=ToSearchResults">Show all hotels</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <div class="modulePadding title">
+                    <a href="#" class="iconSet titleDestination"><span class="smallIcon rightArrowIcon">D</span><span class="smallIcon downArrowIcon">A</span> <span class="iconText">Antalya</span></a>
+
+                </div>
+
+                <ul class="deals">
+                    <li>
+                        <a class="thumb" href="http://m.hotels724.com/templates/459173/hotels/120831/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-3710b8e3-550b-4ecb-9d6b-e70846557a7b|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">
+                            <img width="70" height="70" alt="Renaissance Antalya Beach Resort &amp; Spa" src="http://images.travelnow.com/hotels/1000000/190000/185300/185217/185217_176_t.jpg" /></a>
+
+                        <div class="informationColumn">
+                            <h3><a href="http://m.hotels724.com/templates/459173/hotels/120831/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-3710b8e3-550b-4ecb-9d6b-e70846557a7b|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">Renaissance Antalya Beach Resort &amp; Spa</a></h3>
+
+                            <span class="star-rating star5">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;5&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                            <span class="tripadvisor-rating ta4-5">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;4.5&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                        </div>
+
+                        <div class="priceColumn">
+                            <span class="smallText">From</span> <a class="largePrice" href="http://m.hotels724.com/templates/459173/hotels/120831/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-3710b8e3-550b-4ecb-9d6b-e70846557a7b|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">TRY734</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="thumb" href="http://m.hotels724.com/templates/459173/hotels/121797/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-3710b8e3-550b-4ecb-9d6b-e70846557a7b|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">
+                            <img width="70" height="70" alt="Akra Barut" src="http://images.travelnow.com/hotels/1000000/30000/21700/21663/21663_113_t.jpg" /></a>
+
+                        <div class="informationColumn">
+                            <h3><a href="http://m.hotels724.com/templates/459173/hotels/121797/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-3710b8e3-550b-4ecb-9d6b-e70846557a7b|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">Akra Barut</a></h3>
+
+                            <span class="star-rating star5">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;5&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                            <span class="tripadvisor-rating ta5">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;5&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                        </div>
+
+                        <div class="priceColumn">
+                            <span class="smallText">From</span> <a class="largePrice" href="http://m.hotels724.com/templates/459173/hotels/121797/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-3710b8e3-550b-4ecb-9d6b-e70846557a7b|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">TRY397</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="thumb" href="http://m.hotels724.com/templates/459173/hotels/142993/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-3710b8e3-550b-4ecb-9d6b-e70846557a7b|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">
+                            <img width="70" height="70" alt="Rixos Downtown" src="http://images.travelnow.com/hotels/1000000/30000/21300/21255/21255_129_t.jpg" /></a>
+
+                        <div class="informationColumn">
+                            <h3><a href="http://m.hotels724.com/templates/459173/hotels/142993/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-3710b8e3-550b-4ecb-9d6b-e70846557a7b|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">Rixos Downtown</a></h3>
+
+                            <span class="star-rating star5">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;5&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                            <span class="tripadvisor-rating ta4-5">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;4.5&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                        </div>
+
+                        <div class="priceColumn">
+                            <span class="smallText">From</span> <a class="largePrice" href="http://m.hotels724.com/templates/459173/hotels/142993/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-3710b8e3-550b-4ecb-9d6b-e70846557a7b|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">TRY1,017</a>
+                        </div>
+                    </li>
+
+                    <li class="allHotels"><a href="http://m.hotels724.com/templates/459173/hotels/list?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-3710b8e3-550b-4ecb-9d6b-e70846557a7b|cities&checkout=&checkin=&roomsCount=1&rooms[0].adultsCount=2&rooms[0].childrenCount=0&dateless=true&search=true&mcicid=459173.homepage.hotel.city-AREA-3710b8e3-550b-4ecb-9d6b-e70846557a7b&amp;pagename=ToSearchResults">Show all hotels</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <div class="modulePadding title">
+                    <a href="#" class="iconSet titleDestination"><span class="smallIcon rightArrowIcon">D</span><span class="smallIcon downArrowIcon">A</span> <span class="iconText">Maldives</span></a>
+
+                </div>
+
+                <ul class="deals">
+                    <li>
+                        <a class="thumb" href="http://m.hotels724.com/templates/459173/hotels/394584/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-21de2207-5a29-406b-9d2d-32262bd870de|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">
+                            <img width="70" height="70" alt="Niyama" src="http://images.travelnow.com/hotels/5000000/4680000/4672800/4672718/4672718_114_t.jpg" /></a>
+
+                        <div class="informationColumn">
+                            <h3><a href="http://m.hotels724.com/templates/459173/hotels/394584/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-21de2207-5a29-406b-9d2d-32262bd870de|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">Niyama</a></h3>
+
+                            <span class="star-rating star5">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;5&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                            <span class="tripadvisor-rating ta4-5">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;4.5&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                        </div>
+
+                        <div class="priceColumn">
+                            <span class="smallText">From</span> <a class="largePrice" href="http://m.hotels724.com/templates/459173/hotels/394584/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-21de2207-5a29-406b-9d2d-32262bd870de|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">TRY1,728</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="thumb" href="http://m.hotels724.com/templates/459173/hotels/437331/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-21de2207-5a29-406b-9d2d-32262bd870de|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">
+                            <img width="70" height="70" alt="Maalifushi by COMO" src="http://images.travelnow.com/hotels/7000000/6790000/6781800/6781722/6781722_14_t.jpg" /></a>
+
+                        <div class="informationColumn">
+                            <h3><a href="http://m.hotels724.com/templates/459173/hotels/437331/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-21de2207-5a29-406b-9d2d-32262bd870de|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">Maalifushi by COMO</a></h3>
+
+                            <span class="star-rating star5">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;5&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+
+                        </div>
+
+                        <div class="priceColumn">
+                            <span class="smallText">From</span> <a class="largePrice" href="http://m.hotels724.com/templates/459173/hotels/437331/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-21de2207-5a29-406b-9d2d-32262bd870de|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">TRY1,387</a>
+                        </div>
+                    </li>
+
+                    <li class="allHotels"><a href="http://m.hotels724.com/templates/459173/hotels/list?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-21de2207-5a29-406b-9d2d-32262bd870de|cities&checkout=&checkin=&roomsCount=1&rooms[0].adultsCount=2&rooms[0].childrenCount=0&dateless=true&search=true&mcicid=459173.homepage.hotel.city-AREA-21de2207-5a29-406b-9d2d-32262bd870de&amp;pagename=ToSearchResults">Show all hotels</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <div class="modulePadding title">
+                    <a href="#" class="iconSet titleDestination"><span class="smallIcon rightArrowIcon">D</span><span class="smallIcon downArrowIcon">A</span> <span class="iconText">Kiev</span></a>
+
+                </div>
+
+                <ul class="deals">
+                    <li>
+                        <a class="thumb" href="http://m.hotels724.com/templates/459173/hotels/112376/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-7e3a69cd-0a19-44ca-8d30-24744c59f79f|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">
+                            <img width="70" height="70" alt="Premier Palace Hotel" src="http://images.travelnow.com/hotels/1000000/800000/792000/791992/791992_280_t.jpg" /></a>
+
+                        <div class="informationColumn">
+                            <h3><a href="http://m.hotels724.com/templates/459173/hotels/112376/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-7e3a69cd-0a19-44ca-8d30-24744c59f79f|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">Premier Palace Hotel</a></h3>
+
+                            <span class="star-rating star5">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;5&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                            <span class="tripadvisor-rating ta4-5">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;4.5&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                        </div>
+
+                        <div class="priceColumn">
+                            <span class="smallText">From</span> <a class="largePrice" href="http://m.hotels724.com/templates/459173/hotels/112376/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-7e3a69cd-0a19-44ca-8d30-24744c59f79f|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">TRY344</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="thumb" href="http://m.hotels724.com/templates/459173/hotels/120795/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-7e3a69cd-0a19-44ca-8d30-24744c59f79f|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">
+                            <img width="70" height="70" alt="Hotel Bratislava" src="http://images.travelnow.com/hotels/1000000/900000/891800/891767/891767_121_t.jpg" /></a>
+
+                        <div class="informationColumn">
+                            <h3><a href="http://m.hotels724.com/templates/459173/hotels/120795/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-7e3a69cd-0a19-44ca-8d30-24744c59f79f|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">Hotel Bratislava</a></h3>
+
+                            <span class="star-rating star3">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;3&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                            <span class="tripadvisor-rating ta3-5">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;3.5&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                        </div>
+
+                        <div class="priceColumn">
+                            <span class="smallText">From</span> <a class="largePrice" href="http://m.hotels724.com/templates/459173/hotels/120795/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-7e3a69cd-0a19-44ca-8d30-24744c59f79f|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">TRY87</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="thumb" href="http://m.hotels724.com/templates/459173/hotels/125792/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-7e3a69cd-0a19-44ca-8d30-24744c59f79f|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">
+                            <img width="70" height="70" alt="Rus Accord Hotel" src="http://images.travelnow.com/hotels/1000000/70000/65200/65145/65145_79_t.jpg" /></a>
+
+                        <div class="informationColumn">
+                            <h3><a href="http://m.hotels724.com/templates/459173/hotels/125792/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-7e3a69cd-0a19-44ca-8d30-24744c59f79f|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">Rus Accord Hotel</a></h3>
+
+                            <span class="star-rating star3">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;3&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                            <span class="tripadvisor-rating ta3-5">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;3.5&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                        </div>
+
+                        <div class="priceColumn">
+                            <span class="smallText">From</span> <a class="largePrice" href="http://m.hotels724.com/templates/459173/hotels/125792/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-7e3a69cd-0a19-44ca-8d30-24744c59f79f|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">TRY133</a>
+                        </div>
+                    </li>
+
+                    <li class="allHotels"><a href="http://m.hotels724.com/templates/459173/hotels/list?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-7e3a69cd-0a19-44ca-8d30-24744c59f79f|cities&checkout=&checkin=&roomsCount=1&rooms[0].adultsCount=2&rooms[0].childrenCount=0&dateless=true&search=true&mcicid=459173.homepage.hotel.city-AREA-7e3a69cd-0a19-44ca-8d30-24744c59f79f&amp;pagename=ToSearchResults">Show all hotels</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <div class="modulePadding title">
+                    <a href="#" class="iconSet titleDestination"><span class="smallIcon rightArrowIcon">D</span><span class="smallIcon downArrowIcon">A</span> <span class="iconText">Las Vegas</span></a>
+
+                </div>
+
+                <ul class="deals">
+                    <li>
+                        <a class="thumb" href="http://m.hotels724.com/templates/459173/hotels/107128/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-4fded4ff-af4a-41b7-976b-bd5bd436f135|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">
+                            <img width="70" height="70" alt="Bally's Las Vegas" src="http://images.travelnow.com/hotels/1000000/10000/7700/7611/7611_8_t.jpg" /></a>
+
+                        <div class="informationColumn">
+                            <h3><a href="http://m.hotels724.com/templates/459173/hotels/107128/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-4fded4ff-af4a-41b7-976b-bd5bd436f135|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">Bally's Las Vegas</a></h3>
+
+                            <span class="star-rating star3-5">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;3.5&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                            <span class="tripadvisor-rating ta3-5">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;3.5&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                        </div>
+
+                        <div class="priceColumn">
+                            <span class="smallText">From</span> <a class="largePrice" href="http://m.hotels724.com/templates/459173/hotels/107128/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-4fded4ff-af4a-41b7-976b-bd5bd436f135|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">TRY211</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="thumb" href="http://m.hotels724.com/templates/459173/hotels/108540/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-4fded4ff-af4a-41b7-976b-bd5bd436f135|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">
+                            <img width="70" height="70" alt="MGM Grand Hotel and Casino" src="http://images.travelnow.com/hotels/1000000/20000/12700/12628/12628_164_t.jpg" /></a>
+
+                        <div class="informationColumn">
+                            <h3><a href="http://m.hotels724.com/templates/459173/hotels/108540/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-4fded4ff-af4a-41b7-976b-bd5bd436f135|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">MGM Grand Hotel and Casino</a></h3>
+
+                            <span class="star-rating star4">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;4&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                            <span class="tripadvisor-rating ta4">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;4&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                        </div>
+
+                        <div class="priceColumn">
+                            <span class="smallText">From</span> <a class="largePrice" href="http://m.hotels724.com/templates/459173/hotels/108540/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-4fded4ff-af4a-41b7-976b-bd5bd436f135|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">TRY192</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="thumb" href="http://m.hotels724.com/templates/459173/hotels/108790/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-4fded4ff-af4a-41b7-976b-bd5bd436f135|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">
+                            <img width="70" height="70" alt="Sunset Station Hotel &amp; Casino" src="http://images.travelnow.com/hotels/1000000/50000/42700/42630/42630_53_t.jpg" /></a>
+
+                        <div class="informationColumn">
+                            <h3><a href="http://m.hotels724.com/templates/459173/hotels/108790/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-4fded4ff-af4a-41b7-976b-bd5bd436f135|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">Sunset Station Hotel &amp; Casino</a></h3>
+
+                            <span class="star-rating star3">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;3&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                            <span class="tripadvisor-rating ta4">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;4&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                        </div>
+
+                        <div class="priceColumn">
+                            <span class="smallText">From</span> <a class="largePrice" href="http://m.hotels724.com/templates/459173/hotels/108790/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-4fded4ff-af4a-41b7-976b-bd5bd436f135|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">TRY96</a>
+                        </div>
+                    </li>
+
+                    <li class="allHotels"><a href="http://m.hotels724.com/templates/459173/hotels/list?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-4fded4ff-af4a-41b7-976b-bd5bd436f135|cities&checkout=&checkin=&roomsCount=1&rooms[0].adultsCount=2&rooms[0].childrenCount=0&dateless=true&search=true&mcicid=459173.homepage.hotel.city-AREA-4fded4ff-af4a-41b7-976b-bd5bd436f135&amp;pagename=ToSearchResults">Show all hotels</a></li>
+                </ul>
+            </li>
+
+        </ul>
+
+    </div>
+    <!-- /.columnEqualLeftSpace -->
+</div>
+<!-- /.equalColumn -->
+
+<div class="equalColumn">
+    <div class="columnEqualRightSpace">
+        
+        <h2 class="mainTitle">Today's Top Deals</h2>
+
+        <ul id="TodaysTopDeals">
+            <li>
+                <h3 class="modulePadding title">Dubai</h3>
+                <img class="feature-photo" src="https://merchandising.expediaaffiliate.com/images/destinations/236b6b32-d201-4188-9661-5a3da6cf6d9c_468x115.jpg" title="Dubai">
+
+                <ul class="deals">
+                    <li>
+                        <div class="informationColumn">
+                            <h4><a href="http://m.hotels724.com/templates/459173/hotels/105804/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-236b6b32-d201-4188-9661-5a3da6cf6d9c|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+"
+                                title="Visit Sheraton Dubai Creek Hotel &amp; Towers">Sheraton Dubai Creek Hotel &amp; Towers</a></h4>
+
+                            <span class="star-rating star5">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;5&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                        </div>
+
+                        <div class="priceColumn">
+                            <span class="smallText">From</span><br />
+                            <a class="largePrice" href="http://m.hotels724.com/templates/459173/hotels/105804/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-236b6b32-d201-4188-9661-5a3da6cf6d9c|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">TRY235</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="informationColumn">
+                            <h4><a href="http://m.hotels724.com/templates/459173/hotels/106230/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-236b6b32-d201-4188-9661-5a3da6cf6d9c|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+"
+                                title="Visit Radisson Blu Hotel, Dubai Deira Creek">Radisson Blu Hotel, Dubai Deira Creek</a></h4>
+
+                            <span class="star-rating star4">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;4&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                        </div>
+
+                        <div class="priceColumn">
+                            <span class="smallText">From</span><br />
+                            <a class="largePrice" href="http://m.hotels724.com/templates/459173/hotels/106230/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-236b6b32-d201-4188-9661-5a3da6cf6d9c|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">TRY1,141</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="informationColumn">
+                            <h4><a href="http://m.hotels724.com/templates/459173/hotels/106548/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-236b6b32-d201-4188-9661-5a3da6cf6d9c|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+"
+                                title="Visit Ramada Dubai">Ramada Dubai</a></h4>
+
+                            <span class="star-rating star4">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;4&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                        </div>
+
+                        <div class="priceColumn">
+                            <span class="smallText">From</span><br />
+                            <a class="largePrice" href="http://m.hotels724.com/templates/459173/hotels/106548/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-236b6b32-d201-4188-9661-5a3da6cf6d9c|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">TRY372</a>
+                        </div>
+                    </li>
+                    <li class="last"><a href="http://m.hotels724.com/templates/459173/hotels/list?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-236b6b32-d201-4188-9661-5a3da6cf6d9c|cities&checkout=&checkin=&roomsCount=1&rooms[0].adultsCount=2&rooms[0].childrenCount=0&dateless=true&search=true&mcicid=459173.homepage.hotel.city-AREA-236b6b32-d201-4188-9661-5a3da6cf6d9c&amp;pagename=ToSearchResults">Show all hotels</a></li>
+                </ul>
+            </li>
+            <li>
+                <h3 class="modulePadding title">Cancun</h3>
+                <img class="feature-photo" src="https://merchandising.expediaaffiliate.com/images/destinations/7eef0188-e4dc-4b45-b4a7-57e3df950e1f_468x115.jpg" title="Cancun">
+
+                <ul class="deals">
+                    <li>
+                        <div class="informationColumn">
+                            <h4><a href="http://m.hotels724.com/templates/459173/hotels/105799/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-7eef0188-e4dc-4b45-b4a7-57e3df950e1f|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+"
+                                title="Visit The Westin Lagunamar Ocean Resort Villas, Cancun">The Westin Lagunamar Ocean Resort Villas, Cancun</a></h4>
+
+                            <span class="star-rating star4">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;4&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                        </div>
+
+                        <div class="priceColumn">
+                            <span class="smallText">From</span><br />
+                            <a class="largePrice" href="http://m.hotels724.com/templates/459173/hotels/105799/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-7eef0188-e4dc-4b45-b4a7-57e3df950e1f|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">TRY458</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="informationColumn">
+                            <h4><a href="http://m.hotels724.com/templates/459173/hotels/106033/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-7eef0188-e4dc-4b45-b4a7-57e3df950e1f|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+"
+                                title="Visit Krystal Grand Punta Cancun">Krystal Grand Punta Cancun</a></h4>
+
+                            <span class="star-rating star4">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;4&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                        </div>
+
+                        <div class="priceColumn">
+                            <span class="smallText">From</span><br />
+                            <a class="largePrice" href="http://m.hotels724.com/templates/459173/hotels/106033/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-7eef0188-e4dc-4b45-b4a7-57e3df950e1f|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">TRY373</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="informationColumn">
+                            <h4><a href="http://m.hotels724.com/templates/459173/hotels/113615/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-7eef0188-e4dc-4b45-b4a7-57e3df950e1f|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+"
+                                title="Visit Hotel Plaza Kokai Canc&uacute;n">Hotel Plaza Kokai Cancún</a></h4>
+
+                            <span class="star-rating star3">
+                                <em>&lt;strong class=&quot;rating&quot;&gt;3&lt;/strong&gt; of 5 stars        </em>
+                            </span>
+
+                        </div>
+
+                        <div class="priceColumn">
+                            <span class="smallText">From</span><br />
+                            <a class="largePrice" href="http://m.hotels724.com/templates/459173/hotels/113615/overview?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-7eef0188-e4dc-4b45-b4a7-57e3df950e1f|cities&amp;pagename=ToPropDetails&amp;dealClicked=true
+">TRY114</a>
+                        </div>
+                    </li>
+                    <li class="last"><a href="http://m.hotels724.com/templates/459173/hotels/list?lang=en&currency=TRY&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&targetId=AREA-7eef0188-e4dc-4b45-b4a7-57e3df950e1f|cities&checkout=&checkin=&roomsCount=1&rooms[0].adultsCount=2&rooms[0].childrenCount=0&dateless=true&search=true&mcicid=459173.homepage.hotel.city-AREA-7eef0188-e4dc-4b45-b4a7-57e3df950e1f&amp;pagename=ToSearchResults">Show all hotels</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!--  /#TodaysTopDeals -->
+
+    </div>
+    <!-- /.columnEqualRightSpace -->
+</div>
+<!-- /.equalColumn -->

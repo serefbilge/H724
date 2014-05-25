@@ -1,0 +1,307 @@
+﻿<div class="hpadding20">
+    <p class="dark">Your spa rates</p>
+    <div class="col-md-4 offset-0">
+        <div class="w50percent">
+            <div class="wh90percent textleft">
+                <span class="opensans size13"><b>Check in</b></span>
+                <input type="text" class="form-control mySelectCalendar" id="datepicker" placeholder="mm/dd/yyyy" />
+            </div>
+        </div>
+
+        <div class="w50percentlast">
+            <div class="wh90percent textleft right">
+                <span class="opensans size13"><b>Check out</b></span>
+                <input type="text" class="form-control mySelectCalendar" id="datepicker2" placeholder="mm/dd/yyyy" />
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8 offset-0">
+        <div class="col-md-8 ">
+            <div class="room1">
+                <div class="w50percent">
+                    <div class="wh90percent textleft">
+                        <span class="opensans size13"><b>ROOM 1</b></span><br />
+
+                        <div class="addroom1 block"><a onclick="addroom2()" class="grey cpointer">+ Add room</a></div>
+                    </div>
+                </div>
+
+                <div class="w50percentlast">
+                    <div class="wh90percent textleft right ohidden">
+                        <div class="w50percent">
+                            <div class="wh90percent textleft left">
+                                <span class="opensans size13"><b>Adult</b></span>
+                                <select class="form-control mySelectBoxClass">
+                                    <option>1</option>
+                                    <option selected>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="w50percentlast">
+                            <div class="wh90percent textleft right ohidden">
+                                <span class="opensans size13"><b>Child</b></span>
+                                <select class="form-control mySelectBoxClass">
+                                    <option>0</option>
+                                    <option selected>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="room2 none">
+                <div class="clearfix"></div>
+                <div class="line1"></div>
+                <div class="w50percent">
+                    <div class="wh90percent textleft">
+                        <span class="opensans size13"><b>ROOM 2</b></span><br />
+                        <div class="addroom2 block grey">
+                            <a onclick="addroom3()" class="grey cpointer">+ Add room</a> | <a onclick="removeroom2()" class="orange cpointer">
+                                <img src="@Url.Content("~/Content/images/delete.png")" alt="delete" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w50percentlast">
+                    <div class="wh90percent textleft right">
+                        <div class="w50percent">
+                            <div class="wh90percent textleft left">
+                                <span class="opensans size13"><b>Adult</b></span>
+                                <select class="form-control mySelectBoxClass">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option selected>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="w50percentlast">
+                            <div class="wh90percent textleft right">
+                                <span class="opensans size13"><b>Child</b></span>
+                                <select class="form-control mySelectBoxClass">
+                                    <option selected>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="room3 none">
+                <div class="clearfix"></div>
+                <div class="line1"></div>
+                <div class="w50percent">
+                    <div class="wh90percent textleft">
+                        <span class="opensans size13"><b>ROOM 3</b></span><br />
+                        <div class="addroom3 block grey">
+                            <a onclick="addroom3()" class="grey cpointer">+ Add room</a> | <a onclick="removeroom3()" class="orange cpointer">
+                                <img src="@Url.Content("~/Content/images/delete.png")" alt="delete" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w50percentlast">
+                    <div class="wh90percent textleft right">
+                        <div class="w50percent">
+                            <div class="wh90percent textleft left">
+                                <span class="opensans size13"><b>Adult</b></span>
+                                <select class="form-control mySelectBoxClass">
+                                    <option selected>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="w50percentlast">
+                            <div class="wh90percent textleft right">
+                                <span class="opensans size13"><b>Child</b></span>
+                                <select class="form-control mySelectBoxClass">
+                                    <option selected>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 center offset-0">
+            <button class="updatebtn caps center margtop20">Update</button>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<br />
+
+<p class="hpadding20 dark">Room type</p>
+
+<div class="line2"></div>
+
+<div class="padding20">
+    <div class="col-md-4 offset-0">
+        <a href="#">
+            <img src="@Url.Content("~/Content/images/items2/item1.jpg")" alt="" class="fwimg" /></a>
+    </div>
+    <div class="col-md-8 offset-0">
+        <div class="col-md-8 mediafix1">
+            <h4 class="opensans dark bold margtop1 lh1">Standard Double room</h4>
+            Max Occupancy: 2 adults
+                            <ul class="hotelpreferences margtop10">
+                                <li class="icohp-internet"></li>
+                                <li class="icohp-air"></li>
+                                <li class="icohp-pool"></li>
+                                <li class="icohp-childcare"></li>
+                                <li class="icohp-fitness"></li>
+                                <li class="icohp-breakfast"></li>
+                                <li class="icohp-parking"></li>
+                            </ul>
+            <div class="clearfix"></div>
+            <ul class="checklist2 margtop10">
+                <li>FREE Cancellation</li>
+                <li>Pay at hotel or pay today </li>
+            </ul>
+        </div>
+        <div class="col-md-4 center bordertype4">
+            <span class="opensans orange size24">$49.51</span><br />
+            <span class="opensans lightgrey size12">avg/night</span><br />
+            <br />
+            <span class="lred bold">3 left</span><br />
+            <br />
+            <button class="bookbtn mt1">Book</button>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<div class="line2"></div>
+
+<div class="padding20">
+    <div class="col-md-4 offset-0">
+        <a href="#">
+            <img src="@Url.Content("~/Content/images/items2/item2.jpg")" alt="" class="fwimg" /></a>
+    </div>
+    <div class="col-md-8 offset-0">
+        <div class="col-md-8">
+            <h4 class="opensans dark bold margtop1 lh1">Double Room with Town View</h4>
+            Max Occupancy: 3 adults
+                            <ul class="hotelpreferences margtop10">
+                                <li class="icohp-hairdryer"></li>
+                                <li class="icohp-garden"></li>
+                                <li class="icohp-grill"></li>
+                                <li class="icohp-kitchen"></li>
+                                <li class="icohp-bar"></li>
+                                <li class="icohp-living"></li>
+                                <li class="icohp-tv"></li>
+                            </ul>
+            <div class="clearfix"></div>
+            <ul class="checklist2 margtop10">
+                <li>FREE Cancellation</li>
+                <li>Pay at hotel or pay today </li>
+            </ul>
+        </div>
+        <div class="col-md-4 center bordertype4">
+            <span class="opensans orange size24">$105.78</span><br />
+            <span class="opensans lightgrey size12">avg/night</span><br />
+            <br />
+            <span class="">9 available</span><br />
+            <br />
+            <button class="bookbtn mt1">Book</button>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<div class="line2"></div>
+
+<div class="padding20">
+    <div class="col-md-4 offset-0">
+        <a href="#">
+            <img src="@Url.Content("~/Content/images/items2/item3.jpg")" alt="" class="fwimg" /></a>
+    </div>
+    <div class="col-md-8 offset-0">
+        <div class="col-md-8">
+            <h4 class="opensans dark bold margtop1 lh1">Family Suite</h4>
+            Max Occupancy: 4 adults
+                            <ul class="hotelpreferences margtop10">
+                                <li class="icohp-fridge"></li>
+                                <li class="icohp-microwave"></li>
+                                <li class="icohp-washing"></li>
+                                <li class="icohp-roomservice"></li>
+                                <li class="icohp-safe"></li>
+                                <li class="icohp-playground"></li>
+                                <li class="icohp-conferenceroom"></li>
+                            </ul>
+            <div class="clearfix"></div>
+            <ul class="checklist2 margtop10">
+                <li>FREE Cancellation</li>
+                <li>Pay at hotel or pay today </li>
+            </ul>
+        </div>
+        <div class="col-md-4 center bordertype4">
+            <span class="opensans orange size24">$186.18</span><br />
+            <span class="opensans lightgrey size12">avg/night</span><br />
+            <br />
+            <span class="red bold">booked</span><br />
+            <br />
+            <button class="bookbtn mt1 cunvailable">Book</button>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<div class="line2"></div>
+
+<div class="padding20">
+    <div class="col-md-4 offset-0">
+        <a href="#">
+            <img src="@Url.Content("~/Content/images/items2/item4.jpg")" alt="" class="fwimg" /></a>
+    </div>
+    <div class="col-md-8 offset-0">
+        <div class="col-md-8">
+            <h4 class="opensans dark bold margtop1 lh1">Superior, Sea View</h4>
+            Max Occupancy: 3 adults
+                            <ul class="hotelpreferences margtop10">
+                                <li class="icohp-internet"></li>
+                                <li class="icohp-air"></li>
+                                <li class="icohp-pool"></li>
+                                <li class="icohp-childcare"></li>
+                                <li class="icohp-fitness"></li>
+                                <li class="icohp-breakfast"></li>
+                                <li class="icohp-parking"></li>
+                            </ul>
+            <div class="clearfix"></div>
+            <ul class="checklist2 margtop10">
+                <li>FREE Cancellation</li>
+                <li>Pay at hotel or pay today </li>
+            </ul>
+        </div>
+        <div class="col-md-4 center bordertype4">
+            <span class="opensans orange size24">$211.57</span><br />
+            <span class="opensans lightgrey size12">avg/night</span><br />
+            <br />
+            <span class="">12 available</span><br />
+            <br />
+            <button class="bookbtn mt1">Book</button>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<div class="line2"></div>

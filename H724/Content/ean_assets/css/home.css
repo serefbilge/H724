@@ -1,0 +1,181 @@
+#ui-datepicker-div{-moz-border-radius:4px;-o-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;margin:12px 0 12px 0;padding:8px 10px;z-index:8 !important;}
+#ui-datepicker-div:after,#ui-datepicker-div:before{content:' ';height:0;position:absolute;width:0;}
+#ui-datepicker-div:after{border-left:9px solid transparent;border-right:9px solid transparent;left:104px;margin:1px 0 0 -9px;top:-10px;}
+#ui-datepicker-div:before{border-left:10px solid transparent;border-right:10px solid transparent;left:94px;top:-10px;}
+.ui-datepicker-trigger{cursor:pointer;font-family:EANIcons !important;font-size:20px;margin:0 0 0 5px;text-decoration:none !important;}
+.ui-datepicker{display:none;margin-top:4px;padding:.2em .2em 0;width:17em;}
+.ui-datepicker .ui-datepicker-header{height:24px;padding:.2em 0;position:relative;}
+.ui-datepicker .ui-datepicker-prev,.ui-datepicker .ui-datepicker-prev-hover{cursor:pointer;display:inline;float:left;font-family:EANIcons !important;font-size:10px;left:6px;margin-top:2px;position:absolute;text-decoration:none !important;top:13px;}
+.ui-icon-circle-triangle-w{display:inline;float:left;}
+.ui-datepicker .ui-datepicker-next, .ui-datepicker .ui-datepicker-next-hover{cursor:pointer;display:inline;float:left;font-family:EANIcons !important;font-size:10px;margin-top:2px;position:absolute;right:0px;text-decoration:none !important;top:13px;}
+.ui-icon-circle-triangle-e{display:inline;float:left;}
+.ui-datepicker .ui-datepicker-prev span,.ui-datepicker .ui-datepicker-next span{display:block;left:50%;margin-left:-8px;margin-top:-8px;position:absolute;top:50%;}
+.ui-datepicker .ui-datepicker-title{line-height:1.8em;margin:0 2.3em;text-align:center;}
+.ui-datepicker .ui-datepicker-title select{font-size:1em;margin:1px 0;}
+.ui-datepicker select.ui-datepicker-month-year{width:100%;}
+.ui-datepicker select.ui-datepicker-month,.ui-datepicker select.ui-datepicker-year{width:49%;}
+.ui-datepicker table{border-collapse:collapse;font-size:.9em;margin:0 0 .4em;width:100%;}
+.ui-datepicker th{border:0;font-weight:bold;padding:.7em .3em;text-align:center;}
+.ui-datepicker td{border:0;padding:1px;}
+.ui-datepicker td span,.ui-datepicker td a{display:block;padding:.2em;text-align:right;text-decoration:none;}
+.ui-datepicker .ui-datepicker-buttonpane{background-image:none;border-bottom:0;border-left:0;border-right:0;margin:.7em 0 0 0;padding:0 .2em;}
+.ui-datepicker .ui-datepicker-buttonpane button{cursor:pointer;float:right;margin:.5em .2em .4em;overflow:visible;padding:.2em .6em .3em .6em;width:auto;}
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current{float:left;}
+.calendarSpace{margin-left:12px;}
+.ui-datepicker.ui-datepicker-multi{width:auto;}
+.ui-datepicker-multi .ui-datepicker-group{float:left;}
+.ui-datepicker-multi .ui-datepicker-group table{margin:0 auto .4em;width:95%;}
+.ui-datepicker-multi-2 .ui-datepicker-group{width:50%;}
+.ui-datepicker-multi-3 .ui-datepicker-group{width:33.3%;}
+.ui-datepicker-multi-4 .ui-datepicker-group{width:25%;}
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header{border-left-width:0;}
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header{border-left-width:0;}
+.ui-datepicker-multi .ui-datepicker-buttonpane{clear:left;}
+.ui-datepicker-row-break{clear:both;font-size:0em;width:100%;}
+.ui-datepicker-rtl{direction:rtl;}
+.ui-datepicker-rtl .ui-datepicker-buttonpane{clear:right;}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button{float:left;}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current{float:right;}
+.ui-datepicker-rtl .ui-datepicker-group{float:right;}
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header{border-left-width:1px;border-right-width:0;}
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header{border-left-width:1px;border-right-width:0;}
+.ui-datepicker-cover{display:none;display:block;filter:mask();height:200px;left:-4px;position:absolute;top:-4px;width:200px;z-index:-1;}
+.ui-widget{font-size:1.1em;}
+.ui-widget .ui-widget{font-size:1em;}
+.ui-widget input,.ui-widget select,.ui-widget textarea,.ui-widget button{font-family:Arial,Verdana,sans-serif;font-size:1em;}
+.ui-widget-header{font-weight:bold;}
+.ui-state-default,.ui-widget-content .ui-state-default,.ui-widget-header .ui-state-default{font-weight:normal;}
+.ui-state-default a,.ui-state-default a:link,.ui-state-default a:visited{text-decoration:none;}
+.ui-datepicker-header .ui-state-hover{border:none;}
+.ui-state-hover a,.ui-state-hover a:hover{text-decoration:none;}
+.ui-state-active,.ui-widget-content .ui-state-active,.ui-widget-header .ui-state-active{font-weight:bold;}
+.ui-state-active a,.ui-state-active a:link,.ui-state-active a:visited{text-decoration:none;}
+.ui-widget :active{outline:none;}
+.ui-state-disabled .ui-state-default{-moz-opacity:.45;-o-opacity:.45;-webkit-opacity:.45;border:none !important;filter:alpha(opacity=45);opacity:.45;}
+.ui-autocomplete{float:left;list-style-type:none;margin:0;padding:0;z-index:14 !important;}
+.ui-autocomplete li:last-child{-moz-border-radius:0 0 4px 4px;-o-border-radius:0 0 4px 4px;-webkit-border-radius:0 0 4px 4px;border-radius:0 0 4px 4px;}
+.ui-autocomplete #ui-active-menuitem,.ui-autocomplete li a:hover{border:none;}
+.ui-autocomplete li{float:left;margin-left:2.5%;padding:0;width:94%;}
+.ui-autocomplete li a{cursor:pointer;display:inline;float:left;padding:4px 1.5%;text-decoration:none;width:97%;}
+.ui-autocomplete li.ui-autocomplete-category-first,.ui-autocomplete li.ui-autocomplete-category{clear:both;font-size:1em;font-weight:bold;margin-left:2.5%;text-align:right;width:94%;}
+.ui-autocomplete li.ui-autocomplete-category div{display:inline;float:left;margin-top:10px;padding:1.5% 1.5% 0 1.5%;width:97%;}
+.ui-autocomplete li.ui-autocomplete-category-first div{display:inline;float:left;padding:1.5% 1.5% 0 1.5%;width:97%;}
+.ui-autocomplete li.ui-autocomplete-category-first .largeIcon,.ui-autocomplete li.ui-autocomplete-category .largeIcon{font-weight:normal;}
+
+#ui-datepicker-div {border-width:1px;border-style:solid;border-color: #d1d1d1;background: #f6f6f6;box-shadow:2px 2px 2px #e5e5e5;-moz-box-shadow:2px 2px 2px #e5e5e5;-webkit-box-shadow:2px 2px 2px #e5e5e5;-o-box-shadow:2px 2px 2px #e5e5e5;}
+#ui-datepicker-div:after {border-bottom-width:9px;border-bottom-style:solid;border-bottom-color: #f6f6f6;}
+#ui-datepicker-div:before {border-bottom-width:10px;border-bottom-style:solid;border-bottom-color: #d1d1d1;}
+
+.ui-datepicker-trigger, .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next, .ui-datepicker .ui-datepicker-next-hover {color: #0b427a !important;}
+.ui-datepicker .ui-datepicker-next span::-moz-selection, .ui-datepicker .ui-datepicker-prev span::-moz-selection, .ui-datepicker .ui-datepicker-next span::-webkit-selection, .ui-datepicker .ui-datepicker-prev span::-webkit-selection, .ui-datepicker .ui-datepicker-next span::-o-selection, .ui-datepicker .ui-datepicker-prev span::-o-selection, .ui-datepicker .ui-datepicker-next span::selection, .ui-datepicker .ui-datepicker-prev span::selection {background: #f6f6f6 !important;}
+.ui-widget-content {color: #555;}
+.ui-widget-content a, .ui-widget-header a {color: #0b427a;}
+.ui-widget-header {color: #555;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color: #d1d1d1;}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {border-width:1px;border-style:solid;border-color: #d1d1d1;background: #f6f6f6;color: #555;}
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited, .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {color: #0b427a;}
+.ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {border-width:1px;border-style:solid;border-color: #d1d1d1;background: #fff;color: #555;}
+.ui-state-hover a, .ui-state-hover a:hover {color: #48a3e9;}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {border-bottom-width:1px;border-bottom-style:solid;border-bottom-color: #48a3e9;background: #48a3e9;color: #fff;}
+.ui-state-disabled .ui-state-default {color: #555;background: #f6f6f6;}
+.ui-autocomplete li {background: #fff;border-left-width:1px;border-left-style:solid;border-left-color: #d1d1d1;border-right-width:1px;border-right-style:solid;border-right-color: #d1d1d1;}
+.ui-autocomplete li:last-child {background: #fff;border-width:1px;border-style:solid;border-color: #d1d1d1;border-top:0;}
+.ui-autocomplete li a {color: #555 !important;}
+.ui-autocomplete #ui-active-menuitem, .ui-autocomplete li a:hover {background: #f6f6f6;color: #555 !important;}
+.ui-autocomplete li.ui-autocomplete-category div {border-top:1px dotted #ccc;}
+.ui-widget-overlay {background:#666666;position:absolute;top:0;left:0;opacity:0.5;filter:alpha("Opacity= 50");}
+.ui-dialog .ui-dialog-titlebar.ui-widget-header {border:none;}
+.ui-dialog .ui-dialog-titlebar-close {position:absolute;right:0px;top:0px;}
+.ui-dialog .ui-dialog-titlebar-close:hover {background:none;border:none;}
+.ui-dialog .ui-dialog-titlebar-close .ui-icon {background-image:url("../images/core/close.png");display:block;float:right;width:25px;height:25px;margin:0 -12px -12px 0;text-indent:-99999px;}
+ul#TopDestinations li ul.deals li:after,ul#TodaysTopDeals li ul.deals li:after{clear:both;content:".";display:block;height:0;visibility:hidden;}
+ul#TopDestinations li ul.deals li,ul#TodaysTopDeals li ul.deals li{display:inline-block;}
+* html ul#TopDestinations li ul.deals li,* html ul#TodaysTopDeals li ul.deals li{height:1%;}
+ul#TopDestinations li ul.deals li,ul#TodaysTopDeals li ul.deals li{display:block;}
+h1,.mainTitle{margin-bottom:10px;}
+h3{font-size:1.3em;font-weight:normal;margin:0;padding:0;}
+h4{font-size:1.1em;font-weight:normal;margin:0;padding:0;}
+.largePrice{font-size:1.7em;font-weight:bold;}
+.smallPrice{font-size:1.2em;font-weight:bold;}
+.oldPrice{font-size:1em;font-weight:normal;text-decoration:line-through;}
+#SearchBox{display:inline-block;padding:10px !important;width:95%;}
+#SearchBox .contentBoxModule{margin-bottom:0;}
+#SearchBox .fullColumn{clear:both;margin-bottom:20px;}
+#SearchBox .fullWidth{width:96.5%;}
+#SearchBox label{float:left;margin-bottom:4px;}
+#SearchBox .labelTextTitle{font-size:1.1em;}
+#SearchBox fieldset{border:none;border-bottom-style:solid;border-bottom-width:1px;display:inline;float:left;margin:0;margin-bottom:10px;padding:0;width:100%;}
+#SearchBox fieldset.simpleDestinations{border-bottom:none;}
+#SearchBox #SearchBoxForm{margin:0;padding:0;width:100%;}
+#SearchBox .single-destination{font-size:1.35em;margin:5px 0 14px 0;}
+#SearchBox_DestinationAutoSuggest{bottom:0;height:1px;left:0;position:absolute;width:425px;z-index:14;}
+#SearchBox table.roomsTable{clear:both;margin-bottom:16px;text-align:left;}
+#SearchBox table.roomsTable tr th{font-weight:normal;padding:0 0 4px 0;}
+#SearchBox table.roomsTable tr th #AgeLabel{display:none;font-size:0.8em;margin-bottom:0;}
+#SearchBox table.roomsTable tr td{padding:8px 8px 8px 0;}
+#SearchBox table.roomsTable tr td.childrenAgesCol{padding:8px 0 8px 0 !important;}
+#SearchBox table.roomsTable tr td.numberOfChildrenPrevHighlight{-moz-border-radius:8px 0 0 8px;-o-border-radius:8px 0 0 8px;-webkit-border-radius:8px 0 0 8px;border-radius:8px 0 0 8px;}
+#SearchBox table.roomsTable tr td.childrenAgesHighlight{-moz-border-radius:0 8px 8px 0;-o-border-radius:0 8px 8px 0;-webkit-border-radius:0 8px 8px 0;border-radius:0 8px 8px 0;}
+#SearchBox table.roomsTable tr td.childrenAgesCol select{font-size:0.9em;margin-right:4px;width:43px;}
+#SearchBox table.roomsTable tr td.roomNumberCol{font-size:0.9em;}
+#SearchBox .roomInformation .childrenAges{display:none;font-size:0.85em;margin:0;padding:0;text-align:left;}
+#SearchBox .roomInformation .childrenAges select{display:none;float:none;font-size:0.9em;margin:0;padding:0;width:43px;}
+#SearchBox #PopularDestinations ul{display:inline;float:left;list-style-type:none;margin:0;margin-top:10px;padding:0;width:100%;}
+#SearchBox #PopularDestinations ul li{display:inline;float:left;margin-bottom:4px;margin-right:2%;min-height:15px;overflow:hidden;padding:4px 0 0 0;width:31.2%;}
+#SearchBox #PopularDestinations ul li label{display:block;float:left;margin:0;padding:0 0 0 18px;position:relative;}
+#SearchBox #PopularDestinations ul li input{display:inline;height:13px;left:0;margin:0 8px 0 1px;position:absolute;top:1px;width:13px;}
+#SearchBox #SearchBox_Submit{cursor:pointer;display:inline;float:left;}
+#SearchBox .guarantee{cursor:pointer;float:right;font-size:1em;margin:5px 0 0 0;padding:0;}
+#SearchBox .finalError{-moz-border-radius:4px;-o-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;border-style:solid;border-width:1px;cursor:pointer;display:none;float:left;font-size:0.95em;margin:-2px 0 0 18px;padding:8px;position:relative;}
+#SearchBox .finalError:after,#SearchBox .finalError:before{content:' ';height:0;position:absolute;width:0;}
+#SearchBox .finalError:after{border-bottom:8px solid transparent;border-left:8px solid transparent;border-right-style:solid;border-right-width:8px;border-top:8px solid transparent;bottom:7px;left:-18px;margin:0 0 1px 2px;}
+#SearchBox .finalError:before{border-bottom:9px solid transparent;border-left:9px solid transparent;border-right-style:solid;border-right-width:9px;border-top:9px solid transparent;bottom:7px;left:-18px;}
+ul#TopDestinations{list-style-type:none;margin:0;overflow:hidden;padding:0;}
+ul#TopDestinations li{-moz-border-radius:4px;-o-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;border-style:solid;border-width:1px;margin-bottom:10px;}
+ul#TopDestinations li .title{-moz-border-radius:4px 4px 0 0;-o-border-radius:4px 4px 0 0;-webkit-border-radius:4px 4px 0 0;border-radius:4px 4px 0 0;overflow:hidden;}
+ul#TopDestinations li .title .downArrowIcon{display:none;}
+ul#TopDestinations .titleDestination{display:inline;float:left;}
+ul#TopDestinations .titlePrice{display:inline;float:right;margin-left:20px;}
+ul#TopDestinations li ul.deals{display:none;list-style-type:none;margin:0;overflow:hidden;padding:0;}
+ul#TopDestinations li ul.deals li{-moz-border-radius:0;-o-border-radius:0;-webkit-border-radius:0;border:none;border-radius:0;border-top-style:solid;border-top-width:1px;margin:0;padding:10px;position:relative;}
+ul#TopDestinations .clear{width:100%;}
+ul#TopDestinations li ul.deals li a.thumb{border-style:solid;border-width:2px;float:left;height:66px;margin-right:10px;overflow:hidden;width:66px;}
+ul#TopDestinations li ul.deals li a.thumb img{margin:-3px 0 0 -3px;}
+ul#TopDestinations li ul.deals li h3{margin-bottom:4px;}
+ul#TopDestinations li ul.deals li .drr{clear:both;display:inline;float:left;margin-top:4px;white-space:nowrap;}
+ul#TopDestinations li ul.deals li.allHotels{padding-left:10px;}
+ul#TopDestinations li ul.deals li .priceColumn{display:inline;float:right;text-align:right;width:80%;}
+ul#TodaysTopDeals{list-style-type:none;margin:0;padding:0;}
+ul#TodaysTopDeals li{-moz-border-radius:4px;-o-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;border-style:solid;border-width:1px;margin-bottom:20px;}
+ul#TodaysTopDeals li .title{-moz-border-radius:4px 4px 0 0;-o-border-radius:4px 4px 0 0;-webkit-border-radius:4px 4px 0 0;border-radius:4px 4px 0 0;}
+ul#TodaysTopDeals li .title .downArrowIcon{display:none;}
+ul#TodaysTopDeals .titleDestination{float:left;}
+ul#TodaysTopDeals .titlePrice{float:right;margin-left:20px;}
+ul#TodaysTopDeals li ul.deals{list-style-type:none;margin:0;padding:0;}
+ul#TodaysTopDeals li ul.deals li{-moz-border-radius:0;-o-border-radius:0;-webkit-border-radius:0;border:none;border-radius:0;border-top-style:solid;border-top-width:1px;margin:0;padding:10px;}
+ul#TodaysTopDeals li ul.deals li .informationColumn{float:left;width:69%;}
+ul#TopDestinations li ul.deals li a.thumb:hover{border-style:solid;border-width:2px;}
+ul#TodaysTopDeals li ul.deals li .priceColumn{float:right;margin-left:0;text-align:right;width:28%;}
+ul#TodaysTopDeals li img.feature-photo{background-position:top center;background-repeat:no-repeat;height:115px;margin:0 0 -3px 0;padding:0;vertical-align:middle;width:468px;}
+ul#TodaysTopDeals li ul.deals li .drr{clear:both;display:inline;float:left;margin-top:4px;white-space:nowrap;width:100%;}
+ul#TodaysTopDeals li ul.deals li .tripAdvisorRating, ul#TodaysTopDeals li ul.deals li .starRating{margin-top:6px;}
+.ui-autocomplete{font-size:1em;width:100% !important;}
+#SearchBox #check-in-out{padding-bottom:5px;}
+#check-in-out legend{display:none;}
+#check-in-out div{float:left;margin-bottom:10px;}
+#check-in-out .first{margin-right:40px;}
+#check-in-out .dateless{clear:left;float:none;}
+#check-in-out .dateless label{float:none;}
+#check-in-out span{display:block;margin-bottom:4px;}
+#check-in-out .ui-datepicker-trigger{float:left;margin-bottom:0;}
+#check-in-out input{float:left;width:100px;}
+#check-in-out .dateless input{float:none;width:auto;}
+
+ul#TopDestinations li .title, ul#TopDestinations li ul.deals li.highlight, ul#TodaysTopDeals li .title, ul#TodaysTopDeals li ul.deals li.highlight, #SearchBox table.roomsTable tr td.numberOfChildrenPrevHighlight, #SearchBox table.roomsTable tr td.childrenAgesHighlight, #SearchBox table.roomsTable tr td.numberOfChildrenHighlight {background: #f6f6f6;}
+#SearchBox fieldset {border-bottom-color: #d1d1d1;}
+#SearchBox .finalError {color: #9e0000;background: #f1e7e7;border-color: #9e0000;}
+#SearchBox .finalError:after {border-right-color: #f1e7e7;}
+#SearchBox .finalError:before {border-right-color: #9e0000;}
+ul#TopDestinations li, ul#TodaysTopDeals li {border-color: #d1d1d1;background: #fff;}
+ul#TopDestinations li ul.deals li, ul#TodaysTopDeals li ul.deals li {border-top-color: #d1d1d1;}
+ul#TopDestinations li ul.deals li a.thumb {border-color: #d1d1d1;}
+ul#TopDestinations li ul.deals li a.thumb:hover {border-color: #48a3e9;}

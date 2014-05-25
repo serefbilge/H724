@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency - HTML5 Booking template</title>
+
+    <!-- Bootstrap -->
+    <link href="@Url.Content("~/Content/assets/bootstrap3.0.3/css/bootstrap.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/custom.css")" rel="stylesheet" />
+
+    <!-- Carousel -->
+    <link href="@Url.Content("~/Content/examples/carousel/carousel.css")" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="@Url.Content("~/Content/assets/html5shiv.js")"></script>
+        <script src="@Url.Content("~/Content/assets/respond.min.js")"></script>
+    <![endif]-->
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400,300,300italic' rel='stylesheet' type='text/css'>
+    <!-- Font-Awesome -->
+    <link href="@Url.Content("~/Content/assets/font-awesome-4.0.3/css/font-awesome.min.css")" rel="stylesheet" />
+
+    <!-- REVOLUTION BANNER CSS SETTINGS -->
+    <link href="@Url.Content("~/Content/fullscreen.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/assets/rs-plugin/css/settings.css")" rel="stylesheet" />
+
+    <!-- Picker UI-->
+    <link href="@Url.Content("~/Content/assets/jquery-ui/jquery-ui.css")" rel="stylesheet" />
+
+    @RenderSection("header_end_css", false)
+
+    <!-- jQuery -->
+    <script src="@Url.Content("~/Content/assets/jquery/jquery.v2.0.3.js")"></script>
+    <script src="@Url.Content("~/Content/assets/jquery-ui/jquery-ui.js")"></script>
+
+    @RenderSection("header_end_js", false)
+</head>
+<body id="top" class="thebg">
+    <!-- Top wrapper -->
+    <div class="navbar-wrapper2 navbar-fixed-top">
+        <div class="container">
+            <div class="navbar mtnav">
+                <div class="container offset-3">
+                    <!-- Navigation-->
+                    <div class="navbar-header">
+                        <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="index.html" class="navbar-brand">
+                            <img src="@Url.Content("~/Content/images/logo.png")" alt="Travel Agency Logo" class="logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown active">
+                                <a data-toggle="dropdown" class="dropdown-toggle" href="index.html">Home <span class="badge indent0">1</span><b class="lightcaret mt-2"></b></a>
+                                <ul class="dropdown-menu posright-0">
+                                    <li>
+                                        <div class="row dropwidth01">
+                                            <ul class="droplist col-md-4">
+                                                <li class="dropdown-header">Homepages</li>
+                                                <li><a href="index.html">Home 1 minimal</a></li>
+                                                <li><a href="index2.html">Home 2 offers</a></li>
+                                                <li><a href="index3.html">Home 3 full search</a></li>
+                                                <li><a href="index4.html">Home 4 presentation</a></li>
+                                                <li><a href="index5.html">Home 5 footer2</a></li>
+                                                <li><a href="index6.html">Home 6 full</a></li>
+                                                <li><a href="index7.html">Home 7 </a></li>
+                                                <li><a href="z-new-homepage.html">New Homepage</a> <span class="green">new</span></li>
+                                            </ul>
+                                            <ul class="droplist col-md-4">
+                                                <li class="dropdown-header">Intro pages</li>
+                                                <li><a href="intro.html">Intro 1</a></li>
+                                                <li><a href="intro2.html">Intro 2 - slides</a> <span class="glyphicon glyphicon-star lblue"></span></li>
+                                                <li><a href="intro3.html">Intro 3 - slides2</a> <span class="glyphicon glyphicon-star lblue"></span></li>
+                                            </ul>
+                                            <ul class="droplist col-md-4">
+                                                <li class="dropdown-header">Colors</li>
+                                                <li><a href="../blue/index.html">Blue</a></li>
+                                                <li><a href="../green/index.html">Green</a></li>
+                                                <li><a href="../orange/index.html">Orange</a></li>
+                                                <li><a href="../cyan/index.html">Cyan</a></li>
+                                                <li></li>
+                                                <li class="inactive size10 lgrey caps"><span class="glyphicon glyphicon-star "></span>Popular pages</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a data-toggle="dropdown" class="dropdown-toggle" href="#">Pages <span class="badge indent0">14</span><b class="lightcaret mt-2"></b></a>
+                                <ul class="dropdown-menu posright-0">
+                                    <li>
+                                        <div class="row dropwidth01">
+                                            <ul class="droplist col-md-4">
+                                                <li class="dropdown-header">Inner pages</li>
+                                                <li><a href="list.html">List page 1</a></li>
+                                                <li><a href="list2.html">List page 2</a></li>
+                                                <li><a href="list3.html">List page 3</a></li>
+                                                <li><a href="list4.html">List page 4</a></li>
+                                                <li><a href="details.html">Details page</a></li>
+                                                <li><a href="payment.html">Payment</a></li>
+                                                <li><a href="blog.html">Blog page</a></li>
+                                                <li><a href="blog-details.html">Blog details</a></li>
+                                                <li><a href="about.html">About</a></li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                                <li><a href="profile.html">User Profile</a>  <span class="glyphicon glyphicon-star lblue"></span></li>
+                                                <li><a href="login.html">Login</a></li>
+                                                <li><a href="dashboard/index.html">Dashboard</a>  <span class="glyphicon glyphicon-star lblue"></span></li>
+
+
+                                            </ul>
+                                            <ul class="droplist col-md-4">
+                                                <li class="dropdown-header">Update - <span class="green">14 New Pages</span></li>
+                                                <li><a href="z-new-homepage.html">New Homepage</a>  <span class="glyphicon glyphicon-star lblue"></span></li>
+                                                <li><a href="z-flights-list.html">Flights list</a>  <span class="glyphicon glyphicon-star lblue"></span></li>
+                                                <li><a href="z-flights-payment.html">Flights payment</a></li>
+                                                <li><a href="z-cruise-list.html">Cruise list</a></li>
+                                                <li><a href="z-cruise-payment.html">Cruise payment</a></li>
+                                                <li><a href="z-rentacar-list.html">Rent a car list</a></li>
+                                                <li><a href="z-rentacar-details.html">Rent a car details</a></li>
+                                                <li><a href="z-rentacar-payment.html">Rent a car payment</a></li>
+                                                <li><a href="z-transfers-list.html">Transfers list</a></li>
+                                                <li><a href="z-transfers-payment.html">Transfers payment</a></li>
+                                                <li><a href="z-activities-list.html">Activities list</a></li>
+                                                <li><a href="z-activities-details.html">Activities details</a></li>
+                                                <li><a href="z-activities-payment.html">Activities payment</a></li>
+                                                <li><a href="z-wearesearching.html">Loading page</a></li>
+                                            </ul>
+                                            <ul class="droplist col-md-4">
+                                                <li class="dropdown-header">Bootstrap Shortcodes</li>
+                                                <li><a href="http://getbootstrap.com/components/" target="_blank">Components</a></li>
+                                                <li><a href="http://getbootstrap.com/javascript/" target="_blank">Javascript</a></li>
+                                                <li><a href="http://getbootstrap.com/css/" target="_blank">Css</a></li>
+                                                <li class="dropdown-header">Comming next</li>
+                                                <li class="inactive"><a href="#">More Home pages</a></li>
+                                                <li class="inactive"><a href="#">Elements</a></li>
+                                                <li class="inactive"><a href="#">...</a></li>
+                                                <li></li>
+                                                <li class="inactive size10 lgrey caps"><span class="glyphicon glyphicon-star "></span>Popular pages</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /Navigation-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Top wrapper -->
+
+    <div class="container breadcrumb">
+        <div>
+            <a class="homebtn left" href="#"></a>
+            <div class="left">
+                <ul class="bcrumbs">
+                    <li>/</li>
+                    <li><a href="#">Hotels</a></li>
+                    <li>/</li>
+                    <li><a href="#">U.S.A.</a></li>
+                    <li>/</li>
+                    <li><a href="#" class="active">New York</a></li>
+                </ul>
+            </div>
+            <a class="backbtn right" href="#"></a>
+        </div>
+        <div class="clearfix"></div>
+        <div class="brlines"></div>
+    </div>
+
+    @*<div class="boxModule" id="SubNavChangeSearch">
+        <ul>
+            <li class="destinationName">Hotels in <span id="SubNavCurrentDestination">Dubai, United Arab Emirates</span></li>
+            <li>From May 28, 2014 To May 30, 2014 </li>
+            <li>1 room(s), 2 adult(s) </li>
+            <li class="last">
+                <a class="iconSet" id="SubNavChangeSearchLink" href="#">
+                    <span class="smallIcon rightArrowIcon">D</span>
+                    <span class="iconText">Change your search</span>
+                </a>
+            </li>
+        </ul>
+    </div>*@
+
+    <div class="container">
+        <div class="module pull-left">
+            <h4>Rixos The Palm Dubai</h4>
+            <span class="star-rating star5">
+                <em>&lt;strong class="rating"&gt;5&lt;/strong&gt; of 5 stars </em>
+            </span>
+            <span class="tripadvisor-rating ta4-5">
+                <em>&lt;strong class="rating"&gt;4.5&lt;/strong&gt; of 5 stars </em>
+            </span>
+            <a class="taReviewCount" target="_blank" href="http://www.tripadvisor.com/WidgetEmbed-cdspropertydetail?display=true&amp;partnerId=0DC658C8DC2A463A887F1B6A10C37757&amp;lang=en_US&amp;locationId=2445260&amp;format=html&amp;display=true&amp;isTA=true">487 reviews</a>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="container">
+        @RenderBody()
+    </div>
+    <!-- END OF CONTENT -->
+
+    <!-- FOOTER -->
+    <div class="footerbg fbgfix">
+        <div class="container">
+
+            <div class="col-md-3">
+                <span class="ftitle">Let's socialize</span>
+                <div class="scont">
+                    <a href="#" class="social1b">
+                        <img src="@Url.Content("~/Content/images/icon-facebook.png")" alt="" /></a>
+                    <a href="#" class="social2b">
+                        <img src="@Url.Content("~/Content/images/icon-twitter.png")" alt="" /></a>
+                    <a href="#" class="social3b">
+                        <img src="@Url.Content("~/Content/images/icon-gplus.png")" alt="" /></a>
+                    <a href="#" class="social4b">
+                        <img src="@Url.Content("~/Content/images/icon-youtube.png")" alt="" /></a>
+                    <br />
+                    <br />
+                    <br />
+                    <a href="#">
+                        <img src="@Url.Content("~/Content/images/logosmal.png")" alt="" /></a><br />
+                    &copy; 2013  |  <a href="#">Privacy Policy</a><br />
+                    All Rights Reserved 
+					<br />
+                    <br />
+
+                </div>
+            </div>
+            <!-- End of column 1-->
+
+            <div class="col-md-3">
+                <span class="ftitle">Travel Specialists</span>
+                <br />
+                <br />
+                <ul class="footerlist">
+                    <li><a href="#">Golf Vacations</a></li>
+                    <li><a href="#">Ski & Snowboarding</a></li>
+                    <li><a href="#">Disney Parks Vacations</a></li>
+                    <li><a href="#">Disneyland Vacations</a></li>
+                    <li><a href="#">Disney World Vacations</a></li>
+                    <li><a href="#">Vacations As Advertised</a></li>
+                </ul>
+            </div>
+            <!-- End of column 2-->
+
+            <div class="col-md-3">
+                <span class="ftitle">Travel Specialists</span>
+                <br />
+                <br />
+                <ul class="footerlist">
+                    <li><a href="#">Weddings</a></li>
+                    <li><a href="#">Accessible Travel</a></li>
+                    <li><a href="#">Disney Parks</a></li>
+                    <li><a href="#">Cruises</a></li>
+                    <li><a href="#">Round the World</a></li>
+                    <li><a href="#">First Class Flights</a></li>
+                </ul>
+            </div>
+            <!-- End of column 3-->
+
+            <div class="col-md-3 grey">
+                <span class="ftitle">Newsletter</span>
+                <div class="relative">
+                    <input type="email" class="form-control fccustom" id="exampleInputEmail1" placeholder="Enter email">
+                    <button type="submit" class="btn btn-default btncustom">Submit<img src="@Url.Content("~/Content/images/arrow.png")" alt="" /></button>
+                </div>
+                <br />
+                <br />
+                <span class="ftitle">Customer support</span><br />
+                <span class="pnr">1-866-599-6674</span><br />
+                office@travel.com
+            </div>
+            <!-- End of column 4-->
+
+
+        </div>
+    </div>
+
+    <div class="footerbg3 bordertop1">
+        <div class="container center grey">
+            <a href="#">Home</a> | 
+            <a href="#">About</a> | 
+            <a href="#">Last minute</a> | 
+            <a href="#">Early booking</a> | 
+            <a href="#">Special offers</a> | 
+            <a href="#">Blog</a> | 
+            <a href="#">Contact</a>
+            <a href="#top" class="gotop scroll">
+                <img src="@Url.Content("~/Content/images/spacer.png")" alt="" /></a>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+
+    <!-- bin/jquery.slider.min.js -->
+    <script type="text/javascript" src="@Url.Content("~/Content/assets/plugins/jslider/js/jshashtable-2.1_src.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/assets/plugins/jslider/js/jquery.numberformatter-1.2.3.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/assets/plugins/jslider/js/tmpl.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/assets/plugins/jslider/js/jquery.dependClass-0.1.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/assets/plugins/jslider/js/draggable-0.1.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/assets/plugins/jslider/js/jquery.slider.js")"></script>
+    <!-- end -->
+
+    <!-- IMPORTANT: This script reference should not be at the end of this page, don't reorder this reference -->
+    <!-- IMPORTANT: If you reorder this script, a right padding may occur in carousel slider for slider image -->
+    <script src="@Url.Content("~/Content/js/js-details.js")"></script>
+
+    <!-- Googlemap -->
+    <script src="@Url.Content("~/Content/js/initialize-google-map.js")"></script>
+    <!-- Custom Select -->
+    <script src="@Url.Content("~/Content/assets/jquery/jquery.customSelect.js")"></script>
+    <!-- Custom functions -->
+    <script src="@Url.Content("~/Content/js/functions.js")"></script>
+    <!-- Nicescroll  -->
+    <script src="@Url.Content("~/Content/assets/jquery/jquery.nicescroll.min.js")"></script>
+    <!-- jQuery KenBurn Slider  -->
+    <script src="@Url.Content("~/Content/assets/rs-plugin/js/jquery.themepunch.revolution.min.js")"></script>
+    <!-- CarouFredSel -->
+    <script src="@Url.Content("~/Content/js/jquery.carouFredSel-6.2.1-packed.js")"></script>
+
+    <script src="@Url.Content("~/Content/js/helper-plugins/jquery.touchSwipe.min.js")"></script>
+    <script src="@Url.Content("~/Content/js/helper-plugins/jquery.mousewheel.min.js")"></script>
+    <script src="@Url.Content("~/Content/js/helper-plugins/jquery.transit.min.js")"></script>
+    <script src="@Url.Content("~/Content/js/helper-plugins/jquery.ba-throttle-debounce.min.js")"></script>
+
+    <!-- Counter -->
+    <script src="@Url.Content("~/Content/js/counter.js")"></script>
+    <!-- Carousel-->
+    <script src="@Url.Content("~/Content/js/initialize-carousel-detailspage.js")"></script>
+
+    @RenderSection("body_end_js", false)
+
+    <!-- JS Ease -->
+    <script src="@Url.Content("~/Content/assets/jquery/jquery.easing.js")"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="@Url.Content("~/Content/assets/bootstrap3.0.3/js/bootstrap.min.js")"></script>
+</body>
+</html>
+

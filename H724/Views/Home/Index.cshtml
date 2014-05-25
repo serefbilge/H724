@@ -1,0 +1,93 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_Intro.cshtml";
+}
+
+<!-- BLUE SECTION -->
+<div class="bluediv">
+    <div class="loader">
+        <img src="~/Content/images/loading.gif" alt="" /></div>
+
+    <a href="@Url.Action("Index")">
+        <img class="logointro" src="~/Content/images/intro/logo-intro.png" alt="" /></a>
+
+    <div class="tabscontainer">
+        <ul class='tabs'>
+            <li class="b1" onclick='mySelectUpdate(); changeAnimation(1);'><a href='#tab1'>
+                <div class="anirooms">
+                    <img src="~/Content/images/spacer.png" alt="" />ROOMS</div>
+            </a></li>
+            <li class="b2" onclick='mySelectUpdate(); changeAnimation(2);'><a href='#tab2'>
+                <div class="anispa">
+                    <img src="~/Content/images/spacer.png" alt="" />SPA</div>
+            </a></li>
+            <li class="b3" onclick='mySelectUpdate(); changeAnimation(3);'><a href='#tab3'>
+                <div class="anirestaurants">
+                    <img src="~/Content/images/spacer.png" alt="" />RESTAURANTS</div>
+            </a></li>
+            <li class="b4" onclick='mySelectUpdate(); changeAnimation(4);'><a href='#tab4'>
+                <div class="anipools">
+                    <img src="~/Content/images/spacer.png" alt="" />POOLS</div>
+            </a></li>
+            <li class="b5" onclick='mySelectUpdate(); changeAnimation(5);'><a href='#tab5'>
+                <div class="anievents">
+                    <img src="~/Content/images/spacer.png" alt="" />EVENTS</div>
+            </a></li>
+        </ul>
+    </div>
+
+    <div class="social">
+        @*<a href="#" ><img src="~/Content/images/icon-facebook.png" alt=""/></a>
+			<a href="#" ><img src="~/Content/images/icon-twitter.png" alt=""/></a>
+			<a href="#" ><img src="~/Content/images/icon-gplus.png" alt=""/></a>
+			<a href="#" ><img src="~/Content/images/icon-youtube.png" alt=""/></a>
+			<br/><br/>*@
+        @*&copy; 2014 | <a href="#">Hotels724</a><br/>All rights reserved.*@
+    </div>
+</div>
+<!-- END OF BLUE SECTION -->
+
+<!--WHITE SECTION -->
+<div class="whitediv">
+
+    <!--HOME OBJECTS -->
+    <img class="tab t1" data-opac="1" src="~/Content/images/intro/tab1.jpg" alt="" />
+    <img class="tab t2" data-opac="0.9" src="~/Content/images/intro/tab2.jpg" alt="" />
+    <img class="tab t3" data-opac="0.9" src="~/Content/images/intro/tab3.jpg" alt="" />
+    <img class="tab t4" data-opac="0.9" src="~/Content/images/intro/tab4.jpg" alt="" />
+    <img class="tab t5" data-opac="1" src="~/Content/images/intro/tab5.jpg" alt="" />
+
+    <!--TAB 1 -->
+    @Html.Partial("_TabSearch1")
+    <!-- END OF TAB1 -->
+
+    <!--TAB 2 -->
+    @Html.Partial("_TabSearch2")
+    <!--END OF TAB 2 -->
+
+    <!--TAB 3 -->
+    @Html.Partial("_TabSearch3")
+    <!-- END OF TAB3 -->
+
+    <!--TAB 4 -->
+    @Html.Partial("_TabSearch4")
+    <!-- END OF TAB4 -->
+
+    <!--TAB 5 -->
+    @Html.Partial("_TabSearch5")
+    <!-- END OF TAB5 -->
+
+    <nav>
+        <ul class="menu">
+            <li><a href="#" id="modal-offers-open"><i class="fa fa-briefcase"></i><span>&nbsp;&nbsp;Offers</span></a></li>
+            <li><a href="#" id="modal-weather-open"><i class="fa fa-sun-o"></i><span>&nbsp;&nbsp;Weather Forecast</span></a></li>
+            <li><a href="#" id="modal-notified-open"><i class="fa fa-bell"></i><span>&nbsp;&nbsp;Get notified</span></a></li>
+            <li><a href="#" id="modal-contacts-open"><i class="fa fa-map-marker"></i><span>&nbsp;&nbsp;Contacts</span></a></li>
+        </ul>
+    </nav>
+</div>
+<!-- END OF WHITE SECTION -->
+
+<script>
+    //console.log('Ip: @ViewBag.UserHostIpAddress / Country: @ViewBag.Country / Letter Code: @ViewBag.Iso3166TwoLetterCode');
+</script>
