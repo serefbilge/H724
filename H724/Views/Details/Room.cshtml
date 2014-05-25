@@ -63,7 +63,7 @@
     <!-- RIGHT INFO -->
     <div class="col-md-4 detailsright offset-0">
         <div class="padding20">
-            <h4 class="lh1">Mabely Grand Hotel</h4>
+            <h4 class="lh1">Rixos The Palm Dubai</h4>
             <img src="@Url.Content("~/Content/images/smallrating-5.png")" alt="" />
         </div>
 
@@ -72,7 +72,19 @@
         <div class="hpadding20">
             <h2 class="opensans slim green2">Wonderful!</h2>
         </div>
-
+        <br />
+        <div class="col-md-6 bordertype3">
+            <img src="@Url.Content("~/Content/images/user-rating-4.png")" alt="" /><br />
+            18 reviews
+        </div>
+        <div class="col-md-6 bordertype3">
+            <a href="#" class="grey">+Add review</a>
+        </div>
+        <br />
+        <div class="hpadding20">
+            <!--    <a href="#" class="add2fav margtop5">Add to favourite</a> -->
+            <a href="#" class="booknow margtop20 btnmarg">Book now</a>
+        </div><br />
         <div class="line3 margtop20"></div>
 
         <div class="col-md-6 bordertype1 padding20">
@@ -84,21 +96,7 @@
             <span class="opensans size30 bold grey2">4.5</span>/5<br />
             guest ratings
         </div>
-
-        <div class="col-md-6 bordertype3">
-            <img src="@Url.Content("~/Content/images/user-rating-4.png")" alt="" /><br />
-            18 reviews
-        </div>
-        <div class="col-md-6 bordertype3">
-            <a href="#" class="grey">+Add review</a>
-        </div>
         <div class="clearfix"></div>
-        <br />
-
-        <div class="hpadding20">
-            <a href="#" class="add2fav margtop5">Add to favourite</a>
-            <a href="#" class="booknow margtop20 btnmarg">Book now</a>
-        </div>
     </div>
     <!-- END OF RIGHT INFO -->
 </div>
@@ -109,9 +107,9 @@
         <div class="cstyle10 orange"></div>
 
         <ul class="nav nav-tabs orange myTab">
-            <li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#summary"><span class="summary"></span><span class="hidetext">Summary</span>&nbsp;</a></li>
+            <li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#summary"><span class="summary"></span><span class="hidetext">Amenities</span>&nbsp;</a></li>
             <li onclick="mySelectUpdate()" class="active"><a data-toggle="tab" href="#roomrates"><span class="rates"></span><span class="hidetext">Room rates</span>&nbsp;</a></li>
-            <li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#preferences"><span class="preferences"></span><span class="hidetext">Preferences</span>&nbsp;</a></li>
+            <li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#preferences"><span class="preferences"></span><span class="hidetext">Policies & Fees</span>&nbsp;</a></li>
             <li onclick="loadScript()" class=""><a data-toggle="tab" href="#maps"><span class="maps"></span><span class="hidetext">Maps</span>&nbsp;</a></li>
             <li onclick="mySelectUpdate(); trigerJslider(); trigerJslider2(); trigerJslider3(); trigerJslider4(); trigerJslider5(); trigerJslider6();" class=""><a data-toggle="tab" href="#reviews"><span class="reviews"></span><span class="hidetext">Reviews</span>&nbsp;</a></li>
             <li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#thingstodo"><span class="thingstodo"></span><span class="hidetext">Things to do</span>&nbsp;</a></li>
@@ -121,18 +119,18 @@
             <!-- TAB 1 -->
             <div id="summary" class="tab-pane fade ">
                 <p class="hpadding20">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor aliquam felis, sit amet tempus nibh ullamcorper nec. Maecenas suscipit dolor at blandit congue. Sed adipiscing, odio feugiat pellentesque tincidunt, est leo vestibulum erat, ac pharetra massa justo ac lorem. 
+                    Rixos The Palm Dubai Amenities
                 </p>
                 <div class="line4"></div>
 
                 <!-- Collapse 1 -->
-                <button type="button" class="collapsebtn2" data-toggle="collapse" data-target="#collapse1">
-                    Malaga <span class="collapsearrow"></span>
+                <button type="button" class="collapsebtn2" data-target="#collapse1">
+                    All-Inclusive Details
                 </button>
 
                 <div id="collapse1" class="collapse in">
                     <div class="hpadding20">
-                        Situated near the sea, this hotel is close to Centre de Arte Contemporaneo, Malaga Cathedral, and Malaga Amphitheatre. Also nearby are Alcazaba and Picasso's Birthplace.
+                        Guests can book rooms at Rixos The Palm Dubai for a rate that is either for theroom only or for all-inclusive. All-inclusive rates are higher because they include onsite food and beverages in the room rate (some restrictions may apply).
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -141,13 +139,35 @@
                 <div class="line4"></div>
 
                 <!-- Collapse 2 -->
-                <button type="button" class="collapsebtn2" data-toggle="collapse" data-target="#collapse2">
-                    2 restaurants, a bar/lounge <span class="collapsearrow"></span>
+                <button type="button" class="collapsebtn2" data-target="#collapse2">
+                    General 
                 </button>
-
                 <div id="collapse2" class="collapse in">
                     <div class="hpadding20">
-                        Situated near the sea, this hotel is close to Centre de Arte Contemporaneo, Malaga Cathedral, and Malaga Amphitheatre. Also nearby are Alcazaba and Picasso's Birthplace.
+                        <div class="col-md-4">
+                            <ul class="checklist">
+                                <li>24-hour front desk</li>
+                                <li>Babysitting or childcare (surcharge)</li>
+                                <li>Children's club (free)</li>
+                                <li>Supervised childcare/activities (surcharge)</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="checklist">
+                                <li>Airport transportation (surcharge)</li>
+                                <li>Arcade/game room</li>
+                                <li>Total number of rooms - 261</li>
+                                <li>Number of floors - 10</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="checklist">
+                                <li>ATM/banking</li>
+                                <li>Breakfast available (surcharge)</li>
+                                <li>Business center</li>
+                                <li>Coffee/tea in lobby</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -156,13 +176,13 @@
                 <div class="line4"></div>
 
                 <!-- Collapse 3 -->
-                <button type="button" class="collapsebtn2 collapsed" data-toggle="collapse" data-target="#collapse3">
-                    Complimentary Wi-Fi <span class="collapsearrow"></span>
+                <button type="button" class="collapsebtn2" data-target="#collapse3">
+                    Dining 
                 </button>
 
-                <div id="collapse3" class="collapse">
+                <div id="collapse3" class="collapse in">
                     <div class="hpadding20">
-                        Yes
+                        Buffet breakfasts are available for a surcharge.
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -171,13 +191,16 @@
                 <div class="line4"></div>
 
                 <!-- Collapse 4 -->
-                <button type="button" class="collapsebtn2 collapsed" data-toggle="collapse" data-target="#collapse4">
-                    Internet <span class="collapsearrow"></span>
+                <button type="button" class="collapsebtn2" data-target="#collapse4">
+                    Internet
                 </button>
 
-                <div id="collapse4" class="collapse">
+                <div id="collapse4" class="collapse in">
                     <div class="hpadding20">
-                        Yes
+                        Available in all rooms: Free Wi-Fi
+                    </div>
+                    <div class="hpadding20">
+                        Available in some public areas: Free Wi-Fi
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -186,13 +209,13 @@
                 <div class="line4"></div>
 
                 <!-- Collapse 5 -->
-                <button type="button" class="collapsebtn2 collapsed" data-toggle="collapse" data-target="#collapse5">
-                    Parking <span class="collapsearrow"></span>
+                <button type="button" class="collapsebtn2" data-target="#collapse5">
+                    Parking 
                 </button>
 
-                <div id="collapse5" class="collapse">
+                <div id="collapse5" class="collapse in">
                     <div class="hpadding20">
-                        Yes
+                        Free valet parking
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -201,40 +224,154 @@
                 <div class="line4"></div>
 
                 <!-- Collapse 6 -->
-                <button type="button" class="collapsebtn2" data-toggle="collapse" data-target="#collapse6">
-                    Room Amenities <span class="collapsearrow"></span>
+                <button type="button" class="collapsebtn2" data-target="#collapse6">
+                    Room Amenities 
                 </button>
 
                 <div id="collapse6" class="collapse in">
                     <div class="hpadding20">
                         <div class="col-md-4">
                             <ul class="checklist">
-                                <li>Climate control</li>
+                                <li>Hypo-allergenic bedding available</li>
                                 <li>Air conditioning</li>
-                                <li>Direct-dial phone</li>
+                                <li>Soundproofed rooms</li>
                                 <li>Minibar</li>
                             </ul>
                         </div>
                         <div class="col-md-4">
                             <ul class="checklist">
-                                <li>Wake-up calls</li>
+                                <li>Complimentary bottled water</li>
                                 <li>Daily housekeeping</li>
-                                <li>Private bathroom</li>
-                                <li>Hair dryer</li>
+                                <li>Separate sitting area</li>
+                                <li>Premium bedding</li>
                             </ul>
                         </div>
                         <div class="col-md-4">
                             <ul class="checklist">
-                                <li>Makeup/shaving mirror</li>
-                                <li>Shower/tub combination</li>
-                                <li>Satellite TV service</li>
-                                <li>Electronic/magnetic keys</li>
+                                <li>Furnished balcony</li>
+                                <li>Direct-dial phone</li>
+                                <li>Coffee/tea maker</li>
+                                <li>Complimentary newspaper</li>
                             </ul>
                         </div>
                     </div>
                     <div class="clearfix"></div>
                 </div>
                 <!-- End of collapse 6 -->
+                <div class="line4"></div>
+                <!-- Collapse 7 -->
+                <button type="button" class="collapsebtn2" data-target="#collapse7">
+                    Recreation 
+                </button>
+                <div class="hpadding20">
+                    A private beach and outdoor tennis courts are featured at the hotel. An outdoor pool and a spa tub are on site. Other recreational amenities include a sauna, a steam room, and a fitness center.
+                </div>
+                <div class="hpadding20">
+                    The recreational activities listed below are available either on site or nearby; fees may apply.
+                </div>
+                <div id="collapse7" class="collapse in">
+                    <div class="hpadding20">
+                        <div class="col-md-4">
+                            <ul class="checklist">
+                                <li>Golfing nearby</li>
+                                <li>Skydiving nearby</li>
+                                <li>Golf lessons available nearby</li>
+                                <li>Aerobics on site</li>
+                                <li>Scuba diving on site</li>
+                                <li>Tennis on site</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="checklist">
+                                <li>Basketball on site</li>
+                                <li>Fishing on site</li>
+                                <li>Kayaking on site</li>
+                                <li>Parasailing on site</li>
+                                <li>Volleyball on site</li>
+                                <li>Water skiing on site</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="checklist">
+                                <li>Pilates classes on site</li>
+                                <li>Playground on site</li>
+                                <li>Racquetball/squash on site</li>
+                                <li>Sailing on site</li>
+                                <li>Yoga classes/instruction on site</li>
+                                <li>Beach volleyball on site</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- End of collapse 7 -->
+                <div class="line4"></div>
+                <!-- Collapse 8 -->
+                <button type="button" class="collapsebtn2" data-target="#collapse8">
+                    Spa 
+                </button>
+                <div class="hpadding20">
+                    <b>Rixos Royal Spa</b> has 11 treatment rooms including rooms for couples and outdoor treatment areas. Services include massages, facials, body scrubs, and body treatments. The spa is equipped with a sauna, a spa tub, and Turkish bath/hammam. A variety of treatment therapies are provided, including aromatherapy. 
+                </div>
+                <div id="collapse8" class="collapse in">
+                    <div class="hpadding20">
+                        <div class="col-md-4">
+                            <ul class="checklist">
+                                <li>Spa tub in spa</li>
+                                <li>Couples treatment rooms</li>
+                                <li>Sauna in spa</li>
+                                <li>Massages</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="checklist">
+                                <li>Manicures and pedicures</li>
+                                <li>Body treatments</li>
+                                <li>Number of treatment rooms 11</li>
+                                <li>Body scrubs</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="checklist">
+                                <li>Facial treatments</li>
+                                <li>Outdoor treatment areas</li>
+                                <li>Aromatherapy treatments</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- End of collapse 8 -->
+                <div class="line4"></div>
+                <!-- Collapse 9 -->
+                <button type="button" class="collapsebtn2" data-target="#collapse9">
+                    Accessibility
+                </button>
+                <div class="hpadding20">
+                    To make requests for specific accessibility needs, complete the “Special or Accessibility Requests" section of “Trip Preferences" when you book your hotel.
+                </div>
+                <div id="collapse9" class="collapse in">
+                    <div class="hpadding20">
+                        <div class="col-md-4">
+                            <ul class="checklist">
+                                <li>Accessible bathroom</li>
+                                <li>In-room accessibility</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="checklist">
+                                <li>Accessible path of travel</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="checklist">
+                                <li>Accessible parking</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- End of collapse 9 -->
 
             </div>
             <!-- TAB 2 -->
@@ -552,130 +689,131 @@
             <!-- TAB 3 -->
             <div id="preferences" class="tab-pane fade">
                 <p class="hpadding20">
-                    The hotel offers a snack bar/deli. A bar/lounge is on site where guests can unwind with a drink. Guests can enjoy a complimentary breakfast. An Internet point is located on site and high-speed wireless Internet access is complimentary.
+                    Rixos The Palm Dubai Policies & Fees    
                 </p>
 
                 <div class="line4"></div>
 
-                <!-- Collapse 7 -->
-                <button type="button" class="collapsebtn2" data-toggle="collapse" data-target="#collapse7">
-                    Hotel facilities <span class="collapsearrow"></span>
+                <!-- Collapse 10 -->
+                <button type="button" class="collapsebtn2" data-target="#collapse10">
+                    Check-in 
                 </button>
 
-                <div id="collapse7" class="collapse in">
+                <div id="collapse10" class="collapse in">
                     <div class="hpadding20">
-
-                        <div class="col-md-4 offset-0">
-                            <ul class="hotelpreferences2 left">
-                                <li class="icohp-internet"></li>
-                                <li class="icohp-air"></li>
-                                <li class="icohp-pool"></li>
-                                <li class="icohp-childcare"></li>
-                                <li class="icohp-fitness"></li>
-                                <li class="icohp-breakfast"></li>
-                                <li class="icohp-parking"></li>
-                                <li class="icohp-pets"></li>
-                                <li class="icohp-spa"></li>
-                                <li class="icohp-hairdryer"></li>
-                            </ul>
-                            <ul class="hpref-text left">
-                                <li>High-speed Internet</li>
-                                <li>Air conditioning</li>
-                                <li>Swimming pool</li>
-                                <li>Childcare</li>
-                                <li>Fitness equipment</li>
-                                <li>Free breakfast</li>
-                                <li>Free parking</li>
-                                <li>Pets allowed</li>
-                                <li>Spa services on site</li>
-                                <li>Hair dryer</li>
-                            </ul>
-                        </div>
-
-
-                        <div class="col-md-4 offset-0">
-                            <ul class="hotelpreferences2 left">
-                                <li class="icohp-garden"></li>
-                                <li class="icohp-grill"></li>
-                                <li class="icohp-kitchen"></li>
-                                <li class="icohp-bar"></li>
-                                <li class="icohp-living"></li>
-                                <li class="icohp-tv"></li>
-                                <li class="icohp-fridge"></li>
-                                <li class="icohp-microwave"></li>
-                                <li class="icohp-washing"></li>
-                                <li class="icohp-roomservice"></li>
-                            </ul>
-                            <ul class="hpref-text left">
-                                <li>Courtyard garden</li>
-                                <li>Grill / Barbecue</li>
-                                <li>Kitchen</li>
-                                <li>Bar</li>
-                                <li>Living</li>
-                                <li>TV</li>
-                                <li>Fridge</li>
-                                <li>Microwave</li>
-                                <li>Washing maschine</li>
-                                <li>Room service</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4 offset-0">
-                            <ul class="hotelpreferences2 left">
-                                <li class="icohp-safe"></li>
-                                <li class="icohp-playground"></li>
-                                <li class="icohp-conferenceroom"></li>
-                            </ul>
-                            <ul class="hpref-text left">
-                                <li>Reception Safe</li>
-                                <li>Playground</li>
-                                <li>Conference room</li>
-                            </ul>
-                        </div>
-                        <div class="clearfix"></div>
+                        Check-in time starts at 3 PM
                     </div>
-
+                    <div class="hpadding20">
+                        Minimum check-in age is 18
+                    </div>
+                    <div class="hpadding20">
+                        Special check-in instructions:
+                    </div>
+                    <div class="hpadding20">
+                        A tourism fee is imposed by the city and collected at the property. The fee is AED 20 for the first bedroom per night, and increases by AED 20 per night for each additional bedroom. For further details, please contact the property using the information contained in your confirmation email.
+                    </div>
                 </div>
-                <!-- End of collapse 7 -->
+                        <div class="clearfix"></div>
+
+                <!-- End of collapse 10 -->
                 <br />
                 <div class="line4"></div>
 
-                <!-- Collapse 8 -->
-                <button type="button" class="collapsebtn2" data-toggle="collapse" data-target="#collapse8">
-                    Room facilities <span class="collapsearrow"></span>
+                <!-- Collapse 11 -->
+                <button type="button" class="collapsebtn2" data-target="#collapse11">
+                    Check-out
                 </button>
 
-                <div id="collapse8" class="collapse in">
+                <div id="collapse11" class="collapse in">
                     <div class="hpadding20">
-                        <div class="col-md-4">
-                            <ul class="checklist">
-                                <li>Climate control</li>
-                                <li>Air conditioning</li>
-                                <li>Direct-dial phone</li>
-                                <li>Minibar</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4">
-                            <ul class="checklist">
-                                <li>Wake-up calls</li>
-                                <li>Daily housekeeping</li>
-                                <li>Private bathroom</li>
-                                <li>Hair dryer</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4">
-                            <ul class="checklist">
-                                <li>Makeup/shaving mirror</li>
-                                <li>Shower/tub combination</li>
-                                <li>Satellite TV service</li>
-                                <li>Electronic/magnetic keys</li>
-                            </ul>
-                        </div>
+                        Check-out time is noon
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                <!-- End of collapse 8 -->
-            </div>
+                <!-- End of collapse 11 -->
+                <div class="line4"></div>
 
+                <!-- Collapse 12 -->
+                <button type="button" class="collapsebtn2" data-target="#collapse12">
+                    Payment types
+                </button>
+
+                <div id="collapse12" class="collapse in">
+                    <div class="hpadding20">
+                        Accepted at this hotel: American Express, Diners Club, MasterCard, Visa 
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- End of collapse 12 -->
+                <div class="line4"></div>
+
+                <!-- Collapse 14 -->
+                <button type="button" class="collapsebtn2" data-target="#collapse14">
+                    General
+                </button>
+
+                <div id="collapse14" class="collapse in">
+                    <div class="hpadding20">
+                        Extra-person charges may apply and vary depending on hotel policy.
+                    </div>
+                    <div class="hpadding20">
+                        Government-issued photo identification and a credit card or cash deposit are required at check-in for incidental charges.
+                    </div>
+                    <div class="hpadding20">
+                        Special requests are subject to availability upon check-in and may incur additional charges. Special requests cannot be guaranteed.
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- End of collapse 14 -->
+                <div class="line4"></div>
+
+                <!-- Collapse 15 -->
+                <button type="button" class="collapsebtn2" data-target="#collapse15">
+                    Fees
+                </button>
+
+                <div id="collapse15" class="collapse in">
+                    <div class="hpadding20">
+                        Unless otherwise indicated, the charges below are not included in the overall room price. If not included in the overall room price, they will be charged by the property at check-in or check-out. Charges can vary, for example, based on length of stay or the room you book. This property told us they will charge you for the following:    
+                    </div>
+                    <div class="hpadding20">
+                    <li>Tourism fee: AED 20 per accommodation, per night</li>
+                    </div>
+                    <div class="hpadding20">
+                        We have included all charges provided to us by the property. However, charges can vary, for example, based on length of stay or the room you book.
+                    </div>
+                    <div class="hpadding20">
+                        A tourism fee is imposed by the city and collected at the property. The fee is AED 20 for the first bedroom per night, and increases by AED 20 per night for each additional bedroom. For further details, please contact the property using the information contained in your confirmation email.
+                    </div>
+                    <div class="hpadding20">
+                        The following fees and deposits are charged by the property at time of service, check-in, or check-out.
+                        <li>Breakfast fee: AED 150 for adults and AED 75 for children (approximately)</li>
+                        <li>Airport shuttle fee: AED 275 per vehicle (one way)</li>
+                        <li>Deposit: AED 500 per night</li>
+                        <li>Rollaway bed fee: AED 250 per night</li>
+                    </div>
+                    <div class="hpadding20">
+                        The above list may not be comprehensive. Fees and deposits may not include tax and are subject to change.
+                    </div>
+                    <div class="clearfix"></div>
+                    </div>
+                <!-- End of collapse 15 -->
+                <div class="line4"></div>
+
+                <!-- Collapse 16 -->
+                <button type="button" class="collapsebtn2" data-target="#collapse16">
+                    Additional Details
+                </button>
+
+                <div id="collapse16" class="collapse in">
+                    <div class="hpadding20">
+                        This property offers transfers from the airport (surcharges may apply). Guests must contact the property with arrival details 48 hours prior to arrival, using the contact information on the booking confirmation. A fee for a mandatory New Year's Day gala dinner is included in the total price displayed for stays on 1 January. Children 11 years old and younger stay free when occupying the parent or guardian's room, using existing bedding. Only registered guests are allowed in the guestrooms. No pets and no service animals are allowed at this property.
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- End of collapse 16 -->
+            </div>
+            
             <!-- TAB 4 -->
             <div id="maps" class="tab-pane fade">
                 <div class="hpadding20">
@@ -1095,7 +1233,7 @@
     </div>
 
     <div class="col-md-4">
-        <div class="pagecontainer2 testimonialbox">
+        <!-- <div class="pagecontainer2 testimonialbox">
             <div class="cpadding0 mt-10">
                 <span class="icon-quote"></span>
                 <p class="opensans size16 grey2">
@@ -1103,7 +1241,7 @@
                     <span class="lato orange bold size13"><i>by Ellison from United Kingdom</i></span>
                 </p>
             </div>
-        </div>
+        </div> 
 
         <div class="pagecontainer2 mt20 needassistancebox">
             <div class="cpadding1">
@@ -1145,7 +1283,7 @@
                 <img src="@Url.Content("~/Content/images/filter-rating-5.png")" alt="" />
             </div>
             <br />
-        </div>
+        </div> -->
     </div>
 </div>
 
