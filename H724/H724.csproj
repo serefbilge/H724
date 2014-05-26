@@ -497,6 +497,7 @@
     <Content Include="Content\images\filter-rating-3.png" />
     <Content Include="Content\images\filter-rating-4.png" />
     <Content Include="Content\images\filter-rating-5.png" />
+    <Content Include="Content\images\intro\logo-intro.png" />
     <Content Include="Content\images\items2\item1.jpg" />
     <Content Include="Content\images\items2\item2.jpg" />
     <Content Include="Content\images\items2\item3.jpg" />
@@ -816,7 +817,7 @@
     <Content Include="Content\images\icon-youtube.png" />
     <Content Include="Content\images\intro\cruise.jpg" />
     <Content Include="Content\images\intro\dubai.jpg" />
-    <Content Include="Content\images\intro\logo-intro.png" />
+    <Content Include="Content\images\intro\_logo-intro.png" />
     <Content Include="Content\images\intro\plane.jpg" />
     <Content Include="Content\images\intro\tab1.jpg" />
     <Content Include="Content\images\intro\tab2.jpg" />
