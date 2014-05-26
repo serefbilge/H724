@@ -64,7 +64,7 @@
     <!-- RIGHT INFO -->
     <div class="col-md-4 detailsright offset-0">
         <div class="padding20">
-            <h4 class="lh1">Mabely Grand Hotel</h4>
+            <h4 class="lh1">Rixos Royal SPA Dubai</h4>
             <img src="@Url.Content("~/Content/images/smallrating-5.png")" alt="" />
         </div>
 
@@ -97,7 +97,7 @@
         <br />
 
         <div class="hpadding20">
-            <a href="#" class="add2fav margtop5">Add to favourite</a>
+            <!-- <a href="#" class="add2fav margtop5">Add to favourite</a> -->
             <a href="#" class="booknow margtop20 btnmarg">Book now</a>
         </div>
     </div>
@@ -110,11 +110,11 @@
         <div class="cstyle10 orange"></div>
 
         <ul class="nav nav-tabs orange myTab">
-            <li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#summary"><span class="summary"></span><span class="hidetext">About</span>&nbsp;</a></li>
+            <li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#summary"><span class="summary"></span><span class="hidetext">Amenities</span>&nbsp;</a></li>
             <li onclick="mySelectUpdate()" class="active"><a data-toggle="tab" href="#spaservices"><span class="rates"></span><span class="hidetext">Spa Services</span>&nbsp;</a></li>
-            <li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#preferences"><span class="preferences"></span><span class="hidetext">Preferences</span>&nbsp;</a></li>
+            <li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#preferences"><span class="preferences"></span><span class="hidetext">Policies & Fees</span>&nbsp;</a></li>
             <li onclick="loadScript()" class=""><a data-toggle="tab" href="#maps"><span class="maps"></span><span class="hidetext">Maps</span>&nbsp;</a></li>
-            <li onclick="mySelectUpdate(); trigerJslider(); trigerJslider2(); trigerJslider3(); trigerJslider4(); trigerJslider5(); trigerJslider6();" class=""><a data-toggle="tab" href="#reviews"><span class="reviews"></span><span class="hidetext">Reviews</span>&nbsp;</a></li>
+            <li onclick="mySelectUpdate(); trigerJslider(); trigerJslider2(); trigerJslider3(); trigerJslider4(); trigerJslider5(); trigerJslider6();" class=""><a data-toggle="tab" href="#reviews"><span class="reviews"></span><span class="hidetext">SPA Reviews</span>&nbsp;</a></li>
             <li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#thingstodo"><span class="thingstodo"></span><span class="hidetext">Things to do</span>&nbsp;</a></li>
 
         </ul>
@@ -122,18 +122,18 @@
             <!-- TAB 1 -->
             <div id="summary" class="tab-pane fade ">
                 <p class="hpadding20">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor aliquam felis, sit amet tempus nibh ullamcorper nec. Maecenas suscipit dolor at blandit congue. Sed adipiscing, odio feugiat pellentesque tincidunt, est leo vestibulum erat, ac pharetra massa justo ac lorem. 
+                    <b>Rixos Royal SPA Dubai Amenities</b>
                 </p>
                 <div class="line4"></div>
 
                 <!-- Collapse 1 -->
-                <button type="button" class="collapsebtn2" data-toggle="collapse" data-target="#collapse1">
-                    Malaga <span class="collapsearrow"></span>
+                <button type="button" class="collapsebtn2" data-target="#collapse1">
+                    About
                 </button>
 
                 <div id="collapse1" class="collapse in">
                     <div class="hpadding20">
-                        Situated near the sea, this hotel is close to Centre de Arte Contemporaneo, Malaga Cathedral, and Malaga Amphitheatre. Also nearby are Alcazaba and Picasso's Birthplace.
+                        The Rixos Royal Spa the Palm is a true haven of peace and tranquillity. Covering an impressive 1750 square meters and located adjacent to the hotel’s Full Service Beauty Salon, the spa features VIP Couple Room, Single Therapy Rooms, Facial & Body Treatment Room and a dedicated Thai Massage area, all with ensuite shower and changing facilities.
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -142,13 +142,35 @@
                 <div class="line4"></div>
 
                 <!-- Collapse 2 -->
-                <button type="button" class="collapsebtn2" data-toggle="collapse" data-target="#collapse2">
-                    2 restaurants, a bar/lounge <span class="collapsearrow"></span>
+                <button type="button" class="collapsebtn2" data-target="#collapse2">
+                    General
                 </button>
 
                 <div id="collapse2" class="collapse in">
                     <div class="hpadding20">
-                        Situated near the sea, this hotel is close to Centre de Arte Contemporaneo, Malaga Cathedral, and Malaga Amphitheatre. Also nearby are Alcazaba and Picasso's Birthplace.
+                        <div class="col-md-4">
+                            <ul class="checklist">
+                                <li>Spa tub in spa</li>
+                                <li>Massages</li>
+                                <li>Number of treatment rooms 11</li>
+                                <li>Outdoor treatment areas</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="checklist">
+                                <li>Couples treatment rooms</li>
+                                <li>Manicures and pedicures</li>
+                                <li>Body scrubs</li>
+                                <li>Aromatherapy treatments</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="checklist">
+                                <li>Sauna in spa</li>
+                                <li>Body treatments</li>
+                                <li>Facial treatments</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -157,13 +179,13 @@
                 <div class="line4"></div>
 
                 <!-- Collapse 3 -->
-                <button type="button" class="collapsebtn2 collapsed" data-toggle="collapse" data-target="#collapse3">
-                    Complimentary Wi-Fi <span class="collapsearrow"></span>
+                <button type="button" class="collapsebtn2" data-target="#collapse3">
+                    Internet
                 </button>
 
-                <div id="collapse3" class="collapse">
+                <div id="collapse3" class="collapse in">
                     <div class="hpadding20">
-                        Yes
+                        Available in SPA Treatment Areas: Free Wi-Fi
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -171,29 +193,14 @@
 
                 <div class="line4"></div>
 
-                <!-- Collapse 4 -->
-                <button type="button" class="collapsebtn2 collapsed" data-toggle="collapse" data-target="#collapse4">
-                    Internet <span class="collapsearrow"></span>
-                </button>
-
-                <div id="collapse4" class="collapse">
-                    <div class="hpadding20">
-                        Yes
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <!-- End of collapse 4 -->
-
-                <div class="line4"></div>
-
                 <!-- Collapse 5 -->
-                <button type="button" class="collapsebtn2 collapsed" data-toggle="collapse" data-target="#collapse5">
-                    Parking <span class="collapsearrow"></span>
+                <button type="button" class="collapsebtn2" data-target="#collapse5">
+                    Parking 
                 </button>
 
-                <div id="collapse5" class="collapse">
+                <div id="collapse5" class="collapse in">
                     <div class="hpadding20">
-                        Yes
+                        Free valet parking
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -202,41 +209,79 @@
                 <div class="line4"></div>
 
                 <!-- Collapse 6 -->
-                <button type="button" class="collapsebtn2" data-toggle="collapse" data-target="#collapse6">
-                    Room Amenities <span class="collapsearrow"></span>
+                <button type="button" class="collapsebtn2" data-target="#collapse6">
+                    SPA Treatments
                 </button>
 
                 <div id="collapse6" class="collapse in">
                     <div class="hpadding20">
+                        This term refers to several types of treatments performed in RRSpA. Some of these include;
+                    </div>
+                    <div class="hpadding20">
                         <div class="col-md-4">
                             <ul class="checklist">
-                                <li>Climate control</li>
-                                <li>Air conditioning</li>
-                                <li>Direct-dial phone</li>
-                                <li>Minibar</li>
+                                <li>Hydrotherapy</li>
+                                <li>Algae Therapy</li>
+                                <li>Aromatherapy</li>
+                                <li>Manual lymphatic drainage</li>
+                                <li>Hot Stone Therapy</li>
+                                <li>Lava-Shell Massage</li>
                             </ul>
                         </div>
                         <div class="col-md-4">
                             <ul class="checklist">
-                                <li>Wake-up calls</li>
-                                <li>Daily housekeeping</li>
-                                <li>Private bathroom</li>
-                                <li>Hair dryer</li>
+                                <li>Sports Therapy</li>
+                                <li>Traditional Hamam Treatment</li>
+                                <li>Medical Massage</li>
+                                <li>Thai Massage</li>
+                                <li>Ayurvedic therapies</li>
                             </ul>
                         </div>
                         <div class="col-md-4">
                             <ul class="checklist">
-                                <li>Makeup/shaving mirror</li>
-                                <li>Shower/tub combination</li>
-                                <li>Satellite TV service</li>
-                                <li>Electronic/magnetic keys</li>
+                                <li>Bali Massage</li>
+                                <li>Shiatsu</li>
+                                <li>Reflexology</li>
+                                <li>Face and body treatments</li>
+                                <li>Healthy weight control</li>
                             </ul>
                         </div>
                     </div>
                     <div class="clearfix"></div>
                 </div>
                 <!-- End of collapse 6 -->
+                <div class="line4"></div>
 
+                <!-- Collapse 7 -->
+                <button type="button" class="collapsebtn2" data-target="#collapse7">
+                    Treatment Areas
+                </button>
+
+                <div id="collapse7" class="collapse in">
+                    <div class="hpadding20">
+                        <div class="col-md-4">
+                            <ul class="checklist">
+                                <li>Executive individually designed treatment rooms</li>
+                                <li>Turkish Baths, Saunas and steam baths</li>
+                                <li>Hydrotherapy pool</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="checklist">
+                                <li>Couples twin treatment rooms</li>
+                                <li>Relaxation lounges</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="checklist">
+                                <li>Fitness Center with state of the art equipment</li>
+                                <li>Step aerobics, Pilates, Body Reformer, Yoga</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- End of collapse 7 -->
             </div>
 
             <!-- TAB 2 -->
@@ -246,125 +291,92 @@
 
             <!-- TAB 3 -->
             <div id="preferences" class="tab-pane fade">
-                <p class="hpadding20">
-                    The hotel offers a snack bar/deli. A bar/lounge is on site where guests can unwind with a drink. Guests can enjoy a complimentary breakfast. An Internet point is located on site and high-speed wireless Internet access is complimentary.
-                </p>
 
-                <div class="line4"></div>
-
-                <!-- Collapse 7 -->
-                <button type="button" class="collapsebtn2" data-toggle="collapse" data-target="#collapse7">
-                    Hotel facilities <span class="collapsearrow"></span>
+                <!-- Collapse 8 -->
+                <button type="button" class="collapsebtn2" data-target="#collapse7">
+                    SPA Opening Time
                 </button>
 
                 <div id="collapse7" class="collapse in">
                     <div class="hpadding20">
-
-                        <div class="col-md-4 offset-0">
-                            <ul class="hotelpreferences2 left">
-                                <li class="icohp-internet"></li>
-                                <li class="icohp-air"></li>
-                                <li class="icohp-pool"></li>
-                                <li class="icohp-childcare"></li>
-                                <li class="icohp-fitness"></li>
-                                <li class="icohp-breakfast"></li>
-                                <li class="icohp-parking"></li>
-                                <li class="icohp-pets"></li>
-                                <li class="icohp-spa"></li>
-                                <li class="icohp-hairdryer"></li>
-                            </ul>
-                            <ul class="hpref-text left">
-                                <li>High-speed Internet</li>
-                                <li>Air conditioning</li>
-                                <li>Swimming pool</li>
-                                <li>Childcare</li>
-                                <li>Fitness equipment</li>
-                                <li>Free breakfast</li>
-                                <li>Free parking</li>
-                                <li>Pets allowed</li>
-                                <li>Spa services on site</li>
-                                <li>Hair dryer</li>
-                            </ul>
-                        </div>
-
-
-                        <div class="col-md-4 offset-0">
-                            <ul class="hotelpreferences2 left">
-                                <li class="icohp-garden"></li>
-                                <li class="icohp-grill"></li>
-                                <li class="icohp-kitchen"></li>
-                                <li class="icohp-bar"></li>
-                                <li class="icohp-living"></li>
-                                <li class="icohp-tv"></li>
-                                <li class="icohp-fridge"></li>
-                                <li class="icohp-microwave"></li>
-                                <li class="icohp-washing"></li>
-                                <li class="icohp-roomservice"></li>
-                            </ul>
-                            <ul class="hpref-text left">
-                                <li>Courtyard garden</li>
-                                <li>Grill / Barbecue</li>
-                                <li>Kitchen</li>
-                                <li>Bar</li>
-                                <li>Living</li>
-                                <li>TV</li>
-                                <li>Fridge</li>
-                                <li>Microwave</li>
-                                <li>Washing maschine</li>
-                                <li>Room service</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4 offset-0">
-                            <ul class="hotelpreferences2 left">
-                                <li class="icohp-safe"></li>
-                                <li class="icohp-playground"></li>
-                                <li class="icohp-conferenceroom"></li>
-                            </ul>
-                            <ul class="hpref-text left">
-                                <li>Reception Safe</li>
-                                <li>Playground</li>
-                                <li>Conference room</li>
-                            </ul>
-                        </div>
-                        <div class="clearfix"></div>
+                        The Club is open daily for Hotel Guests, Members and Guests between the hours of 7:00 am and 11:00 pm. Spa treatments are available between the hours of 9:00 am to 11:00 pm . The Company retains the right to extend or limit the opening/closing hours at its own discretion without prior notice.                     
                     </div>
 
                 </div>
-                <!-- End of collapse 7 -->
+                <!-- End of collapse 8 -->
                 <br />
                 <div class="line4"></div>
 
                 <!-- Collapse 8 -->
-                <button type="button" class="collapsebtn2" data-toggle="collapse" data-target="#collapse8">
-                    Room facilities <span class="collapsearrow"></span>
+                <button type="button" class="collapsebtn2" data-target="#collapse8">
+                    Cancellation Policy
                 </button>
 
                 <div id="collapse8" class="collapse in">
                     <div class="hpadding20">
-                        <div class="col-md-4">
-                            <ul class="checklist">
-                                <li>Climate control</li>
-                                <li>Air conditioning</li>
-                                <li>Direct-dial phone</li>
-                                <li>Minibar</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4">
-                            <ul class="checklist">
-                                <li>Wake-up calls</li>
-                                <li>Daily housekeeping</li>
-                                <li>Private bathroom</li>
-                                <li>Hair dryer</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4">
-                            <ul class="checklist">
-                                <li>Makeup/shaving mirror</li>
-                                <li>Shower/tub combination</li>
-                                <li>Satellite TV service</li>
-                                <li>Electronic/magnetic keys</li>
-                            </ul>
-                        </div>
+                        Cancellation is free of charge if made 24 hours in advance. Hotel guests must give four hours notice, after which the full cost of the treatments will be charged.
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- End of collapse 8 -->
+                <div class="line4"></div>
+
+                <!-- Collapse 8 -->
+                <button type="button" class="collapsebtn2" data-target="#collapse9">
+                    Fees
+                </button>
+
+                <div id="collapse9" class="collapse in">
+                    <div class="hpadding20">
+                        Unless otherwise indicated, the charges below are not included in the overall treatment price. If not included in the overall treatment price, they will be charged by the property at treatment session check-in. Charges can vary, for example, based on change in length of session or addition of extra sessions during treatment.
+                    </div>
+                    <div class="hpadding20">
+                        We have included all charges provided to us by the property. However, charges can vary, for example,  based on change in length of session or addition of extra sessions during treatment.
+                    </div>
+                    <div class="hpadding20">
+                        For further details, please contact the property using the information contained in your confirmation email.
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- End of collapse 8 -->
+                <div class="line4"></div>
+
+                <!-- Collapse 8 -->
+                <button type="button" class="collapsebtn2" data-target="#collapse8">
+                    Reservations
+                </button>
+
+                <div id="collapse8" class="collapse in">
+                    <div class="hpadding20">
+                        Bookings made by external guests directly with RRSPA may be secured by a credit card or cash payment. Bookings made by hotel guests directly with RRSPA are guaranteed by the signing of a reservation.    
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- End of collapse 8 -->
+                <div class="line4"></div>
+
+                <!-- Collapse 8 -->
+                <button type="button" class="collapsebtn2" data-target="#collapse8">
+                    Arrival at RRSPA
+                </button>
+
+                <div id="collapse8" class="collapse in">
+                    <div class="hpadding20">
+                        To enhance your spa experience, we encourage you to arrive 15 minutes prior to your treatment. Throw off your shoes and indulge yourself with our luxurious robes and slippers, leave your cares at the door and unwind in our calming, therapeutic and relaxed environment. Give yourself time prior to your treatment to optimise the overall effects, and completely re-balance your mind, body and spirit.    
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- End of collapse 8 -->
+                <div class="line4"></div>
+
+                <!-- Collapse 8 -->
+                <button type="button" class="collapsebtn2" data-target="#collapse8">
+                    Treatments at RRSPA
+                </button>
+
+                <div id="collapse8" class="collapse in">
+                    <div class="hpadding20">
+                        Reservations of 30, 60, 90 or more minutes have an effective treatment time of 20, 50, 80 or more minutes.    
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -790,57 +802,7 @@
     </div>
 
     <div class="col-md-4">
-        <div class="pagecontainer2 testimonialbox">
-            <div class="cpadding0 mt-10">
-                <span class="icon-quote"></span>
-                <p class="opensans size16 grey2">
-                    It was very comfortable to stay and staff were pleasant and welcoming.<br />
-                    <span class="lato orange bold size13"><i>by Ellison from United Kingdom</i></span>
-                </p>
-            </div>
-        </div>
-
-        <div class="pagecontainer2 mt20 needassistancebox">
-            <div class="cpadding1">
-                <span class="icon-help"></span>
-                <h3 class="opensans">Need Assistance?</h3>
-                <p class="size14 grey">Our team is 24/7 at your service to help you with your booking issues or answer any related questions</p>
-                <p class="opensans size30 green xslim">1-866-599-6674</p>
-            </div>
-        </div>
-        <br />
-
-        <div class="pagecontainer2 mt20 alsolikebox">
-            <div class="cpadding1">
-                <span class="icon-location"></span>
-                <h3 class="opensans">You May Also Like</h3>
-                <div class="clearfix"></div>
-            </div>
-            <div class="cpadding1 ">
-                <a href="#">
-                    <img src="@Url.Content("~/Content/images/smallthumb-1.jpg")" class="left mr20" alt="" /></a>
-                <a href="#" class="dark"><b>Hotel Amaragua</b></a><br />
-                <span class="opensans green bold size14">$36-$160</span> <span class="grey">avg/night</span><br />
-                <img src="@Url.Content("~/Content/images/filter-rating-5.png")" alt="" />
-            </div>
-            <div class="line5"></div>
-            <div class="cpadding1 ">
-                <a href="#">
-                    <img src="@Url.Content("~/Content/images/smallthumb-2.jpg")" class="left mr20" alt="" /></a>
-                <a href="#" class="dark"><b>Hotel Amaragua</b></a><br />
-                <span class="opensans green bold size14">$36-$160</span> <span class="grey">avg/night</span><br />
-                <img src="@Url.Content("~/Content/images/filter-rating-5.png")" alt="" />
-            </div>
-            <div class="line5"></div>
-            <div class="cpadding1 ">
-                <a href="#">
-                    <img src="@Url.Content("~/Content/images/smallthumb-3.jpg")" class="left mr20" alt="" /></a>
-                <a href="#" class="dark"><b>Hotel Amaragua</b></a><br />
-                <span class="opensans green bold size14">$36-$160</span> <span class="grey">avg/night</span><br />
-                <img src="@Url.Content("~/Content/images/filter-rating-5.png")" alt="" />
-            </div>
-            <br />
-        </div>
+        
     </div>
 </div>
 
