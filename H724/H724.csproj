@@ -1388,6 +1388,7 @@
     <Content Include="Views\Details\Event.cshtml" />
     <Content Include="Views\SpaDetails\SpaServices.cshtml" />
     <Content Include="Views\SpaDetails\SpaServices_old.cshtml" />
+    <Content Include="Views\Shared\_ChangeSearch.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
