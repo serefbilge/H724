@@ -23,5 +23,10 @@ namespace H724.Controllers
             return View();
         }
 
+        public ActionResult ChangeSearch()
+        {
+            return PartialView("_ChangeSearch");
+        }
+
     }
 }
