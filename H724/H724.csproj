@@ -520,6 +520,7 @@
     <Content Include="Content\images\items\item9.jpg" />
     <Content Include="Content\images\li.png" />
     <Content Include="Content\images\li2.png" />
+    <Content Include="Content\images\logo.png" />
     <Content Include="Content\images\logosmal.png" />
     <Content Include="Content\images\logo_h724.png" />
     <Content Include="Content\images\slider\pool\pool-1.jpg" />
@@ -829,7 +830,6 @@
     <Content Include="Content\images\login-bg.jpg" />
     <Content Include="Content\images\login-blue.png" />
     <Content Include="Content\images\login-home.png" />
-    <Content Include="Content\images\logo.png" />
     <Content Include="Content\images\menu_divider.png" />
     <Content Include="Content\images\palmbg.jpg" />
     <Content Include="Content\images\palmleafs.png" />
