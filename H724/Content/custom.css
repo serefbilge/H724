@@ -9,6 +9,12 @@ position: relative;
 
 .tripadvisor-rating em{display:none;}.tripadvisor-rating{background-image:url('images/tp-rating.png');display:inline;float:left;height:16px;margin:0 6px 6px 0;overflow:hidden;text-indent:-9999px;width:85px;}.ta1{background-position:0 -15px;}.ta1-5{background-position:0 -30px;}.ta2{background-position:0 -45px;}.ta2-5{background-position:0 -61px;}.ta3{background-position:0 -75px;}.ta3-5{background-position:0 -90px;}.ta4{background-position:0 -105px;}.ta4-5{background-position:0 -120px;}.ta5{background-position:0 -135px;}
 
+#SubNavChangeSearch { padding: 5px 10px;font-size: 12px; margin-top: 100px;margin-bottom: 0;border: 1px solid #d1d1d1; }
+#SubNavChangeSearch ul { display: inline; float: left; margin: 0; padding: 0; }
+    #SubNavChangeSearch ul li { border-right-width: 1px; border-right-style: solid; border-right-color: #d1d1d1; }
+    #SubNavChangeSearch ul li { display: inline; line-height: 1.8; margin: 0 10px 0 0; padding: 2px 10px 0 0; }
+    #SubNavChangeSearch ul li.last { border-right: none; display: inline; margin: 0; padding: 0; }
+.rowsearch{ margin-bottom: 10px;border: 1px solid #d1d1d1;}
 /*Bootstrap Fix*/
 body { font-weight: 400; }
 
@@ -3496,6 +3502,7 @@ span.cruise-ico {
 }
 
 @media (min-width: 992px) {
+    #SubNavChangeSearch{ margin-top: 100px;}
     .breadcrumb {
         margin-top: 130px;
         color: #ccc;
