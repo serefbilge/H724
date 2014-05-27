@@ -89,7 +89,7 @@ jQuery(document).ready(function() {
 			 
 			  }
 			  else{
-			   $('.navbar-wrapper2').css({'min-height' : 110-($scrollTop/2) +'px'});
+			   $('.navbar-wrapper2').css({'min-height' : 80-($scrollTop/2) +'px'});
 			  }
 		  $('#dajy').css({'top': ((- $scrollTop / 5)+ $headerheight)  + 'px' });
 		  //$(".sboxpurple").css({'opacity' : 1-($scrollTop/300)});

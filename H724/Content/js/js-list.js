@@ -149,7 +149,7 @@ jQuery(window).scroll(function(){
 	 
 	  }
 	  else{
-	   jQuery('.navbar-wrapper2').css({'min-height' : 110-(jQueryscrollTop/2) +'px'});
+	   jQuery('.navbar-wrapper2').css({'min-height' : 80-(jQueryscrollTop/2) +'px'});
 	  }
   jQuery('#dajy').css({'top': ((- jQueryscrollTop / 5)+ jQueryheaderheight)  + 'px' });
   //jQuery(".sboxpurple").css({'opacity' : 1-(jQueryscrollTop/300)});
