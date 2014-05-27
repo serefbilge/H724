@@ -209,7 +209,7 @@ jQuery(window).scroll(function(){
 			 if ( jQueryiw < 992 ) {
 			  }
 			  else{
-			   jQuery('.mtnav').stop().animate({top: '30px'}, 500);
+			   jQuery('.mtnav').stop().animate({top: '10px'}, 500);
 			  }
 			
 			

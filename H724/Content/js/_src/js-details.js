@@ -193,7 +193,7 @@ jQuery(window).scroll(function(){
 		 if ( $iw < 992 ) {
 		  }
 		  else{
-		   jQuery('.mtnav').stop().animate({top: '30px'}, 500);
+		   jQuery('.mtnav').stop().animate({top: '10px'}, 500);
 		  }
 
 		jQuery('.logo').stop().animate({width: '120px'}, 100);		
