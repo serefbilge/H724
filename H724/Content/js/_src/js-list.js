@@ -190,7 +190,7 @@ jQuery(window).scroll(function(){
 	
 	if(jQuery(window).scrollTop() != 0){
 		jQuery('.mtnav').stop().animate({top: '0px'}, 500);
-		jQuery('.logo').stop().animate({width: '100px'}, 100);
+		jQuery('.logo').stop().animate({width: '115px'}, 100);
 	}       
 	else {
 		 if ( jQueryiw < 992 ) {
