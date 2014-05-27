@@ -8,10 +8,12 @@
         Services = new List<SpaService>
         {
             new SpaService {Name = "Face Comfort Massage", DurationInMinute = 25, Price = 70},
-            new SpaService {Name = "Quick Facial", DurationInMinute = 30, Price = 90}
+            new SpaService {Name = "Quick Facial", DurationInMinute = 30, Price = 90},
+            new SpaService {Name = "Classic Face Care", DurationInMinute = 55, Price = 180},
+            new SpaService {Name = "Moisturizing Comfort", DurationInMinute = 55, Price = 160},
+            new SpaService {Name = "Pure Solutions", DurationInMinute = 55, Price = 180}
         }
     };
-
     var group2 = new SpaServiceGroup
     {
         Name = "Specific Facial Treatments",
@@ -23,10 +25,22 @@
             new SpaService {Name = "Double Max Lift Ox.-Treat.", DurationInMinute = 55, Price = 260}
         }
     };
-
+    var group3 = new SpaServiceGroup
+    {
+        Name = "Intensive Body Treatment",
+        Services = new List<SpaService>
+        {
+            new SpaService {Name = "Kianty Body Exfoliante", DurationInMinute = 30, Price = 90},
+            new SpaService {Name = "Slimming & Anti-Cellulite Apparat ", DurationInMinute = 30, Price = 90},
+            new SpaService {Name = "Express Detox Treatment “Mousse Mare”", DurationInMinute = 55, Price = 180},
+            new SpaService {Name = "Slimming Treatment “Vigna Del Mare”", DurationInMinute = 55, Price = 190},
+            new SpaService {Name = "Kianty Toscana Thermo Cellulite Treatment", DurationInMinute = 55, Price = 190}
+        }
+    };
     groups.Add(group1);
     groups.Add(group2);
-
+    groups.Add(group3);
+    
     var gcounter = 0;
     var sorder = 0;
 }
