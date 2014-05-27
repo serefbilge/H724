@@ -824,12 +824,6 @@ height:100%!important;
 /*if you change the margin-top you must change it also in js-new-homepage.js*/
 .cst03{background:#fff; margin-top:900px; position:relative;  z-index:100; display:block;}
 
-
-.navbar-brand{
-padding:12px 15px 0px 0!important;
-}
-
-
 .nav2 > li > a{
 font-family:Lato;
 font-size:14px;
