@@ -54,8 +54,6 @@ a { color: #666; }
 .tab-content4 > .active, .pill-content > .active { display: block !important; }
 .tab-content4 > .tab-pane, .pill-content > .pill-pane { display: none; }
 
-.container{ padding-left: 0; }
-
 /* General Extensions*/
 .inblock{ display: inline-block; }
 
@@ -4453,6 +4451,7 @@ span.icon-lockk {
     height: 334px;
     overflow: hidden;
     position: relative;
+    padding: 0 !important;
 }
 
 nav.navtab {
