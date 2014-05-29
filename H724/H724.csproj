@@ -1380,7 +1380,6 @@
     <Content Include="Views\Home\EanIndex.cshtml" />
     <Content Include="Views\Shared\_Layout_RoomListing.cshtml" />
     <Content Include="Views\Shared\_Layout_Details.cshtml" />
-    <Content Include="Views\Details\Details_old.cshtml" />
     <Content Include="Views\Details\Restaurant.cshtml" />
     <Content Include="Views\Details\Room.cshtml" />
     <Content Include="Views\Details\Spa.cshtml" />
