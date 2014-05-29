@@ -51,6 +51,8 @@ jQuery(document).ready(function(){
 			jQuery('html,body').animate({scrollTop:jQuery(this.hash).offset().top - jQueryih}, 1500);
 		});
 	});
+
+    $('ul.nav-tabs li').click(function () { mySelectUpdate(); });
 });
 
 
