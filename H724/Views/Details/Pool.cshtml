@@ -9,18 +9,9 @@
     <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/jslider/css/jslider.round.css")" type="text/css">
 }
 
-<div class="container pagecontainer mart5 offset-0">
-    <div class="col-md-12  offset-0">
-        <div class="cstyle10 blue"></div>
-        <ul class="nav nav-tabs blue myTab">
-            <li class=""><a href="@Url.Action("Room", "Details")"><span class="room"></span><span class="hidetext">Room</span>&nbsp;</a></li>
-            <li class=""><a href="@Url.Action("Spa", "Details")"><span class="spa"></span>&nbsp;<span class="hidetext">Spa</span>&nbsp;</a></li>
-            <li class=""><a href="@Url.Action("Restaurant", "Details")"><span class="restaurant"></span>&nbsp;<span class="hidetext">Restaurant</span>&nbsp;</a></li>
-            <li class="active"><a href="@Url.Action("Pool", "Details")"><span class="pool"></span>&nbsp;<span class="hidetext">Pool</span>&nbsp;</a></li>
-            <li class=""><a href="@Url.Action("Event", "Details")"><span class="event"></span>&nbsp;<span class="hidetext">Event</span>&nbsp;</a></li>
-        </ul>
-    </div>
-</div>
+<script>
+    $('li.pool').addClass('active');
+</script>
 
 <div class="container pagecontainer mart5 offset-0">
     <!-- SLIDER -->

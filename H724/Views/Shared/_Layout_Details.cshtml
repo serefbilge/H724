@@ -158,7 +158,7 @@
     <!-- /Top wrapper -->
     
     @Html.Action("ChangeSearch", "Details")
-
+    
     <div class="container">
         <div class="module pull-left">
             <h4>Rixos The Palm Dubai</h4>
@@ -169,6 +169,19 @@
                 <em>&lt;strong class="rating"&gt;4.5&lt;/strong&gt; of 5 stars </em>
             </span>
             <span class="left"><a class="taReviewCount" target="_blank" href="http://www.tripadvisor.com/WidgetEmbed-cdspropertydetail?display=true&amp;partnerId=0DC658C8DC2A463A887F1B6A10C37757&amp;lang=en_US&amp;locationId=2445260&amp;format=html&amp;display=true&amp;isTA=true">487 reviews</a></span>
+        </div>
+    </div>
+    
+    <div class="container pagecontainer mart5 offset-0">
+        <div class="col-md-12  offset-0">
+            <div class="cstyle10 blue"></div>
+            <ul class="nav nav-tabs blue myTab">
+                <li class="room"><a href="@Url.Action("Room", "Details")"><span class="room"></span><span class="hidetext">Room</span>&nbsp;</a></li>
+                <li class="spa"><a href="@Url.Action("Spa", "Details")"><span class="spa"></span>&nbsp;<span class="hidetext">Spa</span>&nbsp;</a></li>
+                <li class="restaurant"><a href="@Url.Action("Restaurant", "Details")"><span class="restaurant"></span>&nbsp;<span class="hidetext">Restaurant</span>&nbsp;</a></li>
+                <li class="pool"><a href="@Url.Action("Pool", "Details")"><span class="pool"></span>&nbsp;<span class="hidetext">Pool</span>&nbsp;</a></li>
+                <li class="event"><a href="@Url.Action("Event", "Details")"><span class="event"></span>&nbsp;<span class="hidetext">Event</span>&nbsp;</a></li>
+            </ul>
         </div>
     </div>
 
