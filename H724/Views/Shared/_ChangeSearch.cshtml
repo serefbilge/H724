@@ -59,7 +59,12 @@
         <!-- End of event_search_tab -->
         
         <script>
-            $('#@(activeTab)').addClass("active");
+            var activeTabId = '@(activeTab)';
+            $('#' + activeTabId).addClass("active");
+
+            var activeLink = $('a[href="#' + activeTabId + '"]').closest('li');
+
+            activeLink.addClass("active");
         </script>
         <div class="clearfix"></div><br />
 

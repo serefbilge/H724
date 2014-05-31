@@ -163,7 +163,7 @@
     </div>
     <!-- /Top wrapper -->
 
-    @Html.Action("ChangeSearch", "RoomListing")
+    @Html.Action("ChangeSearch", "RoomListing", new { searchType = ViewBag.SearchType })
 
     <!-- CONTENT -->
     <div class="container offset-0">
