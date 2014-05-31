@@ -26,36 +26,25 @@
     </div>
 
     <div class="clearfix"></div>
-
-    <div class="room1">
-        <div class="w50percent">
-            <div class="wh90percent textleft">
-                <span class="opensans size13"><b>Adult</b></span>
-                <select class="form-control mySelectBoxClass">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="w50percentlast">
-            <div class="wh90percent textleft right">
-                <span class="opensans size13"><b>Child</b></span>
-                <select class="form-control mySelectBoxClass">
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </div>
+    
+    <div class="w50percent">
+        <div class="wh90percent textleft">
+            <form action="@Url.Action("RoomSearch", "RoomListing")">
+                <button type="submit" class="btn-search2">Search</button>
+            </form>
         </div>
     </div>
-    <form action="@Url.Action("RoomSearch", "Home")">
-        <button type="submit" class="btn-search2">Search</button>
-    </form>
+
+    <div class="w50percentlast">
+        <div class="wh90percent textleft right">
+            <span class="opensans size13"><b>Adult</b></span>
+            <select class="form-control mySelectBoxClass">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+    </div>
 </div>
