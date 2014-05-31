@@ -1,6 +1,8 @@
 ﻿@{
     ViewBag.Title = "Restaurant Details";
     Layout = "~/Views/Shared/_Layout_Details.cshtml";
+
+    var linkId = ViewBag.RestaurantId != null ? "restaurant_" + ViewBag.RestaurantId : "restaurant_123";
 }
 
 @section header_end_css{
@@ -10,18 +12,18 @@
     <link rel="stylesheet" href="@Url.Content("~/Content/assets/responsive-navtab/responsive-navtab.css")" type="text/css" />
 }
 
-<script>
+@*<script>
     $('li.restaurant').addClass('active');
-</script>
+</script>*@
 
 <div class="container pagecontainer mart5 offset-0">
     <!-- SLIDER -->
     <div class="col-md-8 details-slider">
         <nav class="navtab">
             <ul>
-                <li class="current"><a href="#">A La Turca Restaurant</a></li>
-                <li><a href="hotel_rest_2.html">Chef's-Steak House</a></li>
-                <li><a href="hotel_rest_3.html">ROCCHA Restaurant</a></li>
+                <li id="restaurant_123"><a href="@Url.Action("Restaurant", "Details", new { id = "123", name = "A-La-Turca-Restaurant" })">A La Turca Restaurant</a></li>
+                <li id="restaurant_124"><a href="@Url.Action("Restaurant", "Details", new { id = "124", name = "Chef's-Steak-House" })">Chef's-Steak House</a></li>
+                <li id="restaurant_125"><a href="@Url.Action("Restaurant", "Details", new { id = "125", name = "ROCCHA-Restaurant" })">ROCCHA Restaurant</a></li>
             </ul>
         </nav>
         <div id="c-carousel">
@@ -62,7 +64,7 @@
     <!-- RIGHT INFO -->
     <div class="col-md-4 detailsright offset-0">
         <div class="padding20">
-            <h4 class="lh1">Mabely Grand Hotel</h4>
+            <h4 id="restaurant_name" class="lh1">Mabely Grand Hotel</h4>
             <img src="@Url.Content("~/Content/images/smallrating-5.png")" alt="" />
         </div>
 
@@ -1149,5 +1151,11 @@
 </div>
 
 
+<script>
+    var link = $('li#' + '@linkId');
+    var name = $('#restaurant_name');
 
+    link.addClass("current");
+    name.text(link.text());
+</script>
 

@@ -21,8 +21,10 @@ namespace H724.Controllers
             return View();
         }
 
-        public ActionResult Restaurant()
+        public ActionResult Restaurant(string id)
         {
+            ViewBag.RestaurantId = id ?? "124"; 
+
             return View();
         }
 
