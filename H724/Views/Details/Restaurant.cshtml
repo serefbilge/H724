@@ -13,8 +13,8 @@
 }
 
 @*<script>
-    $('li.restaurant').addClass('active');
-</script>*@
+        $('li.restaurant').addClass('active');
+    </script>*@
 
 <div class="container pagecontainer mart5 offset-0">
     <!-- SLIDER -->
@@ -52,21 +52,30 @@
                 </div>
                 <div class="clearfix"></div>
                 <button id="prev_btn2" class="prev2">
-                    <img src="@Url.Content("~/Content/images/spacer.png")" alt="" /></button>
+                    <img src="@Url.Content("~/Content/images/spacer.png")" alt="" />
+                </button>
                 <button id="next_btn2" class="next2">
-                    <img src="@Url.Content("~/Content/images/spacer.png")" alt="" /></button>
+                    <img src="@Url.Content("~/Content/images/spacer.png")" alt="" />
+                </button>
             </div>
         </div>
         <!-- /c-carousel -->
     </div>
     <!-- END OF SLIDER -->
-
     <!-- RIGHT INFO -->
     <div class="col-md-4 detailsright offset-0">
         <div class="padding20">
             <h4 id="restaurant_name" class="lh1">A La Turca Restaurant</h4>
             <img src="@Url.Content("~/Content/images/smallrating-5.png")" alt="" />
         </div>
+
+        <script>
+            var link = $('li#' + '@linkId');
+            var name = $('#restaurant_name');
+
+            link.addClass("current");
+            name.text(link.text());
+        </script>
 
         <div class="line3"></div>
 
@@ -115,14 +124,14 @@
             <li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#preferences"><span class="preferences"></span><span class="hidetext">Preferences</span>&nbsp;</a></li>
             <li onclick="loadScript()" class=""><a data-toggle="tab" href="#maps"><span class="maps"></span><span class="hidetext">Maps</span>&nbsp;</a></li>
             <li onclick="mySelectUpdate(); trigerJslider(); trigerJslider2(); trigerJslider3(); trigerJslider4(); trigerJslider5(); trigerJslider6();" class=""><a data-toggle="tab" href="#reviews"><span class="reviews"></span><span class="hidetext">Reviews</span>&nbsp;</a></li>
-           <!-- <li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#thingstodo"><span class="thingstodo"></span><span class="hidetext">Things to do</span>&nbsp;</a></li> -->
+            <!-- <li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#thingstodo"><span class="thingstodo"></span><span class="hidetext">Things to do</span>&nbsp;</a></li> -->
 
         </ul>
         <div class="tab-content4">
             <!-- TAB 1 -->
             <div id="summary" class="tab-pane fade ">
                 <p class="hpadding20">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor aliquam felis, sit amet tempus nibh ullamcorper nec. Maecenas suscipit dolor at blandit congue. Sed adipiscing, odio feugiat pellentesque tincidunt, est leo vestibulum erat, ac pharetra massa justo ac lorem. 
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor aliquam felis, sit amet tempus nibh ullamcorper nec. Maecenas suscipit dolor at blandit congue. Sed adipiscing, odio feugiat pellentesque tincidunt, est leo vestibulum erat, ac pharetra massa justo ac lorem.
                 </p>
                 <div class="line4"></div>
 
@@ -307,7 +316,8 @@
                                         <span class="opensans size13"><b>ROOM 2</b></span><br />
                                         <div class="addroom2 block grey">
                                             <a onclick="addroom3()" class="grey cpointer">+ Add room</a> | <a onclick="removeroom2()" class="orange cpointer">
-                                                <img src="@Url.Content("~/Content/images/delete.png")" alt="delete" /></a>
+                                                <img src="@Url.Content("~/Content/images/delete.png")" alt="delete" />
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -351,7 +361,8 @@
                                         <span class="opensans size13"><b>ROOM 3</b></span><br />
                                         <div class="addroom3 block grey">
                                             <a onclick="addroom3()" class="grey cpointer">+ Add room</a> | <a onclick="removeroom3()" class="orange cpointer">
-                                                <img src="@Url.Content("~/Content/images/delete.png")" alt="delete" /></a>
+                                                <img src="@Url.Content("~/Content/images/delete.png")" alt="delete" />
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -403,7 +414,8 @@
                 <div class="padding20">
                     <div class="col-md-4 offset-0">
                         <a href="#">
-                            <img src="@Url.Content("~/Content/images/items2/item1.jpg")" alt="" class="fwimg" /></a>
+                            <img src="@Url.Content("~/Content/images/items2/item1.jpg")" alt="" class="fwimg" />
+                        </a>
                     </div>
                     <div class="col-md-8 offset-0">
                         <div class="col-md-8 mediafix1">
@@ -440,7 +452,8 @@
                 <div class="padding20">
                     <div class="col-md-4 offset-0">
                         <a href="#">
-                            <img src="@Url.Content("~/Content/images/items2/item2.jpg")" alt="" class="fwimg" /></a>
+                            <img src="@Url.Content("~/Content/images/items2/item2.jpg")" alt="" class="fwimg" />
+                        </a>
                     </div>
                     <div class="col-md-8 offset-0">
                         <div class="col-md-8">
@@ -477,7 +490,8 @@
                 <div class="padding20">
                     <div class="col-md-4 offset-0">
                         <a href="#">
-                            <img src="@Url.Content("~/Content/images/items2/item3.jpg")" alt="" class="fwimg" /></a>
+                            <img src="@Url.Content("~/Content/images/items2/item3.jpg")" alt="" class="fwimg" />
+                        </a>
                     </div>
                     <div class="col-md-8 offset-0">
                         <div class="col-md-8">
@@ -514,7 +528,8 @@
                 <div class="padding20">
                     <div class="col-md-4 offset-0">
                         <a href="#">
-                            <img src="@Url.Content("~/Content/images/items2/item4.jpg")" alt="" class="fwimg" /></a>
+                            <img src="@Url.Content("~/Content/images/items2/item4.jpg")" alt="" class="fwimg" />
+                        </a>
                     </div>
                     <div class="col-md-8 offset-0">
                         <div class="col-md-8">
@@ -756,8 +771,10 @@
                                 <span class="dark">by Sena</span><br />
                                 from London, UK<br />
                                 <img src="@Url.Content("~/Content/images/check.png")" alt="" /><br />
-                                <span class="green">Recommended<br />
-                                    for Everyone</span>
+                                <span class="green">
+                                    Recommended<br />
+                                    for Everyone
+                                </span>
                             </div>
 
                         </div>
@@ -793,8 +810,10 @@
                                 <span class="dark">by Sena</span><br />
                                 from London, UK<br />
                                 <img src="@Url.Content("~/Content/images/check.png")" alt="" /><br />
-                                <span class="green">Recommended<br />
-                                    for Everyone</span>
+                                <span class="green">
+                                    Recommended<br />
+                                    for Everyone
+                                </span>
                             </div>
 
                         </div>
@@ -830,8 +849,10 @@
                                 <span class="dark">by Sena</span><br />
                                 from London, UK<br />
                                 <img src="@Url.Content("~/Content/images/check.png")" alt="" /><br />
-                                <span class="green">Recommended<br />
-                                    for Everyone</span>
+                                <span class="green">
+                                    Recommended<br />
+                                    for Everyone
+                                </span>
                             </div>
 
                         </div>
@@ -892,7 +913,8 @@
                     <div class="padding20 relative wh70percent">
                         <div class="layout-slider wh100percent">
                             <span class="cstyle01">
-                                <input id="Slider1" type="slider" name="price" value="0;4.2" /></span>
+                                <input id="Slider1" type="slider" name="price" value="0;4.2" />
+                            </span>
                         </div>
                         <script type="text/javascript">
                             function trigerJslider() {
@@ -905,7 +927,8 @@
 
                         <div class="layout-slider margtop10 wh100percent">
                             <span class="cstyle01">
-                                <input id="Slider2" type="slider" name="price" value="0;5.0" /></span>
+                                <input id="Slider2" type="slider" name="price" value="0;5.0" />
+                            </span>
                         </div>
                         <script type="text/javascript">
                             function trigerJslider2() {
@@ -915,7 +938,8 @@
 
                         <div class="layout-slider margtop10 wh100percent">
                             <span class="cstyle01">
-                                <input id="Slider3" type="slider" name="price" value="0;2.5" /></span>
+                                <input id="Slider3" type="slider" name="price" value="0;2.5" />
+                            </span>
                         </div>
                         <script type="text/javascript">
                             function trigerJslider3() {
@@ -925,7 +949,8 @@
 
                         <div class="layout-slider margtop10 wh100percent">
                             <span class="cstyle01">
-                                <input id="Slider4" type="slider" name="price" value="0;3.8" /></span>
+                                <input id="Slider4" type="slider" name="price" value="0;3.8" />
+                            </span>
                         </div>
                         <script type="text/javascript">
                             function trigerJslider4() {
@@ -935,7 +960,8 @@
 
                         <div class="layout-slider margtop10 wh100percent">
                             <span class="cstyle01">
-                                <input id="Slider5" type="slider" name="price" value="0;4.4" /></span>
+                                <input id="Slider5" type="slider" name="price" value="0;4.4" />
+                            </span>
                         </div>
                         <script type="text/javascript">
                             function trigerJslider5() {
@@ -945,7 +971,8 @@
 
                         <div class="layout-slider margtop10 wh100percent">
                             <span class="cstyle01">
-                                <input id="Slider6" type="slider" name="price" value="0;4.0" /></span>
+                                <input id="Slider6" type="slider" name="price" value="0;4.0" />
+                            </span>
                         </div>
                         <script type="text/javascript">
                             function trigerJslider6() {
@@ -979,119 +1006,119 @@
             </div>
 
             <!-- TAB 6 -->
-          <!--  <div id="thingstodo" class="tab-pane fade">
+            <!--  <div id="thingstodo" class="tab-pane fade">
 
-                <p class="hpadding20 opensans size16 dark bold">Attractions travelers recommend</p>
+                  <p class="hpadding20 opensans size16 dark bold">Attractions travelers recommend</p>
 
-                <div class="line2"></div>
+                  <div class="line2"></div>
 
-                <div class="padding20">
-                    <div class="col-md-4 offset-0">
-                        <a href="#">
-                            <img src="@Url.Content("~/Content/images/items2/item5.jpg")" alt="" class="fwimg" /></a>
-                    </div>
-                    <div class="col-md-8 offset-0">
-                        <div class="col-md-8 mediafix1">
-                            <span class="opensans dark size16 margtop1 margtop-5">Porto Limnionas Beach</span><br />
-                            <span class="green">“Just Great!!!”</span> 08/27/2013<br />
-                            <p class="margtop10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam velit augue, placerat quis est eget, cursus dictum felis. Morbi non dui vitae nisl pharetra placerat.</p>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="col-md-4 center bordertype4">
-                            <img src="@Url.Content("~/Content/images/user-rating-4.png")" alt="" /><br />
-                            <span class="opensans grey size14">31 reviews</span>
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <button class="bookbtn mt1">More</button>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="line2"></div>
+                  <div class="padding20">
+                      <div class="col-md-4 offset-0">
+                          <a href="#">
+                              <img src="@Url.Content("~/Content/images/items2/item5.jpg")" alt="" class="fwimg" /></a>
+                      </div>
+                      <div class="col-md-8 offset-0">
+                          <div class="col-md-8 mediafix1">
+                              <span class="opensans dark size16 margtop1 margtop-5">Porto Limnionas Beach</span><br />
+                              <span class="green">“Just Great!!!”</span> 08/27/2013<br />
+                              <p class="margtop10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam velit augue, placerat quis est eget, cursus dictum felis. Morbi non dui vitae nisl pharetra placerat.</p>
+                              <div class="clearfix"></div>
+                          </div>
+                          <div class="col-md-4 center bordertype4">
+                              <img src="@Url.Content("~/Content/images/user-rating-4.png")" alt="" /><br />
+                              <span class="opensans grey size14">31 reviews</span>
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                              <button class="bookbtn mt1">More</button>
+                          </div>
+                      </div>
+                      <div class="clearfix"></div>
+                  </div>
+                  <div class="line2"></div>
 
-                <div class="padding20">
-                    <div class="col-md-4 offset-0">
-                        <a href="#">
-                            <img src="@Url.Content("~/Content/images/items2/item6.jpg")" alt="" class="fwimg" /></a>
-                    </div>
-                    <div class="col-md-8 offset-0">
-                        <div class="col-md-8 mediafix1">
-                            <span class="opensans dark size16 margtop1 margtop-5">Marathonissi (Turtle Island), Laganas</span><br />
-                            <span class="green">“Beautiful”</span> 08/27/2013<br />
-                            <p class="margtop10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam velit augue, placerat quis est eget, cursus dictum felis. Morbi non dui vitae nisl pharetra placerat.</p>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="col-md-4 center bordertype4">
-                            <img src="@Url.Content("~/Content/images/user-rating-5.png")" alt="" /><br />
-                            <span class="opensans grey size14">23 reviews</span>
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <button class="bookbtn mt1">More</button>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="line2"></div>
+                  <div class="padding20">
+                      <div class="col-md-4 offset-0">
+                          <a href="#">
+                              <img src="@Url.Content("~/Content/images/items2/item6.jpg")" alt="" class="fwimg" /></a>
+                      </div>
+                      <div class="col-md-8 offset-0">
+                          <div class="col-md-8 mediafix1">
+                              <span class="opensans dark size16 margtop1 margtop-5">Marathonissi (Turtle Island), Laganas</span><br />
+                              <span class="green">“Beautiful”</span> 08/27/2013<br />
+                              <p class="margtop10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam velit augue, placerat quis est eget, cursus dictum felis. Morbi non dui vitae nisl pharetra placerat.</p>
+                              <div class="clearfix"></div>
+                          </div>
+                          <div class="col-md-4 center bordertype4">
+                              <img src="@Url.Content("~/Content/images/user-rating-5.png")" alt="" /><br />
+                              <span class="opensans grey size14">23 reviews</span>
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                              <button class="bookbtn mt1">More</button>
+                          </div>
+                      </div>
+                      <div class="clearfix"></div>
+                  </div>
+                  <div class="line2"></div>
 
-                <div class="padding20">
-                    <div class="col-md-4 offset-0">
-                        <a href="#">
-                            <img src="@Url.Content("~/Content/images/items2/item7.jpg")" alt="" class="fwimg" /></a>
-                    </div>
-                    <div class="col-md-8 offset-0">
-                        <div class="col-md-8 mediafix1">
-                            <span class="opensans dark size16 margtop1 margtop-5">Navagio Beach (Shipwreck Beach)</span><br />
-                            <span class="green">“like being on a tropical island”</span> 08/27/2013<br />
-                            <p class="margtop10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam velit augue, placerat quis est eget, cursus dictum felis. Morbi non dui vitae nisl pharetra placerat.</p>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="col-md-4 center bordertype4">
-                            <img src="@Url.Content("~/Content/images/user-rating-3.png")" alt="" /><br />
-                            <span class="opensans grey size14">17 reviews</span>
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <button class="bookbtn mt1">More</button>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="line2"></div>
+                  <div class="padding20">
+                      <div class="col-md-4 offset-0">
+                          <a href="#">
+                              <img src="@Url.Content("~/Content/images/items2/item7.jpg")" alt="" class="fwimg" /></a>
+                      </div>
+                      <div class="col-md-8 offset-0">
+                          <div class="col-md-8 mediafix1">
+                              <span class="opensans dark size16 margtop1 margtop-5">Navagio Beach (Shipwreck Beach)</span><br />
+                              <span class="green">“like being on a tropical island”</span> 08/27/2013<br />
+                              <p class="margtop10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam velit augue, placerat quis est eget, cursus dictum felis. Morbi non dui vitae nisl pharetra placerat.</p>
+                              <div class="clearfix"></div>
+                          </div>
+                          <div class="col-md-4 center bordertype4">
+                              <img src="@Url.Content("~/Content/images/user-rating-3.png")" alt="" /><br />
+                              <span class="opensans grey size14">17 reviews</span>
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                              <button class="bookbtn mt1">More</button>
+                          </div>
+                      </div>
+                      <div class="clearfix"></div>
+                  </div>
+                  <div class="line2"></div>
 
-                <div class="padding20">
-                    <div class="col-md-4 offset-0">
-                        <a href="#">
-                            <img src="@Url.Content("~/Content/images/items2/item8.jpg")" alt="" class="fwimg" /></a>
-                    </div>
-                    <div class="col-md-8 offset-0">
-                        <div class="col-md-8 mediafix1">
-                            <span class="opensans dark size16 margtop1 margtop-5">Blue Caves</span><br />
-                            <span class="green">“A must see”</span> 08/27/2013<br />
-                            <p class="margtop10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam velit augue, placerat quis est eget, cursus dictum felis. Morbi non dui vitae nisl pharetra placerat.</p>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="col-md-4 center bordertype4">
-                            <img src="@Url.Content("~/Content/images/user-rating-4.png")" alt="" /><br />
-                            <span class="opensans grey size14">10 reviews</span>
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <button class="bookbtn mt1">More</button>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="line2"></div>
+                  <div class="padding20">
+                      <div class="col-md-4 offset-0">
+                          <a href="#">
+                              <img src="@Url.Content("~/Content/images/items2/item8.jpg")" alt="" class="fwimg" /></a>
+                      </div>
+                      <div class="col-md-8 offset-0">
+                          <div class="col-md-8 mediafix1">
+                              <span class="opensans dark size16 margtop1 margtop-5">Blue Caves</span><br />
+                              <span class="green">“A must see”</span> 08/27/2013<br />
+                              <p class="margtop10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam velit augue, placerat quis est eget, cursus dictum felis. Morbi non dui vitae nisl pharetra placerat.</p>
+                              <div class="clearfix"></div>
+                          </div>
+                          <div class="col-md-4 center bordertype4">
+                              <img src="@Url.Content("~/Content/images/user-rating-4.png")" alt="" /><br />
+                              <span class="opensans grey size14">10 reviews</span>
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                              <button class="bookbtn mt1">More</button>
+                          </div>
+                      </div>
+                      <div class="clearfix"></div>
+                  </div>
+                  <div class="line2"></div>
 
 
 
-            </div> -->
+              </div> -->
         </div>
     </div>
 
@@ -1124,7 +1151,8 @@
             </div>
             <div class="cpadding1 ">
                 <a href="#">
-                    <img src="@Url.Content("~/Content/images/smallthumb-1.jpg")" class="left mr20" alt="" /></a>
+                    <img src="@Url.Content("~/Content/images/smallthumb-1.jpg")" class="left mr20" alt="" />
+                </a>
                 <a href="#" class="dark"><b>Hotel Amaragua</b></a><br />
                 <span class="opensans green bold size14">$36-$160</span> <span class="grey">avg/night</span><br />
                 <img src="@Url.Content("~/Content/images/filter-rating-5.png")" alt="" />
@@ -1132,7 +1160,8 @@
             <div class="line5"></div>
             <div class="cpadding1 ">
                 <a href="#">
-                    <img src="@Url.Content("~/Content/images/smallthumb-2.jpg")" class="left mr20" alt="" /></a>
+                    <img src="@Url.Content("~/Content/images/smallthumb-2.jpg")" class="left mr20" alt="" />
+                </a>
                 <a href="#" class="dark"><b>Hotel Amaragua</b></a><br />
                 <span class="opensans green bold size14">$36-$160</span> <span class="grey">avg/night</span><br />
                 <img src="@Url.Content("~/Content/images/filter-rating-5.png")" alt="" />
@@ -1140,7 +1169,8 @@
             <div class="line5"></div>
             <div class="cpadding1 ">
                 <a href="#">
-                    <img src="@Url.Content("~/Content/images/smallthumb-3.jpg")" class="left mr20" alt="" /></a>
+                    <img src="@Url.Content("~/Content/images/smallthumb-3.jpg")" class="left mr20" alt="" />
+                </a>
                 <a href="#" class="dark"><b>Hotel Amaragua</b></a><br />
                 <span class="opensans green bold size14">$36-$160</span> <span class="grey">avg/night</span><br />
                 <img src="@Url.Content("~/Content/images/filter-rating-5.png")" alt="" />
@@ -1149,13 +1179,3 @@
         </div>
     </div>
 </div>
-
-
-<script>
-    var link = $('li#' + '@linkId');
-    var name = $('#restaurant_name');
-
-    link.addClass("current");
-    name.text(link.text());
-</script>
-
