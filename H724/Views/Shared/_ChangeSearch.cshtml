@@ -1,4 +1,6 @@
-﻿<div class="container well" id="SubNavChangeSearch">
+﻿@using H724.Models
+
+<div class="container well" id="SubNavChangeSearch">
     <ul>
         <li class="destinationName">Hotel Spas in <span id="SubNavCurrentDestination">Dubai, United Arab Emirates</span></li>
         <li>From May 28, 2014 To May 30, 2014 </li>
@@ -12,7 +14,7 @@
     </ul>
 </div>
 <div id="search_change" class="rowsearch well container collapse">
-    
+
     <ul class="nav nav-tabs myTab">
         <li class="room"><a data-toggle="tab" href="#room_search_tab"><span class="room"></span><span class="hidetext">Room</span>&nbsp;</a></li>
         <li class="spa"><a data-toggle="tab" href="#spa_search_tab"><span class="spa"></span>&nbsp;<span class="hidetext">Spa</span>&nbsp;</a></li>
@@ -22,37 +24,47 @@
     </ul>
 
     <div class="tab-content">
+        @{
+            var searchType = ViewBag.SearchType;
 
+            var activeTab = searchType == SearchType.RoomSearch ? "room_search_tab" :
+                            searchType == SearchType.SpaSearch ? "spa_search_tab" :
+                            searchType == SearchType.RestaurantSearch ? "restaurant_search_tab" :
+                            searchType == SearchType.PoolSearch ? "pool_search_tab" : "event_search_tab";
+        }
         <!-- Tab room_search_tab -->
         <div class="tab-pane " id="room_search_tab">
-            
+            @Html.Action("RoomSearch", "Search")
         </div>
         <!-- End of Tab room_search_tab -->
         <!-- Tab spa_search_tab -->
         <div class="tab-pane " id="spa_search_tab">
-
+            @Html.Action("SpaSearch", "Search")
         </div>
         <!-- End of Tab spa_search_tab -->
         <!-- Tab restaurant_search_tab -->
         <div class="tab-pane " id="restaurant_search_tab">
-
+            @Html.Action("RestaurantSearch", "Search")
         </div>
         <!-- End of Tab restaurant_search_tab -->
         <!-- Tab pool_search_tab -->
         <div class="tab-pane " id="pool_search_tab">
-
+            @Html.Action("PoolSearch", "Search")
         </div>
         <!-- End of Tab pool_search_tab -->
         <!-- Tab event_search_tab -->
         <div class="tab-pane " id="event_search_tab">
-
+            @Html.Action("EventSearch", "Search")
         </div>
         <!-- End of event_search_tab -->
         
+        <script>
+            $('#@(activeTab)').addClass("active");
+        </script>
         <div class="clearfix"></div><br />
 
         <button type="submit" class="btn-search4 margleft15">Search</button>
     </div>
-    
+
 </div>
 

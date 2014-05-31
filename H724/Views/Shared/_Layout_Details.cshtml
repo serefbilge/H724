@@ -157,7 +157,7 @@
     </div>
     <!-- /Top wrapper -->
     
-    @Html.Action("ChangeSearch", "Details")
+    @Html.Action("ChangeSearch", "Details", new { searchType = ViewBag.SearchType })
     
     <div class="container offset-0">
         <div class="module pull-left">
@@ -262,8 +262,7 @@
                 office@travel.com
             </div>
             <!-- End of column 4-->
-
-
+            
         </div>
     </div>
     <div class="footerbg3 bordertop1">
