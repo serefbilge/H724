@@ -58,23 +58,23 @@
     <img class="tab t5" data-opac="1" src="~/Content/images/intro/tab5.jpg" alt="" />
 
     <!--TAB 1 -->
-    @Html.Partial("_TabSearch1")
+    @Html.Action("RoomSearch", "Search")
     <!-- END OF TAB1 -->
 
     <!--TAB 2 -->
-    @Html.Partial("_TabSearch2")
+    @Html.Action("SpaSearch", "Search")
     <!--END OF TAB 2 -->
 
     <!--TAB 3 -->
-    @Html.Partial("_TabSearch3")
+    @Html.Action("RestaurantSearch", "Search")
     <!-- END OF TAB3 -->
 
     <!--TAB 4 -->
-    @Html.Partial("_TabSearch4")
+    @Html.Action("PoolSearch", "Search")
     <!-- END OF TAB4 -->
 
     <!--TAB 5 -->
-    @Html.Partial("_TabSearch5")
+    @Html.Action("EventSearch", "Search")
     <!-- END OF TAB5 -->
 
     @*<nav>

@@ -132,6 +132,7 @@
     <Compile Include="Controllers\DetailsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RoomListingController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Controllers\SpaDetailsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1367,11 +1368,6 @@
     <Content Include="Content\ean_assets\fonts\EAN-Icons.woff" />
     <Content Include="Content\images\update1\loading.psd" />
     <None Include="Properties\PublishProfiles\publish.pubxml" />
-    <Content Include="Views\Home\_TabSearch1.cshtml" />
-    <Content Include="Views\Home\_TabSearch2.cshtml" />
-    <Content Include="Views\Home\_TabSearch3.cshtml" />
-    <Content Include="Views\Home\_TabSearch4.cshtml" />
-    <Content Include="Views\Home\_TabSearch5.cshtml" />
     <Content Include="Views\RoomListing\RoomSearch.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\RoomListing\RoomSearch2.cshtml" />
@@ -1388,6 +1384,11 @@
     <Content Include="Views\SpaDetails\SpaServices.cshtml" />
     <Content Include="Views\SpaDetails\SpaServices_old.cshtml" />
     <Content Include="Views\Shared\_ChangeSearch.cshtml" />
+    <Content Include="Views\Search\_RoomSearch.cshtml" />
+    <Content Include="Views\Search\_SpaSearch.cshtml" />
+    <Content Include="Views\Search\_RestaurantSearch.cshtml" />
+    <Content Include="Views\Search\_PoolSearch.cshtml" />
+    <Content Include="Views\Search\_EventSearch.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
