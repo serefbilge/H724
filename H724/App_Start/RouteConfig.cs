@@ -7,7 +7,7 @@ using System.Web.Routing;
 
 namespace H724
 {
-    public class RouteConfig
+    public static class RouteConfig
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
@@ -16,7 +16,7 @@ namespace H724
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Details", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "VenereHome", id = UrlParameter.Optional }
             );
         }
     }

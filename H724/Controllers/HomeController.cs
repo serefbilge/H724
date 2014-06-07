@@ -92,6 +92,16 @@ namespace H724.Controllers
             return View(hotelSummaries);
         }
 
+        public ActionResult NewHome()
+        {
+            return View();
+        }
+
+        public ActionResult VenereHome()
+        {
+            return View();
+        }
+
         public ActionResult Details()
         {
             return RedirectToAction("Room", "Details");

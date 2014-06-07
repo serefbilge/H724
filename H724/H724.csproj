@@ -378,6 +378,8 @@
     <Content Include="Content\assets\jquery\jquery.preload.js" />
     <Content Include="Content\assets\jquery\jquery.v2.0.3.js" />
     <Content Include="Content\assets\Lab\LAB.min.js" />
+    <Content Include="Content\assets\Masonry\masonry.css" />
+    <Content Include="Content\assets\Masonry\masonry.pkgd.js" />
     <Content Include="Content\assets\plugins\animo\animate+animo.css" />
     <Content Include="Content\assets\plugins\animo\animo.js" />
     <Content Include="Content\assets\plugins\jslider\css\jslider.blue.css" />
@@ -695,6 +697,7 @@
     <Content Include="Content\js\jquery.carouFredSel-6.2.1-packed.js" />
     <Content Include="Content\js\js-details.js" />
     <Content Include="Content\js\js-list4.js" />
+    <Content Include="Content\js\js-new-homepage.js" />
     <Content Include="Content\js\_src\application.js" />
     <Content Include="Content\js\_src\counter.js" />
     <Content Include="Content\js\_src\customizer.js" />
@@ -1204,6 +1207,7 @@
     <Content Include="Content\js\js-intro2.js" />
     <Content Include="Content\js\js-list.js" />
     <Content Include="Content\spa_details.css" />
+    <Content Include="Content\style01.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -1258,6 +1262,9 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\venere_assets\home_page_allcss_v.55.53132.css" />
+    <Content Include="Content\venere_assets\home_page_alljs_v.55.53132.js" />
+    <Content Include="Content\venere_assets\home_page_searchbox_children_en_row.js" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\assets\bootstrap3.0.3\fonts\glyphicons-halflings-regular.eot" />
@@ -1390,6 +1397,9 @@
     <Content Include="Views\Search\_RestaurantSearch.cshtml" />
     <Content Include="Views\Search\_PoolSearch.cshtml" />
     <Content Include="Views\Search\_EventSearch.cshtml" />
+    <Content Include="Views\Shared\_LayoutNewHome.cshtml" />
+    <Content Include="Views\Home\NewHome.cshtml" />
+    <Content Include="Views\Home\VenereHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
