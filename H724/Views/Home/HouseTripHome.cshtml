@@ -1,0 +1,788 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta content='width=device-width , initial-scale=1.0' name='viewport' />
+    <meta charset='utf-8' />
+    <meta content='IE=edge' http-equiv='X-UA-Compatible' />
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-3.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"5f77faf85e","applicationID":"432481","transactionName":"IgoLTEEOWw4DFB0OXwwASlFdBVIa","queueTime":4,"applicationTime":511,"ttGuid":"","agentToken":null,"agent":"js-agent.newrelic.com/nr-411.min.js"}</script>
+    <script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"Uw8EVEVXCwEEXFA="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e){function n(t,e,n){n||(n={});for(var r=o[t],a=r&&r.length||0,s=n[i]||(n[i]={}),u=0;a>u;u++)r[u].apply(s,e);return s}function r(t,e){var n=o[t]||(o[t]=[]);n.push(e)}var o={},i="nr@context";e.exports={on:r,emit:n}},{}],2:[function(t){function e(t,e,n,i,s){return u?u-=1:r("err",[s||new UncaughtException(t,e,n)]),"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t(5),a=window.onerror,s=!1,u=0;t("loader").features.push("err"),window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(d){"stack"in d&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(4),s=!0)}i.on("fn-start",function(){s&&(u+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&u>0&&(u-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:5,2:4,3:3,4:6,5:1,6:14,handle:"D5DuLP",loader:"G9z0Bl"}],3:[function(t){function e(t){r.inPlace(t,["addEventListener","removeEventListener"],"-",n)}function n(t){return t[1]}var r=t(1),o=(t(3),t(2));if(e(window),"getPrototypeOf"in Object){for(var i=document;i&&!i.hasOwnProperty("addEventListener");)i=Object.getPrototypeOf(i);i&&e(i);for(var a=XMLHttpRequest.prototype;a&&!a.hasOwnProperty("addEventListener");)a=Object.getPrototypeOf(a);a&&e(a)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&e(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=e["nr@wrapped"]?t[1]=e["nr@wrapped"]:e["nr@wrapped"]=t[1]=r(e,"fn-"):"function"==typeof e.handleEvent&&r.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:15,2:1,3:14}],4:[function(t){var e=(t(3),t(1)),n=t(2);e.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=e(t[0],"fn-")})},{1:15,2:1,3:14}],5:[function(t){function e(t){var e=t[0];"string"==typeof e&&(e=new Function(e)),t[0]=n(e,"fn-")}var n=(t(3),t(1)),r=t(2);n.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",e)},{1:15,2:1,3:14}],6:[function(t){function e(){o.inPlace(this,s,"fn-")}function n(t,e){o.inPlace(e,["onreadystatechange"],"fn-")}function r(t,e){return e}var o=t(1),i=t(2),a=window.XMLHttpRequest,s=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];window.XMLHttpRequest=function(t){var n=new a(t);try{i.emit("new-xhr",[],n),o.inPlace(n,["addEventListener","removeEventListener"],"-",function(t,e){return e}),n.addEventListener("readystatechange",e,!1)}catch(r){try{i.emit("internal-error",r)}catch(s){}}return n},window.XMLHttpRequest.prototype=a.prototype,o.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",r),i.on("send-xhr-start",n),i.on("open-xhr-start",n)},{1:15,2:1}],7:[function(t){function e(){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;u>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,d="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=e(d);if(f&&(r.rxSize=f),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}t("loader").features.push("xhr");var o=t("handle"),i=t(1),a=t(5),s=["load","error","abort","timeout"],u=s.length,d=t(2);t(3),t(4),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var d=e(o);d&&(r.txSize=d)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",e)}catch(r){}}};for(var f=0;u>f;f++)n.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&e()},{1:8,2:11,3:3,4:6,5:1,handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e){var n=r[t];return n?n.apply(this,e):(o[t]||(o[t]=[]),void o[t].push(e))}var r={},o={};e.exports=n,n.queues=o,n.handlers=r},{}],11:[function(t,e){function n(t){if(!t||"object"!=typeof t&&"function"!=typeof t)return-1;if(t===window)return 0;if(o.call(t,"__nr"))return t.__nr;try{return Object.defineProperty(t,"__nr",{value:r,writable:!0,enumerable:!1}),r}catch(e){return t.__nr=r,r}finally{r+=1}}var r=1,o=Object.prototype.hasOwnProperty;e.exports=n},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&u&&u.body){p.proto="https"===c.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=u.createElement("script");e.src=p.proto+t.agent,u.body.appendChild(e)}}function r(){"complete"===u.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,u=s.document,d="addEventListener",f="attachEvent",c=(""+location).split("?")[0],p=e.exports={offset:i(),origin:c,features:[]};u[d]?(u[d]("DOMContentLoaded",o,!1),s[d]("load",n,!1)):(u[f]("onreadystatechange",r),s[f]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],14:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],15:[function(t,e){function n(t,e,r,s){function nrWrapper(){try{var n,a=u(arguments),d=this,f=r&&r(a,d)||{}}catch(c){i([c,"",[a,d,s],f])}o(e+"start",[a,d,s],f);try{return n=t.apply(d,a)}catch(p){throw o(e+"err",[a,d,p],f),p}finally{o(e+"end",[a,d,n],f)}}return a(t)?t:(e||(e=""),nrWrapper[n.flag]=!0,nrWrapper)}function r(t,e,r,o){r||(r="");var i,s,u,d="-"===r.charAt(0);for(u=0;u<e.length;u++)s=e[u],i=t[s],a(i)||(t[s]=n(i,d?s+r:r,o,s,t))}function o(t,e,n){try{s.emit(t,e,n)}catch(r){i([r,t,e,n])}}function i(t){try{s.emit("internal-error",t)}catch(e){}}function a(t){return!(t&&"function"==typeof t&&t.apply&&!t[n.flag])}var s=t(1),u=t(2);e.exports=n,n.inPlace=r,n.flag="nr@wrapper"},{1:1,2:14}]},{},["G9z0Bl",2,7]);</script>
+    <link href="//maps.googleapis.com" rel="dns-prefetch" />
+    <link href="//maps.gstatic.com" rel="dns-prefetch" />
+    <link href="//mts0.googleapis.com" rel="dns-prefetch" />
+    <link href="//mts1.googleapis.com" rel="dns-prefetch" />
+    <link href="//googletagmanager.com" rel="dns-prefetch" />
+    <link href="//googleadservices.com" rel="dns-prefetch" />
+    <link href="//i.kissmetrics.com" rel="dns-prefetch" />
+    <link href="//google-analytics.com" rel="dns-prefetch" />
+    <link href="//googleads.g.doubleclick.net" rel="dns-prefetch" />
+    <link href="//trk.kissmetrics.net" rel="dns-prefetch" />
+    <link href="//fonts.googleapis.com" rel="dns-prefetch" />
+    <link href="//cdn0.housetrip.com" rel="dns-prefetch" />
+    <link href="//cdn1.housetrip.com" rel="dns-prefetch" />
+    <link href="//cdn2.housetrip.com" rel="dns-prefetch" />
+    <link href="//cdn3.housetrip.com" rel="dns-prefetch" />
+    <link href="//rum-static.pingdom.net" rel="dns-prefetch" />
+    <link href="//a.triggit.com" rel="dns-prefetch" />
+    <link href="//facebook.com" rel="dns-prefetch" />
+
+    <meta content='HouseTrip is the revolutionary holiday rental online booking site, offering a wide selection of self catering apartments, cottages, villas and chalets.' name='description' />
+    <meta content="ALqVxUrZ_CeHI-VwdGrEFxBMWCMAXDxUAsiHdG8mywg" name="google-site-verification" />
+    <meta content='F7AF840C69CC355DCD80D9EDF0E68A73' name='msvalidate.01' />
+    <meta content='79064591989' property='fb:page_id' />
+    <meta content='a1d79e590e39b9a8b40a5c384d7e449b' name='p:domain_verify' />
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta name="csrf-token" content="DEyxUgp9ADJJpMND+iikQE319oNhyKI0u+njIjVd8W0=" />
+    <link href="http://www.housetrip.com/" rel="canonical" />
+    <link href="http://www.housetrip.fr/" hreflang="fr" rel="alternate" title="Français" />
+    <link href="http://www.housetrip.de/" hreflang="de" rel="alternate" title="Deutsch" />
+    <link href="http://www.housetrip.es/" hreflang="es" rel="alternate" title="Español" />
+    <link href="http://www.housetrip.it/" hreflang="it" rel="alternate" title="Italiano" />
+    <link href="http://www.housetrip.com/pt" hreflang="pt" rel="alternate" title="Português" />
+    <title>
+        Do you HouseTrip yet?
+    </title>
+    <link href='https://plus.google.com/106796743632271752474' rel='publisher' />
+    <link href='http://cdn2.housetrip.com/images/apple-touch-icons/apple-touch-icon-152x152-precomposed.png?1398950426' rel='apple-touch-icon-precomposed' sizes='152x152' />
+    <link href='http://cdn0.housetrip.com/images/apple-touch-icons/apple-touch-icon-120x120-precomposed.png?1398950426' rel='apple-touch-icon-precomposed' sizes='120x120' />
+    <link href='http://cdn0.housetrip.com/images/apple-touch-icons/apple-touch-icon-76x76-precomposed.png?1398950426' rel='apple-touch-icon-precomposed' sizes='76x76' />
+    <link href='http://cdn2.housetrip.com/images/apple-touch-icons/apple-touch-icon-precomposed.png?1398950426' rel='apple-touch-icon-precomposed' />
+    <!--[if !IE]><!-->
+    <link href="http://cdn2.housetrip.com/assets/v4/application-16390002ac725bbcb20053f67195a282.css" media="all" rel="stylesheet" type="text/css" />
+    <!--<![endif]-->
+    <!--[if gte IE 8]>
+    <link href="http://cdn2.housetrip.com/assets/v4/application_for_ie-7b89a67a732155c050613c2015894720.css" media="all" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <link href="http://cdn1.housetrip.com/assets/whitey_header.css?1402326944" media="all" rel="stylesheet" type="text/css" />
+    <script src="http://cdn1.housetrip.com/assets/v4/lib/ie/bind-dffdbfc9b44e4c9765fc0f7210825e71.js" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+    <script src="http://cdn0.housetrip.com/assets/v4/lib/ie/html5shiv-printshiv-cf0d92f68c62017cc3b121d705eac7e9.js" type="text/javascript"></script>
+    <script src="http://cdn1.housetrip.com/assets/v4/lib/ie/PIE-98683c2f3d37cfa30d5431745357238b.js" type="text/javascript"></script>
+    <script src="http://cdn2.housetrip.com/assets/v4/lib/ie/ie-opacity-polyfill-261ba19e6a5a47102e726148c84f1d8e.js" type="text/javascript"></script>
+    <script src="http://cdn0.housetrip.com/assets/v4/lib/ie/selectivizr-min-fc9892f9fe550862a9b7aca87a88f0a8.js" type="text/javascript"></script>
+    <script src='/assets/respond.js'></script>
+    <![endif]-->
+
+
+
+</head>
+    <body class='js-authentication-modal' data-env='production' data-valid-hosts='^www\.housetrip\.(?:com|fr|de|es|it)$'>
+        
+        <div class='ht-loading-indicator full-page'>
+            <div class='loader'>
+                <div class='circle'></div>
+            </div>
+            <div class='notice'>
+
+            </div>
+        </div>
+
+        <div class='ht-mobile-overlays'></div>
+
+        <div class='ht-main'>
+            <nav class='ht-header js-kissmetrics-layer navbar navbar-default' role='navigation'>
+                <div class='ht-container'>
+                    <div class='navbar-header' itemscope='' itemtype='http://schema.org/Organization'>
+                        <button class='ht-navbar-toggle navbar-toggle' data-target='.ht-navbar-collapse' data-toggle='collapse' type='button'>
+                            <span class='sr-only'>Toggle navigation</span>
+                            <span class='icon-bar'></span>
+                            <span class='icon-bar'></span>
+                            <span class='icon-bar'></span>
+                        </button>
+                        <a href="/" class="navbar-brand" itemprop="url">
+                            <img alt="HouseTrip" class="logo" itemprop="logo" src="http://cdn1.housetrip.com/images/v4/logo.svg?1398950426" />
+                        </a>
+                    </div>
+                    <div class='ht-navbar-collapse collapse navbar-collapse navbar-right'>
+                        <ul class='ht-navbar hidden-xs'>
+                            <li class='ht-currency-language-item'>
+                                <a class='ht-user-logged-out' data-toggle='dropdown' href=''>
+                                    English / USD
+                                    <b class='caret'></b>
+                                </a>
+                                <div class='ht-dropdown-menu'>
+                                    <div class='arrow'></div>
+                                    <ul class='ht-currency-and-language-selector col-sm-6'>
+                                        <li class='ht-dropdown-title'>
+                                            Language
+                                        </li>
+                                        <li>
+                                            <a href="/" id="switch_to_en">
+                                                English
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.housetrip.fr/" id="switch_to_fr">
+                                                Français
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.housetrip.de/" id="switch_to_de">
+                                                Deutsch
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.housetrip.es/" id="switch_to_es">
+                                                Español
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.housetrip.it/" id="switch_to_it">
+                                                Italiano
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/pt" id="switch_to_pt">
+                                                Português
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class='ht-currency-and-language-selector col-sm-6'>
+                                        <li class='ht-dropdown-title'>
+                                            Currency
+                                        </li>
+                                        <li>
+                                            <a href="/?switch_currency=EUR" id="switch_to_EUR">
+                                                € EUR
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/?switch_currency=GBP" id="switch_to_GBP">
+                                                £ GBP
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/?switch_currency=USD" id="switch_to_USD">
+                                                $ USD
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/?switch_currency=CHF" id="switch_to_CHF">
+                                                CHF
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </li>
+
+                            <li class='ht-nav-separator'></li>
+                            <li class='ht-navigation-signedout-item'>
+                                <a href="/en/free-listing-on-housetrip" class="list_place">Become a Host</a>
+                            </li>
+                            <li class='ht-nav-separator'></li>
+                            <li class='ht-navigation-signedout-item'>
+                                <a href="#" class="js-authentication-trigger join-today-header" data-authentication-source="Global header" data-authentication_modal="{&quot;default_component&quot;:&quot;sign_up&quot;,&quot;render_options&quot;:{&quot;sign_in&quot;:{&quot;title&quot;:&quot;Sign in to HouseTrip&quot;},&quot;sign_up&quot;:{&quot;title&quot;:&quot;Join HouseTrip today&quot;},&quot;forgotten_password&quot;:{&quot;title&quot;:&quot;Forgotten your password?&quot;},&quot;check_email&quot;:{&quot;title&quot;:&quot;Email has been sent&quot;},&quot;contest&quot;:{&quot;title&quot;:&quot;Register for a chance to win a holiday in Sardinia&quot;}}}"><span class="glyphicon ht-icon-pen"></span>Join today</a>
+                            </li>
+                            <li class='ht-nav-separator'></li>
+                            <li class='ht-navigation-signedout-item ht-last-item'>
+                                <a href="#" class="js-authentication-trigger sign-in-header" data-authentication-source="Global header" data-authentication_modal="{&quot;default_component&quot;:&quot;sign_in&quot;,&quot;render_options&quot;:{&quot;sign_in&quot;:{&quot;title&quot;:&quot;Sign in to HouseTrip&quot;},&quot;sign_up&quot;:{&quot;title&quot;:&quot;Join HouseTrip today&quot;},&quot;forgotten_password&quot;:{&quot;title&quot;:&quot;Forgotten your password?&quot;},&quot;check_email&quot;:{&quot;title&quot;:&quot;Email has been sent&quot;},&quot;contest&quot;:{&quot;title&quot;:&quot;Register for a chance to win a holiday in Sardinia&quot;}}}"><span class="glyphicon ht-icon-login"></span>Sign in</a>
+                            </li>
+
+                        </ul>
+                        <ul class='ht-navbar visible-xs'>
+                            <li class='ht-navigation-signedout-item'>
+                                <a href="#" class="js-authentication-trigger join-today-header" data-authentication-source="Global header" data-authentication_modal="{&quot;default_component&quot;:&quot;sign_up&quot;,&quot;render_options&quot;:{&quot;sign_in&quot;:{&quot;title&quot;:&quot;Sign in to HouseTrip&quot;},&quot;sign_up&quot;:{&quot;title&quot;:&quot;Join HouseTrip today&quot;},&quot;forgotten_password&quot;:{&quot;title&quot;:&quot;Forgotten your password?&quot;},&quot;check_email&quot;:{&quot;title&quot;:&quot;Email has been sent&quot;},&quot;contest&quot;:{&quot;title&quot;:&quot;Register for a chance to win a holiday in Sardinia&quot;}}}"><span class="glyphicon ht-icon-pen"></span>Join today</a>
+                            </li>
+                            <li class='ht-navigation-signedout-item'>
+                                <a href="#" class="js-authentication-trigger sign-in-header" data-authentication-source="Global header" data-authentication_modal="{&quot;default_component&quot;:&quot;sign_in&quot;,&quot;render_options&quot;:{&quot;sign_in&quot;:{&quot;title&quot;:&quot;Sign in to HouseTrip&quot;},&quot;sign_up&quot;:{&quot;title&quot;:&quot;Join HouseTrip today&quot;},&quot;forgotten_password&quot;:{&quot;title&quot;:&quot;Forgotten your password?&quot;},&quot;check_email&quot;:{&quot;title&quot;:&quot;Email has been sent&quot;},&quot;contest&quot;:{&quot;title&quot;:&quot;Register for a chance to win a holiday in Sardinia&quot;}}}"><span class="glyphicon ht-icon-login"></span>Sign in</a>
+                            </li>
+                            <li class='ht-navigation-signedout-item'>
+                                <a href="/en/free-listing-on-housetrip" class="list_place">
+                                    <span class='glyphicon ht-icon-house'></span>
+                                    Become a Host
+                                </a>
+                            </li>
+                            <li class='ht-mobile-localization-item'>
+                                <span class='glyphicon ht-icon-globe'></span>
+                                <select data-type='locale-selector'>
+                                    <option selected='selected' value='/'>
+                                        English
+                                    </option>
+                                    <option value='http://www.housetrip.fr/'>
+                                        Français
+                                    </option>
+                                    <option value='http://www.housetrip.de/'>
+                                        Deutsch
+                                    </option>
+                                    <option value='http://www.housetrip.es/'>
+                                        Español
+                                    </option>
+                                    <option value='http://www.housetrip.it/'>
+                                        Italiano
+                                    </option>
+                                    <option value='/pt'>
+                                        Português
+                                    </option>
+                                </select>
+                            </li>
+                            <li class='ht-mobile-localization-item'>
+                                <span class='glyphicon ht-icon-money'></span>
+                                <select data-type='currency-selector'>
+                                    <option value='/?switch_currency=EUR'>
+                                        EUR
+                                    </option>
+                                    <option value='/?switch_currency=GBP'>
+                                        GBP
+                                    </option>
+                                    <option selected='selected' value='/?switch_currency=USD'>
+                                        USD
+                                    </option>
+                                    <option value='/?switch_currency=CHF'>
+                                        CHF
+                                    </option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        
+            <section class='hero js-kissmetrics-layer'>
+                <div class='hero-background js-fader' data-images='["http://cdn0.housetrip.com/images/v4/home/hero_desktop_1.jpg?1400772223","http://cdn1.housetrip.com/images/v4/home/hero_desktop_2.jpg?1400772223","http://cdn1.housetrip.com/images/v4/home/hero_desktop_3.jpg?1400772223","http://cdn1.housetrip.com/images/v4/home/hero_desktop_4.jpg?1400772223"]'></div>
+                <div class='container'>
+                    <div class='hero-strapline js-ie-sensitive'>
+                        <h1 class='hero-strapline__title'>Book a whole home</h1>
+                        <h2 class='hero-strapline__subtitle'>for less than the price of a hotel room</h2>
+                    </div>
+                    <div class='hero-search ht-search-box' data-type='search-form'>
+                        <div class='row'>
+                            <div class='col-xs-12'>
+                                <form action="/en/search-holiday-apartments" autocomplete="off" class="new_property_search" id="new_property_search" method="get">
+                                    <div class='ht-search-field'>
+                                        <div class='search-input' data-countries='Countries' data-districts='Districts' data-locations='Cities' data-regions='Regions' data-validation='Start typing to see the complete list'>
+                                            <input class="js-ie-sensitive text_field" id="property_search_destination_name" name="property_search[destination_name]" placeholder="e.g. Paris, London, Tuscany" size="30" type="text" />
+                                            <input id="property_search_destination_id" name="property_search[destination_id]" type="hidden" />
+                                            <ul class='destination-results'></ul>
+                                        </div>
+                                        <div class='search-button'>
+                                            <button class='btn' id='search_now'>
+                                                <span class='glyphicon ht-icon-search'></span>
+                                            </button>
+                                        </div>
+
+                                        <div class='search-guests'>
+                                            <input id="property_search_number_of_guests" name="property_search[number_of_guests]" type="hidden" value="2" />
+                                            <span class='glyphicon ht-icon-user'></span>
+                                            <div class='guests-actions'>
+                                                <div class='decrement'>
+                                                    <span class='glyphicon glyphicon-minus'></span>
+                                                </div>
+                                                <div class='guest-number'>2</div>
+                                                <div class='increment'>
+                                                    <span class='glyphicon glyphicon-plus'></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class='ht-separator'></div>
+
+                                        <div class='search-calendar js-search-calendar' data-translations='{"calendar":{"days_of_week_short":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"months_short":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]},"inputs":{"nights":"{{= nights }} nights","night":"{{= nights }} night"},"clearNotice":"I don&apos;t know my dates yet"}'>
+                                            <div class='glyphicon ht-icon-calendar js-toggle'></div>
+                                            <input class="start-date date-display js-start-date-to-show" id="date_picker_property_search_from_date_pretty" name="date_picker_property_search[from_date_pretty]" placeholder="Check in" type="text" value="" />
+                                            <input class="end-date date-display js-end-date-to-show" id="date_picker_property_search_end_date_pretty" name="date_picker_property_search[end_date_pretty]" placeholder="Check out" type="text" value="" />
+                                            <input class="js-start-date-to-submit" id="property_search_from_date" name="property_search[from_date]" type="hidden" />
+                                            <input class="js-end-date-to-submit" id="property_search_to_date" name="property_search[to_date]" type="hidden" />
+                                            <div class='js-remove-dates glyphicon ht-icon-remove'></div>
+                                            <span class='js-number-of-nights number-of-nights'>0 nights</span>
+                                            <div class='ht-loading-indicator'></div>
+                                        </div>
+                                        <div class='ht-separator'></div>
+
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='ht-join-today hidden-xs'>
+                        <a href="#" class="js-authentication-trigger ht-join-today-button" data-authentication-source="Home page hero contest" data-authentication_modal="{&quot;default_component&quot;:&quot;contest&quot;,&quot;render_options&quot;:{&quot;sign_in&quot;:{&quot;title&quot;:&quot;Sign in to HouseTrip&quot;},&quot;sign_up&quot;:{&quot;title&quot;:&quot;Join HouseTrip today&quot;},&quot;forgotten_password&quot;:{&quot;title&quot;:&quot;Forgotten your password?&quot;},&quot;check_email&quot;:{&quot;title&quot;:&quot;Email has been sent&quot;},&quot;contest&quot;:{&quot;title&quot;:&quot;Register for a chance to win a holiday in Sardinia&quot;}}}"><span class="ht-title ht-contest">Win a holiday in Sardinia</span><span class="ht-subtitle ht-contest">Join today <span class="glyphicon glyphicon-chevron-right"></span></span></a>
+                    </div>
+                </div>
+                <section class='ht-join-today-mobile js-kissmetrics-layer visible-xs'>
+                    <a href="#" class="js-authentication-trigger ht-join-today-button" data-authentication-source="Home page hero contest" data-authentication_modal="{&quot;default_component&quot;:&quot;contest&quot;,&quot;render_options&quot;:{&quot;sign_in&quot;:{&quot;title&quot;:&quot;Sign in to HouseTrip&quot;},&quot;sign_up&quot;:{&quot;title&quot;:&quot;Join HouseTrip today&quot;},&quot;forgotten_password&quot;:{&quot;title&quot;:&quot;Forgotten your password?&quot;},&quot;check_email&quot;:{&quot;title&quot;:&quot;Email has been sent&quot;},&quot;contest&quot;:{&quot;title&quot;:&quot;Register for a chance to win a holiday in Sardinia&quot;}}}"><span class="ht-title ht-contest">Win a holiday in Sardinia</span><span class="ht-subtitle ht-contest">Join today <span class="glyphicon glyphicon-chevron-right"></span></span></a>
+                </section>
+            </section>
+
+            <section class='ht-highlights'>
+                <div class='ht-container'>
+                    <div class='ht-item-first'>
+                        <div class='ht-bullet-holder'>
+                            <div class='ht-bullet'>
+                                <span class='glyphicon ht-icon-globe'></span>
+                            </div>
+                        </div>
+                        <div class='ht-message-holder'>
+                            <span class='ht-title'>Homes all over the world</span>
+                            Over 300,000 quality houses, apartments & villas in 19,000 destinations
+                        </div>
+                    </div>
+                    <div class='ht-item'>
+                        <div class='ht-bullet-holder'>
+                            <div class='ht-bullet'>
+                                <span class='glyphicon ht-icon-stacked-coins'></span>
+                            </div>
+                        </div>
+                        <div class='ht-message-holder'>
+                            <span class='ht-title'>Homes that are great value</span>
+                            A whole home typically costs 28% less than a hotel room
+                        </div>
+                    </div>
+                    <div class='ht-item-last'>
+                        <div class='ht-bullet-holder'>
+                            <div class='ht-bullet'>
+                                <span class='glyphicon ht-icon-thumb-up'></span>
+                            </div>
+                        </div>
+                        <div class='ht-message-holder'>
+                            <span class='ht-title'>Homes with peace of mind</span>
+                            Our HouseTrip Happiness Pledge means that over 95% of guests recommend us
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class='ht-image-group'>
+                <div class='row'>
+                    <div class='ht-big-row col-sm-5'>
+                        <div class='marketing-text'>
+                            <div class='separator hidden-xs'></div>
+                            <h2>
+                                Last year, 25 million Europeans chose a holiday home over a hotel room.
+                            </h2>
+                            <p>
+                                Enjoy the comforts of an affordable holiday home, with the peace of mind of booking through HouseTrip.
+                            </p>
+                            <div class='separator hidden-xs'></div>
+                        </div>
+                    </div>
+                    <div class='ht-small-row col-sm-2'>
+                        <a href="/en/rome" class="rome-image js-grid-image destination-link" data-for-kissmetrics="Rome">
+                            <div class='gradient'>
+                                <div class='image-title property-name js-image-title' data-name='Rome' data-properties_count='3392 properties'>Rome</div>
+                                <div class='image-title properties-count'>3392 properties</div>
+                            </div>
+                            <div class='image-overlay'></div>
+                        </a>
+                    </div>
+                    <div class='ht-small-row col-sm-5'>
+                        <a href="/en/london" class="london-image js-grid-image destination-link" data-for-kissmetrics="London">
+                            <div class='gradient'>
+                                <div class='image-title property-name js-image-title' data-name='London' data-properties_count='1951 properties'>London</div>
+                                <div class='image-title properties-count'>1951 properties</div>
+                            </div>
+                            <div class='image-overlay'></div>
+                        </a>
+                    </div>
+                    <div class='ht-medium-row col-sm-5'>
+                        <a href="/en/paris" class="paris-image js-grid-image destination-link" data-for-kissmetrics="Paris">
+                            <div class='gradient'>
+                                <div class='image-title property-name js-image-title' data-name='Paris' data-properties_count='5162 properties'>Paris</div>
+                                <div class='image-title properties-count'>5162 properties</div>
+                            </div>
+                            <div class='image-overlay'></div>
+                        </a>
+                    </div>
+                    <div class='ht-small-row col-sm-2'>
+                        <a href="/en/majorca-island" class="majorca-image js-grid-image destination-link" data-for-kissmetrics="Majorca">
+                            <div class='gradient'>
+                                <div class='image-title property-name js-image-title' data-name='Majorca' data-properties_count='3145 properties'>Majorca</div>
+                                <div class='image-title properties-count'>3145 properties</div>
+                            </div>
+                            <div class='image-overlay'></div>
+                        </a>
+                    </div>
+                    <div class='ht-small-row col-sm-2'>
+                        <a href="/en/algarve" class="algarve-image js-grid-image destination-link" data-for-kissmetrics="Algarve">
+                            <div class='gradient'>
+                                <div class='image-title property-name js-image-title' data-name='Algarve' data-properties_count='1959 properties'>Algarve</div>
+                                <div class='image-title properties-count'>1959 properties</div>
+                            </div>
+                            <div class='image-overlay'></div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class='ht-top-searches'>
+                <div class='ht-container'>
+                    <div class='ht-top-searches-item'>
+                        <div class='ht-description'>
+                            <div class='ht-title'>Weekend and city break destinations</div>
+                            <p>Take your next city break with HouseTrip. Enjoy a weekend away in a stylish city centre apartment in <a href="/en/belgium">Belgium</a>, <a href="/en/germany">Germany</a>, or <a href="/en/austria">Austria</a>. Or head further afield and take a vacation in <a href="/en/turkey">Turkey</a>, <a href="/en/morocco">Morocco</a>, or <a href="/en/united-states">USA</a>.</p>
+
+                        </div>
+                        <div class='ht-links'>
+                            <ul class="ht-link-column"><li><a href="/en/london">London</a></li><li><a href="/en/new-york-city">New York</a></li><li><a href="/en/amsterdam">Amsterdam</a></li><li><a href="/en/paris">Paris</a></li><li><a href="/en/berlin">Berlin</a></li><li><a href="/en/barcelona">Barcelona</a></li><li><a href="/en/rome">Rome</a></li><li><a href="/en/edinburgh">Edinburgh</a></li><li><a href="/en/vienna">Vienna</a></li><li><a href="/en/florence">Florence</a></li></ul><ul class="ht-link-column"><li><a href="/en/marrakech">Marrakech</a></li><li><a href="/en/prague">Prague</a></li><li><a href="/en/lisbon">Lisbon</a></li><li><a href="/en/istanbul">Istanbul</a></li><li><a href="/en/krakow">Krakow</a></li><li><a href="/en/madrid">Madrid</a></li><li><a href="/en/venice">Venice</a></li><li><a href="/en/nice">Nice</a></li><li><a href="/en/budapest">Budapest</a></li><li><a href="/en/cannes">Cannes</a></li></ul>
+                        </div>
+                    </div>
+                    <div class='ht-top-searches-item'>
+                        <div class='ht-description'>
+                            <div class='ht-title'>Family and beach holiday destinations</div>
+                            <p>Book your next family vacation in a charming country cottage in <a href="/en/france">France</a>, or a spacious villa with a private swimming pool in <a href="/en/spain">Spain</a>. Or enjoy some sun in a beachfront property in <a href="/en/italy">Italy</a>, <a href="/en/portugal">Portugal</a>, or <a href="/en/croatia">Croatia</a>.</p>
+
+                        </div>
+                        <div class='ht-links'>
+                            <ul class="ht-link-column"><li><a href="/en/ibiza">Ibiza</a></li><li><a href="/en/tuscany">Tuscany</a></li><li><a href="/en/state-of-florida">Florida</a></li><li><a href="/en/miami">Miami</a></li><li><a href="/en/marseille">Marseille</a></li><li><a href="/en/marbella">Marbella</a></li><li><a href="/en/benidorm">Benidorm</a></li><li><a href="/en/sardinia">Sardinia</a></li><li><a href="/en/tenerife">Tenerife</a></li><li><a href="/en/majorca-island">Majorca</a></li></ul><ul class="ht-link-column"><li><a href="/en/menorca">Menorca</a></li><li><a href="/en/algarve">Algarve</a></li><li><a href="/en/dubrovnik">Dubrovnik</a></li><li><a href="/en/crete">Crete</a></li><li><a href="/en/corsica">Corsica</a></li><li><a href="/en/malaga">Malaga</a></li><li><a href="/en/valencia">Valencia</a></li><li><a href="/en/alicante">Alicante</a></li><li><a href="/en/sicily">Sicily</a></li><li><a href="/en/nerja">Nerja</a></li></ul>
+                        </div>
+                    </div>
+                    <div class='ht-top-searches-item'>
+                        <div class='ht-description'>
+                            <div class='ht-title'>Popular UK destinations</div>
+                            <p>Find the ideal holiday rental for your next holiday in the <a href="/en/united-kingdom">United Kingdom</a>. Choose from top destinations throughout the country.</p>
+
+                        </div>
+                        <div class='ht-links'>
+                            <ul class="ht-link-column"><li><a href="/en/county-of-kent">Kent</a></li><li><a href="/en/lake-district">Lake District</a></li><li><a href="/en/devon">Devon</a></li><li><a href="/en/cumbria">Cumbria</a></li><li><a href="/en/glasgow">Glasgow</a></li><li><a href="/en/torquay">Torquay</a></li><li><a href="/en/penzance">Penzance</a></li><li><a href="/en/england">England</a></li><li><a href="/en/scotland">Scotland</a></li><li><a href="/en/wales">Wales</a></li></ul><ul class="ht-link-column"><li><a href="/en/cornwall">Cornwall</a></li><li><a href="/en/newquay">Newquay</a></li><li><a href="/en/norfolk">Norfolk</a></li><li><a href="/en/falmouth">Falmouth</a></li><li><a href="/en/looe">Looe</a></li></ul>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class='ht-about-housetrip'>
+                <div class='ht-container'>
+                    <div class='ht-title'>About HouseTrip</div>
+                    <div class='ht-about-description'>
+                        <p>HouseTrip is one of the largest holiday rental websites in the world. An ideal alternative to hotels, a HouseTrip stay means authenticity, privacy, value for money and flexibility. Enjoy the many benefits that <a href="/en/all-rentals">holiday rentals</a> have to offer: more space, extra bedrooms, a kitchen and WiFi and laundry facilities at no extra charge.</p>
+                        <p>Securely book a holiday rental for your vacation in <a href="/en/europe-index">Europe</a>, <a href="/en/asia-index">Asia</a>, <a href="/en/africa-index">Africa</a>, <a href="/en/north-america-index">North America</a>, <a href="/en/south-america-index">South America</a> and <a href="/en/australia-and-oceania-index">Australia and Oceania</a>. Read how much HouseTrip Guests love their experience in independent reviews on <a href="https://www.trustpilot.co.uk/review/housetrip.com" target="_blank">Trustpilot</a> and <a href="http://www.reviewcentre.com/Travel-Agents/HouseTrip-www-housetrip-com-reviews_1589824" target="_blank">Review Centre</a>.</p>
+                    </div>
+                    <div class='ht-about-host'>
+                        <span class='ht-host-title'>Own a holiday apartment, villa or cottage?</span>
+                        <p>Become a HouseTrip Host, list your property and start earning while welcoming Guests into your home.</p>
+                        <a href="/en/free-listing-on-housetrip">
+                            <button class='ht-button ht-button-primary ht-button-full-width'>
+                                Become a HouseTrip Host
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <footer class='ht-footer'>
+                <div class='ht-container sitemap'>
+
+                </div>
+                <div class='ht-container'>
+                    <ul>
+                        <li>
+                            <a href="/en/about/housetrip" class="what-is-housetrip">What is HouseTrip?</a>
+                        </li>
+                        <li>
+                            <a href="/en/how-to-book" class="be-a-guest">Be a Guest</a>
+                        </li>
+                        <li>
+                            <a href="/en/free-listing-on-housetrip" class="be-a-host">Become a Host</a>
+                        </li>
+                        <li>
+                            <a class="be-an-affiliate" href="mailto:partners@housetrip.com">Become an Affiliate</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="/en/about/team" class="cms_page_link about-us">About Us</a>
+                        </li>
+                        <li>
+                            <a href="/en/press/articles" class="cms_page_link press-corner">Press Corner</a>
+                        </li>
+                        <li>
+                            <a href="https://housetrip.zendesk.com/anonymous_requests/new?locale=1" class="contact-us">Contact Us</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="https://housetrip.zendesk.com/forums?locale=1" class="help-footer">FAQs</a>
+                        </li>
+                        <li>
+                            <a href="http://blog.housetrip.com/team/housetrip-jobs" class="jobs">Jobs</a>
+                        </li>
+                        <li>
+                            <a href="http://blog.housetrip.com" class="trip-plus-blog">Trip+ Blog</a>
+                        </li>
+                    </ul>
+                    <ul class='social'>
+                        <li>
+                            <a href="https://www.facebook.com/HouseTrip" target="_blank">
+                                <span class="glyphicon ht-icon-facebook"></span>
+                                Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/housetrip" target="_blank">
+                                <span class="glyphicon ht-icon-twitter"></span>
+                                Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/+housetrip/posts" target="_blank">
+                                <span class="glyphicon ht-icon-google-plus"></span>
+                                Google+
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class='ht-container terms-and-conditions'>
+                    <p>
+                        Use of this website constitutes acceptance of the <a href="/en/about/terms_and_conditions" class="cms_page_link terms-of-use">Terms of Use</a>, <a href="/en/about/booking_terms" class="cms_page_link booking-terms">Booking Terms</a> and <a href="/en/about/privacy_policy" class="cms_page_link privacy-policy">Privacy & Cookies Policy</a>.
+                    </p>
+                    <p>
+                        &copy; HouseTrip SA 2009-2014. All rights reserved.
+                    </p>
+                </div>
+            </footer>
+        </div>
+    
+        <script type="text/javascript">
+//<![CDATA[
+            window.HouseTrip = window.HouseTrip || {};
+            window.HouseTrip.i18n = {"mobileForm":{"any":"Any"}};
+            window.HouseTrip.config = {"photoCarousel":{"overlayImage":"http://cdn2.housetrip.com/images/v4/search/image-overlay.png"}};
+//]]>
+        </script>
+
+        <script src="http://cdn1.housetrip.com/assets/v4/application-983160184af571d9b94aff546b2369b4.js" type="text/javascript"></script>
+
+        <script type='text/javascript'>
+            //<![CDATA[
+            $(function() { HouseTrip.houseFlip.disable('people_picker'); });
+            //]]>
+        </script>
+
+        <!--[if IE 9]>
+            <script src="http://cdn0.housetrip.com/assets/v4/lib/jquery.placeholder-2535f26754632c4e10faa76fc689419c.js" type="text/javascript"></script>
+            <script src="http://cdn2.housetrip.com/assets/v4/placeholder-64a3c6a5243b2c1d408470815127e96a.js" type="text/javascript"></script>
+        <![endif]-->
+
+        <script type='text/javascript'>
+            //<![CDATA[
+            $(function() {
+                HouseTrip.currentUser = new HouseTrip.Models.CurrentUser({"id":null,"display_name":null});
+            });
+            //]]>
+        </script>
+    
+        <script type="text/javascript">
+//<![CDATA[
+            var TDConf = TDConf || {}; // The other properties for TDConf is defined in the caller
+
+            try {
+                var send_info_to_trade_doubler = function() {
+                    TDConf.sudomain = ("https:" == document.location.protocol) ? "swrap" : "wrap";
+                    TDConf.host = ".tradedoubler.com/wrap";
+                    TDConf.containerTagURL = (("https:" == document.location.protocol) ? "https://" : "http://") + TDConf.sudomain + TDConf.host;
+                    if (typeof (TDConf.Config) != "undefined") {
+                        var e = document.createElement("script");
+                        e.type = "text/javascript";
+                        e.async = true;
+                        e.src = TDConf.containerTagURL + "?id=" + TDConf.Config.containerTagId;
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(e, s);
+                    }
+                };
+            }
+            catch(e)
+            {
+                // Do nothing probably something wrong on TradeDouble side
+            }
+
+//]]>
+        </script>
+    
+        <script type="text/javascript">
+//<![CDATA[
+            TDConf.Config = {
+                protocol: document.location.protocol,
+                containerTagId: "3406",
+            };
+            send_info_to_trade_doubler();
+//]]>
+        </script>
+
+        <script type='text/javascript'>
+            //<![CDATA[
+            $(document).ready(function() {
+                HouseTrip.Views.SearchBar.load();
+                new HouseTrip.Views.Homepage({ el: 'body' });
+
+                HouseTrip.Helpers.KissMetrics.setProperty({"Visited Responsive Home Page":"Yes"});
+                HouseTrip.Helpers.KissMetrics.setUserProperties();
+            });
+            //]]>
+        </script>
+
+        <!--[if lt IE 9]>
+            <script src="http://cdn1.housetrip.com/assets/v4/lib/ie/svg_fix-22eecfcf55f48124f54fadb4403d7589.js" type="text/javascript"></script>
+            <script src="http://cdn2.housetrip.com/assets/v4/views/grid_image-8483104e37c47ce2c1b0a621ecab1607.js" type="text/javascript"></script>
+        <![endif]-->
+
+        <script type="text/javascript">
+//<![CDATA[
+            $(function() {
+                HouseTrip.navigationBar = new HouseTrip.Views.NavigationBar({
+                    el: '.ht-navbar-collapse',
+                    model: new HouseTrip.Models.NavigationBar({"path":"/en/v4/layout/navigation_bar"})
+                });
+            });
+//]]>
+        </script>
+
+        <div aria-hidden='true' class='ht-modal modal authentication-modal fade' id='js-authentication-modal' role='dialog' tabindex='-1'>
+            <div class='modal-dialog'>
+                <div class='modal-content'>
+                    <div class='modal-body'>
+                        <button aria-hidden='true' class='close' data-dismiss='modal'>
+                            <i class='ht-icon-remove'></i>
+                        </button>
+                        <h4 class='modal-title'></h4>
+                        <div class='js-sign-in-component'>
+                            <form action="https://www.housetrip.com/en/v4/session" class="js-sign-in-form" id="new_user" method="post">
+                                <div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="DEyxUgp9ADJJpMND+iikQE319oNhyKI0u+njIjVd8W0=" /></div>
+                                <div class="stacked-group email-group text-input-group">
+                                    <label for="user_email">Email address or user name<span class="required_field_mark"> *</span></label>
+                                    <input class="form-control text_field" id="user_email" name="user[email]" size="30" tabindex="1" type="email" />
+                                </div><div class="stacked-group password-group">
+                                          <div class='js-authentication-switch forgot-password anchor' data-authentication_modal='{"default_component":"forgotten_password","render_options":{"sign_in":{"title":"Sign in to HouseTrip"},"sign_up":{"title":"Join HouseTrip today"},"forgotten_password":{"title":"Forgotten your password?"},"check_email":{"title":"Email has been sent"},"contest":{"title":"Register for a chance to win a holiday in Sardinia"}}}' tabindex='6'>
+                                              Forgotten your password?
+                                          </div>
+                                          <label for="user_password">Password<span class="required_field_mark"> *</span></label>
+                                          <input class="form-control password_field" id="user_password" name="user[password]" size="30" tabindex="2" type="password" />
+                                      </div><div class='stacked-group-lg'>
+                                                <button class='js-submit-remote-form ht-button ht-button-primary ht-button-full-width' tabindex='3'>Sign in</button>
+                                            </div>
+                            </form>
+                            <div class='or stacked-group'>
+                                or
+                            </div>
+                            <div class='stacked-group'>
+                                <div class="fb-button-container clearfix" tabindex="4"><a class="fb-button"><img alt="Facebook" class="fb-icon" src="http://cdn0.housetrip.com/images/v4/facebook.png?1397652842" /><span class="fb-text">Sign in using Facebook</span></a></div>
+                                <div class="fb-error"></div>
+                            </div>
+                            <div class='facebook-warning stacked-group'>
+                                We will never post to your Facebook wall without your permission.
+                            </div>
+                            <div class='register stacked-group'>
+                                Don't have a HouseTrip account?
+                                <div class='js-authentication-switch anchor' data-authentication_modal='{"default_component":"sign_up","render_options":{"sign_in":{"title":"Sign in to HouseTrip"},"sign_up":{"title":"Join HouseTrip today"},"forgotten_password":{"title":"Forgotten your password?"},"check_email":{"title":"Email has been sent"},"contest":{"title":"Register for a chance to win a holiday in Sardinia"}}}' tabindex='5'>
+                                    Join today
+                                </div>
+                            </div>
+                        </div>
+                        <div class='js-sign-up-component'>
+                            <form action="https://www.housetrip.com/en/v4/users" class="new_user" id="new_user" method="post">
+                                <div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="DEyxUgp9ADJJpMND+iikQE319oNhyKI0u+njIjVd8W0=" /></div>
+                                <div class="stacked-group text-input-group">
+                                    <label for="user_email">Email address</label>
+                                    <input class="form-control text_field" id="user_email" name="user[email]" size="30" tabindex="1" type="email" />
+
+                                </div><div class="stacked-group text-input-group">
+                                          <label for="user_password">Password</label>
+                                          <input autocomplete="off" class="form-control password_field" id="user_password" name="user[password]" size="30" tabindex="3" type="password" />
+
+                                      </div><div class='stacked-group checkbox-group js-ie-sensitive js-css3-checkbox' tabindex='4'>
+                                                <input name="user[receives_newsletter]" type="hidden" value="0" /><input checked="checked" class="check_box" id="user_receives_newsletter" name="user[receives_newsletter]" type="checkbox" value="1" />
+                                                <label for="user_receives_newsletter" tabindex="4"><figure class="displayed-checkbox"><i class="ht-icon-ok"></i></figure>Keep me updated with great deals and the latest offers</label>
+                                            </div>
+                                <div class='stacked-group checkbox-group js-ie-sensitive js-css3-checkbox' tabindex='5'>
+                                    <input name="user[terms]" type="hidden" value="0" /><input class="check_box" id="user_terms" name="user[terms]" type="checkbox" value="1" />
+                                    <label for="user_terms"><figure class="displayed-checkbox"><i class="ht-icon-ok"></i></figure>I accept HouseTrip’s <a href="/en/about/terms_and_conditions" class="cms_page_link" tabindex="-1" target="_blank">Terms of Use</a>, <a href="/en/about/booking_terms" class="cms_page_link" tabindex="-1" target="_blank">Booking Terms</a> and <a href="/en/about/privacy_policy" class="cms_page_link" tabindex="-1" target="_blank">Privacy Policy</a>.</label>
+
+                                </div>
+                                <div class='stacked-group-lg'>
+                                    <button class='js-submit-remote-form ht-button ht-button-primary ht-button-full-width' tabindex='6'>I accept. Create my account</button>
+                                </div>
+                            </form>
+                            <div class='or stacked-group text-center'>or</div>
+                            <div class='stacked-group'>
+                                <div class="fb-button-container clearfix" tabindex="7"><a class="fb-button"><img alt="Facebook" class="fb-icon" src="http://cdn0.housetrip.com/images/v4/facebook.png?1397652842" /><span class="fb-text">Join using Facebook</span></a></div>
+                                <div class="fb-error"></div>
+                            </div>
+                            <div class='facebook-warning stacked-group'>
+                                We will never post to your Facebook wall without your permission.
+                            </div>
+                            <div class='register stacked-group'>
+                                Already have a HouseTrip account?
+                                <div class='js-authentication-switch anchor' data-authentication_modal='{"default_component":"sign_in","render_options":{"sign_in":{"title":"Sign in to HouseTrip"},"sign_up":{"title":"Join HouseTrip today"},"forgotten_password":{"title":"Forgotten your password?"},"check_email":{"title":"Email has been sent"},"contest":{"title":"Register for a chance to win a holiday in Sardinia"}}}' tabindex='8'>
+                                    Sign in
+                                </div>
+                            </div>
+                        </div>
+                        <div class='js-forgotten-password-component'>
+                            <div class='stacked-group'>
+                                Enter your email below and we'll send you instructions for resetting your password.
+                            </div>
+                            <form action="https://www.housetrip.com/en/v4/passwords" class="new_user_email" id="new_user_email" method="post">
+                                <div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="DEyxUgp9ADJJpMND+iikQE319oNhyKI0u+njIjVd8W0=" /></div>
+                                <div class="stacked-group email-group text-input-group">
+                                    <label for="user_email_email">Email address</label>
+                                    <input class="form-control text_field" id="user_email_email" name="user_email[email]" size="30" tabindex="1" type="email" />
+
+                                </div><div class='stacked-group-lg'>
+                                          <button class='js-submit-remote-form ht-button ht-button-primary ht-button-full-width' tabindex='2'>Send</button>
+                                      </div>
+                            </form>
+                            <div class='register stacked-group'>
+                                Return to
+                                <span class='js-authentication-switch anchor' data-authentication_modal='{"default_component":"sign_in","render_options":{"sign_in":{"title":"Sign in to HouseTrip"},"sign_up":{"title":"Join HouseTrip today"},"forgotten_password":{"title":"Forgotten your password?"},"check_email":{"title":"Email has been sent"},"contest":{"title":"Register for a chance to win a holiday in Sardinia"}}}' tabindex='3'>
+                                    sign in
+                                </span>
+                            </div>
+                        </div>
+                        <div class='js-check-email-component'>
+                            <div class='stacked-group-lg'>
+                                An email has been sent to  with instructions on how to reset your password.
+                            </div>
+                        </div>
+                        <div class='js-contest-component'>
+                            <form action="https://www.housetrip.com/en/v4/users" class="new_user" id="new_user" method="post">
+                                <div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="DEyxUgp9ADJJpMND+iikQE319oNhyKI0u+njIjVd8W0=" /></div>
+                                <div class='contest'>
+                                    <div class='contest-description'>
+                                        Join us today for a chance to win a holiday for four people on the coast of Sardinia*.
+                                    </div>
+                                    <div class='contest-rules'>
+                                        Open to residents of European Union member states and Switzerland only.
+                                        <a href="/en/about/sardinia_contest_terms" class="cms_page_link" tabindex="-1" target="_blank">* Terms & Conditions</a>
+                                    </div>
+                                </div>
+                                <div class="stacked-group text-input-group">
+                                    <label for="user_first_name">Full Name</label>
+                                    <input class="form-control text_field" id="user_first_name" name="user[first_name]" size="30" tabindex="1" type="text" />
+                                </div><div class="stacked-group text-input-group">
+                                          <label for="user_email">Email address</label>
+                                          <input class="form-control text_field" id="user_email" name="user[email]" size="30" tabindex="2" type="email" />
+
+                                      </div><div class="stacked-group text-input-group">
+                                                <label for="user_password">Password</label>
+                                                <input autocomplete="off" class="form-control password_field" id="user_password" name="user[password]" size="30" tabindex="3" type="password" />
+
+                                            </div><div class='stacked-group checkbox-group js-ie-sensitive js-css3-checkbox' tabindex='4'>
+                                                      <input name="user[receives_newsletter]" type="hidden" value="0" /><input checked="checked" class="check_box" id="user_receives_newsletter_contest" name="user[receives_newsletter]" type="checkbox" value="1" />
+                                                      <label for="user_receives_newsletter_contest" id="user_receives_newsletter_contest" tabindex="4"><figure class="displayed-checkbox"><i class="ht-icon-ok"></i></figure>Keep me updated with great deals and the latest offers</label>
+                                                  </div>
+                                <div class='stacked-group checkbox-group js-ie-sensitive js-css3-checkbox' tabindex='5'>
+                                    <input name="user[terms]" type="hidden" value="0" /><input class="check_box" id="user_terms_contest" name="user[terms]" type="checkbox" value="1" />
+                                    <label for="user_terms_contest" id="user_terms_contest"><figure class="displayed-checkbox"><i class="ht-icon-ok"></i></figure>I accept HouseTrip’s <a href="/en/about/terms_and_conditions" class="cms_page_link" tabindex="-1" target="_blank">Terms of Use</a>, <a href="/en/about/booking_terms" class="cms_page_link" tabindex="-1" target="_blank">Booking Terms</a> and <a href="/en/about/privacy_policy" class="cms_page_link" tabindex="-1" target="_blank">Privacy Policy</a>.</label>
+
+                                </div>
+                                <input id="contest" name="contest" type="hidden" value="true" />
+                                <div class='stacked-group-lg'>
+                                    <button class='js-submit-remote-form ht-button ht-button-primary ht-button-full-width' tabindex='6'>I accept. Create my account</button>
+                                </div>
+                            </form>
+                            <div class='or stacked-group text-center'>or</div>
+                            <div class='stacked-group'>
+                                <div class="fb-button-container clearfix" tabindex="7"><a class="fb-button"><img alt="Facebook" class="fb-icon" src="http://cdn0.housetrip.com/images/v4/facebook.png?1397652842" /><span class="fb-text">Join using Facebook</span></a></div>
+                                <div class="fb-error"></div>
+                            </div>
+                            <div class='facebook-warning stacked-group'>
+                                We will never post to your Facebook wall without your permission.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

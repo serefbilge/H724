@@ -102,6 +102,10 @@ namespace H724.Controllers
             return View();
         }
 
+        public ActionResult HouseTripHome()
+        {
+            return View();
+        }
         public ActionResult Details()
         {
             return RedirectToAction("Room", "Details");

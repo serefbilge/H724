@@ -1400,6 +1400,7 @@
     <Content Include="Views\Shared\_LayoutNewHome.cshtml" />
     <Content Include="Views\Home\NewHome.cshtml" />
     <Content Include="Views\Home\VenereHome.cshtml" />
+    <Content Include="Views\Home\HouseTripHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
