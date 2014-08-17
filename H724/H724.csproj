@@ -698,6 +698,8 @@
     <Content Include="Content\js\js-details.js" />
     <Content Include="Content\js\js-list4.js" />
     <Content Include="Content\js\js-new-homepage.js" />
+    <Content Include="Content\js\mcalendar\js-index3.js" />
+    <Content Include="Content\js\scroll_navi.js" />
     <Content Include="Content\js\_src\application.js" />
     <Content Include="Content\js\_src\counter.js" />
     <Content Include="Content\js\_src\customizer.js" />
